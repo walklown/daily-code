@@ -11,8 +11,9 @@ public class MyAction {
 		@Autowried IDemoService demoService;
 	
 		@RequestMapping("/index.html")
-		public void query(){
-
+		public String query(){
+			System.out.println("index");
+			return "index";
 		}
 	
 }

@@ -9,6 +9,7 @@ import com.gupaoedu.vip.spring.core.suport.BeanDefinitionReader;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.Properties;
 import java.util.concurrent.ConcurrentHashMap;
 
 public class MyApplicationContext implements BeanFactory {
@@ -28,7 +29,7 @@ public class MyApplicationContext implements BeanFactory {
     public void refresh(){
 
         //定位
-        this.reader = new BeanDefinitionReader();
+        this.reader = new BeanDefinitionReader(configLocations);
 
         List<String> beanDefinitions = reader.loadBeanDefinations();
         //注册
@@ -106,5 +107,14 @@ public class MyApplicationContext implements BeanFactory {
             e.printStackTrace();
         }
         return null;
+    }
+
+
+    public Properties getConfig(){
+        return this.reader.getConfig();
+    }
+
+    public String[] getBeanDefinitionNames() {
+        return this.beanDefinitionMap.keySet().toArray(new String[this.beanDefinitionMap.size()]);
     }
 }

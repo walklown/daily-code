@@ -11,8 +11,8 @@ import java.io.IOException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-@Controller
-@RequestMapping("/demo")
+//@Controller
+//@RequestMapping("/demo")
 public class DemoAction {
 	
 	@Autowried private IDemoService demoService;
