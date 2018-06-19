@@ -1,4 +1,4 @@
-package com.zzp.pattern;
+package com.zzp.pattern.prototype;
 
 import java.util.ArrayList;
 import java.util.List;
