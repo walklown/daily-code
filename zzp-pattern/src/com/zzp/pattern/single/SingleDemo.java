@@ -1,4 +1,4 @@
-package com.zzp.pattern;
+package com.zzp.pattern.single;
 
 public class SingleDemo {
     private static boolean initialized = false;

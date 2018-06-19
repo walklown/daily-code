@@ -1,4 +1,4 @@
-package com.zzp.pattern;
+package com.zzp.pattern.single;
 
 import java.lang.reflect.Constructor;
 
