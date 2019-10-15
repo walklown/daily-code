@@ -1,0 +1,79 @@
+plugins {
+    id 'org.springframework.boot' version '2.1.8.RELEASE'
+    id 'java'
+}
+// 引入jar包定义
+// 这个文件中定义的jar包可以直接在子项目中使用，不需要再次使用 apply from 这个语句
+//
+apply from: 'dependency.gradle'
+
+allprojects {
+    repositories {
+        mavenCentral()
+        maven { url 'https://repo.spring.io/snapshot' }
+        maven { url 'https://repo.spring.io/milestone' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+    }
+}
+
+ext {
+    set('springCloudVersion', 'Greenwich.SR1')
+}
+
+
+subprojects { subproj ->
+    apply plugin: 'java'
+    apply plugin: 'idea'
+    apply plugin: 'eclipse'
+    // 用于发布 jar 包到相应服务器
+    apply plugin: 'maven'
+
+    group = project_group
+
+    sourceCompatibility = project_jdk
+    targetCompatibility = project_jdk
+
+    jar{
+        baseName = project_group
+        version = '1.0.0-SNAPSHOT'
+    }
+
+    // 编码改为 UTF-8, 否则编译源码的时候会出错
+    // 当然，这个需要根据自己的 java 源码的编码进行调整
+    [compileJava, compileTestJava, javadoc]*.options*.encoding = 'UTF-8'
+
+    artifacts {
+        archives jar
+    }
+
+    dependencies {
+        implementation libraries."lombok"
+        implementation (libraries."swagger2") {
+            exclude group:'org.springframework.plugin'
+        }
+    }
+
+    sourceSets {
+        generated {
+            java {
+                srcDirs = ['src/main/generated', 'src/main/java']
+            }
+        }
+        main {
+            java {
+                srcDirs = ['src/main/generated', 'src/main/java']
+            }
+        }
+    }
+
+    clean {
+        delete 'src/main/generated'
+    }
+
+    idea {
+/*    module {
+        sourceDirs += file('src/main/generated')
+    }*/
+    }
+
+}
