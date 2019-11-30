@@ -17,30 +17,30 @@ public class NettyNioServer {
         final ByteBuf buf = Unpooled.unreleasableBuffer(
                 Unpooled.copiedBuffer("Hi!\r\n", Charset.forName("UTF-8")));
         NioEventLoopGroup bossGroup = new NioEventLoopGroup(1);
-    NioEventLoopGroup workerGroup = new NioEventLoopGroup();
+        NioEventLoopGroup workerGroup = new NioEventLoopGroup();
         try {
             ServerBootstrap b = new ServerBootstrap();    //1
             b.group(bossGroup, workerGroup)   //2
-             .channel(NioServerSocketChannel.class)
-             .localAddress(new InetSocketAddress(port))
-             .childHandler(new ChannelInitializer<SocketChannel>() {    //3
-                 @Override
-                 public void initChannel(SocketChannel ch) 
-                     throws Exception {
-                     ch.pipeline().addLast(new ChannelInboundHandlerAdapter() {    //4
-                         @Override
-                         public void channelActive(ChannelHandlerContext ctx) throws Exception {
-                             ctx.writeAndFlush(buf.duplicate())                //5
-                                     .addListener(ChannelFutureListener.CLOSE);
-                         }
-                     });
-                 }
-             });
+                    .channel(NioServerSocketChannel.class)
+                    .localAddress(new InetSocketAddress(port))
+                    .childHandler(new ChannelInitializer<SocketChannel>() {    //3
+                        @Override
+                        public void initChannel(SocketChannel ch)
+                                throws Exception {
+                            ch.pipeline().addLast(new ChannelInboundHandlerAdapter() {    //4
+                                @Override
+                                public void channelActive(ChannelHandlerContext ctx) throws Exception {
+                                    ctx.writeAndFlush(buf.duplicate())                //5
+                                            .addListener(ChannelFutureListener.CLOSE);
+                                }
+                            });
+                        }
+                    });
             ChannelFuture f = b.bind().sync();                    //6
             f.channel().closeFuture().sync();
         } finally {
             bossGroup.shutdownGracefully().sync();                    //7
-        workerGroup.shutdownGracefully().sync();
+            workerGroup.shutdownGracefully().sync();
         }
     }
 }

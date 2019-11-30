@@ -1,8 +1,7 @@
 package com.zzp.learn.walklown.jarkata.pattern.observice.mouse;
 
-import com.zzp.pattern.observice.core.MouseHandler;
+import com.zzp.learn.walklown.jarkata.pattern.observice.core.MouseHandler;
 
-import java.lang.reflect.Method;
 import java.lang.reflect.Proxy;
 
 /**

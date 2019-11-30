@@ -1,7 +1,7 @@
 package com.zzp.learn.walklown.jarkata.pattern.observice.mouse;
 
 
-import com.zzp.pattern.observice.core.Event;
+import com.zzp.learn.walklown.jarkata.pattern.observice.core.Event;
 
 /**
  * 观察者

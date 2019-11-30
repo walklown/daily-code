@@ -12,4 +12,8 @@ public class HashTest {
         int i = -200;
         System.out.println(i >>> 1);
     }
+
+    public static void main(String[] args) {
+        System.out.println("BillingcenterAccount_InfoPwdSign".getBytes());
+    }
 }

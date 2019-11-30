@@ -1,7 +1,9 @@
 rootProject.name = 'attempt'
+include 'demo'
 include 'springboot'
 include 'eureka'
 include 'jarkata'
 include 'netty'
 include 'tool'
+include 'vertx-graphql'
 

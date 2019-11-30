@@ -1,7 +1,24 @@
+// buildscript 代码块中脚本优先执行
+buildscript {
+    // ext 用于定义动态属性
+    ext {
+        spring_boot = "2.2.0.RELEASE"
+        spring_framework = "5.1.10"
+        dependency_management = "1.0.8.RELEASE"
+    }
+    // 依赖关系
+    dependencies {
+        // classpath 声明说明了在执行其余的脚本时，ClassLoader 可以使用这些依赖项
+        classpath("io.spring.gradle:dependency-management-plugin:${dependency_management}")
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${spring_boot}")
+    }
+}
+
 plugins {
-    id 'org.springframework.boot' version '2.1.8.RELEASE'
+//    id 'org.springframework.boot' version ''
     id 'java'
 }
+
 // 引入jar包定义
 // 这个文件中定义的jar包可以直接在子项目中使用，不需要再次使用 apply from 这个语句
 //
@@ -20,7 +37,6 @@ ext {
     set('springCloudVersion', 'Greenwich.SR1')
 }
 
-
 subprojects { subproj ->
     apply plugin: 'java'
     apply plugin: 'idea'
@@ -33,7 +49,7 @@ subprojects { subproj ->
     sourceCompatibility = project_jdk
     targetCompatibility = project_jdk
 
-    jar{
+    jar {
         baseName = project_group
         version = '1.0.0-SNAPSHOT'
     }
@@ -48,8 +64,8 @@ subprojects { subproj ->
 
     dependencies {
         implementation libraries."lombok"
-        implementation (libraries."swagger2") {
-            exclude group:'org.springframework.plugin'
+        implementation(libraries."swagger2") {
+            exclude group: 'org.springframework.plugin'
         }
     }
 

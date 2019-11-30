@@ -1,6 +1,6 @@
 package com.zzp.learn.walklown.jarkata.pattern.observice.core;
 
-import com.zzp.pattern.observice.mouse.MouseEventCallback;
+import com.zzp.learn.walklown.jarkata.pattern.observice.mouse.MouseEventCallback;
 
 import java.lang.reflect.InvocationHandler;
 import java.lang.reflect.Method;

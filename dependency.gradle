@@ -43,8 +43,8 @@ ext.libraries = [
         "persistence-api"                 : "javax.persistence:persistence-api:${versions.persistence_api}",
         "jta"                             : "javax.transaction:jta:${versions.jta}",
 
-        "mysql-connector-java"            : "mysql:mysql-connector-java:5.1.30",
-
+        "mysql-connector-java"            : "mysql:mysql-connector-java:8.0.17",
+        "mybatis" : "org.mybatis:mybatis:3.5.2",
 
         "jedis"                           : "redis.clients:jedis:${versions.jedis}",
         "redisson"                        : "org.redisson:redisson:${versions.redisson}",
@@ -67,11 +67,11 @@ ext.libraries = [
         "gson"                            : "com.google.code.gson:gson:${versions.gson}",
         // JSON
         "jsoup"                           : "org.jsoup:jsoup:1.10.3",
-        "fastjson"                        : "com.alibaba:fastjson:1.2.47",
+        "fastjson"                        : "com.alibaba:fastjson:1.2.62",
 
         //测试
-        "mybatis-spring-boot-starter-test":
-                "org.mybatis.spring.boot:mybatis-spring-boot-starter-test:${versions.mybatis_spring_boot}",
+//        "mybatis-spring-boot-starter-test":
+//                "org.mybatis.spring.boot:mybatis-spring-boot-starter-test:${versions.mybatis_spring_boot}",
         "junit"                           : "junit:junit:${versions.junit}",
         "assertj"                         : "org.assertj:assertj-core:${versions.assertj}",
         "mockito-core"                    : "org.mockito:mockito-core:${versions.mockito}",

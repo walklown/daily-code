@@ -1,6 +1,6 @@
 package com.zzp.learn.walklown.jarkata.pattern.decorator.update;
 
-import com.zzp.pattern.decorator.old.CanteenService;
+import com.zzp.learn.walklown.jarkata.pattern.decorator.old.CanteenService;
 
 public class HotelServiceImpl implements HotelService {
     private CanteenService canteenService;

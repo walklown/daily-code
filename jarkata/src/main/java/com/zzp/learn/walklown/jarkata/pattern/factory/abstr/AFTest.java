@@ -1,6 +1,6 @@
 package com.zzp.learn.walklown.jarkata.pattern.factory.abstr;
 
-import com.zzp.pattern.factory.FactoryBean;
+import com.zzp.learn.walklown.jarkata.pattern.factory.FactoryBean;
 
 public class AFTest {
     public static void main(String[] args) {

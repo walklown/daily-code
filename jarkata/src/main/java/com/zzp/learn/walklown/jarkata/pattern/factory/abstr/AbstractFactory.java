@@ -1,8 +1,8 @@
 package com.zzp.learn.walklown.jarkata.pattern.factory.abstr;
 
-import com.zzp.pattern.factory.FactoryBean;
-import com.zzp.pattern.factory.FileBean;
-import com.zzp.pattern.factory.LoginBean;
+import com.zzp.learn.walklown.jarkata.pattern.factory.FactoryBean;
+import com.zzp.learn.walklown.jarkata.pattern.factory.FileBean;
+import com.zzp.learn.walklown.jarkata.pattern.factory.LoginBean;
 
 public class AbstractFactory implements IAbstractFactory {
     @Override

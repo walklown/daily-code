@@ -1,9 +1,9 @@
 package com.zzp.learn.walklown.jarkata.pattern.decorator;
 
-import com.zzp.pattern.decorator.old.CanteenService;
-import com.zzp.pattern.decorator.old.CanteenServiceImpl;
-import com.zzp.pattern.decorator.update.HotelService;
-import com.zzp.pattern.decorator.update.HotelServiceImpl;
+import com.zzp.learn.walklown.jarkata.pattern.decorator.old.CanteenService;
+import com.zzp.learn.walklown.jarkata.pattern.decorator.old.CanteenServiceImpl;
+import com.zzp.learn.walklown.jarkata.pattern.decorator.update.HotelService;
+import com.zzp.learn.walklown.jarkata.pattern.decorator.update.HotelServiceImpl;
 
 public class CustomerTest {
     public static void main(String[] args) {
