@@ -1,4 +1,4 @@
-package com.zzp.zookeeper;
+package com.gupaoedu.zookeeper;
 
 import org.apache.zookeeper.*;
 import org.apache.zookeeper.data.Stat;
@@ -12,7 +12,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 
-public class DistributedLock implements Lock, Watcher {
+public class ZkLock implements Lock, Watcher {
 
     private ZooKeeper zk = null;
     private String ROOT_LOCK = "/lock"; //根节点
@@ -21,7 +21,7 @@ public class DistributedLock implements Lock, Watcher {
 
     private CountDownLatch countDownLatch;
 
-    public DistributedLock() {
+    public ZkLock() {
         try {
             zk = new ZooKeeper("192.168.89.128:2181", 4000, this);
             //判断根节点是否存在
@@ -38,6 +38,7 @@ public class DistributedLock implements Lock, Watcher {
         }
     }
 
+    @Override
     public void lock() {
         if (this.tryLock()) {
             System.out.println(Thread.currentThread() + "->" + CURRENT_LOCK + ",获得锁成功");
@@ -62,10 +63,12 @@ public class DistributedLock implements Lock, Watcher {
         return true;
     }
 
+    @Override
     public void lockInterruptibly() throws InterruptedException {
 
     }
 
+    @Override
     public boolean tryLock() {
         try {
             CURRENT_LOCK = zk.create(ROOT_LOCK + "/", "0".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE,
@@ -92,10 +95,12 @@ public class DistributedLock implements Lock, Watcher {
         return false;
     }
 
+    @Override
     public boolean tryLock(long time, TimeUnit unit) throws InterruptedException {
         return false;
     }
 
+    @Override
     public void unlock() {
         System.out.println(Thread.currentThread() + "->" + CURRENT_LOCK + "释放锁");
         try {
@@ -109,10 +114,12 @@ public class DistributedLock implements Lock, Watcher {
         }
     }
 
+    @Override
     public Condition newCondition() {
         return null;
     }
 
+    @Override
     public void process(WatchedEvent watchedEvent) {
         if (countDownLatch != null) {
             countDownLatch.countDown();

@@ -1,4 +1,4 @@
-package com.zzp.zookeeper;
+package com.gupaoedu.zookeeper;
 
 import java.io.IOException;
 import java.util.concurrent.CountDownLatch;
@@ -10,8 +10,8 @@ public class App {
             new Thread(() -> {
                 try {
                     countDownLatch.await();
-                    DistributedLock distributedLock = new DistributedLock();
-                    distributedLock.lock();
+                    ZkLock zkLock = new ZkLock();
+                    zkLock.lock();
                 } catch (InterruptedException e) {
                     e.printStackTrace();
                 }

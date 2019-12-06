@@ -3,13 +3,13 @@ buildscript {
     // ext 用于定义动态属性
     ext {
         spring_boot = "2.2.0.RELEASE"
-        spring_framework = "5.1.10"
-        dependency_management = "1.0.8.RELEASE"
+        spring_framework = "5.2.0.RELEASE"
+//        dependency_management = "1.0.8.RELEASE"
     }
     // 依赖关系
     dependencies {
         // classpath 声明说明了在执行其余的脚本时，ClassLoader 可以使用这些依赖项
-        classpath("io.spring.gradle:dependency-management-plugin:${dependency_management}")
+//        classpath("io.spring.gradle:dependency-management-plugin:${dependency_management}")
         classpath("org.springframework.boot:spring-boot-gradle-plugin:${spring_boot}")
     }
 }
@@ -92,4 +92,6 @@ subprojects { subproj ->
     }*/
     }
 
+}
+project(':demo') {
 }

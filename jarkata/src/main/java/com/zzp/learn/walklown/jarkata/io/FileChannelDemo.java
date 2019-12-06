@@ -8,7 +8,6 @@ import java.nio.channels.FileChannel;
 public class FileChannelDemo {
 
     public static void main(String[] args) {
-        //经过测试：FileOutputStream执行耗时:17，6，10 毫秒
         try (FileChannel fileChannel = new RandomAccessFile(new File("D://db.data"), "rw").getChannel();) {
             // 写
             byte[] data = new byte[4096];

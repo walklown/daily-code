@@ -1,4 +1,4 @@
-package com.gupaoedu.vip.spring.mvc.servlet;
+package com.gupaoedu.spring.mvc.servlet;
 
 import com.gupaoedu.vip.spring.annotation.*;
 import com.gupaoedu.vip.spring.aop.GPAopProxyUtils;

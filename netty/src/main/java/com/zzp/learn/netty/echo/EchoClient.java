@@ -9,6 +9,8 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
 import java.net.InetSocketAddress;
+import java.time.LocalDateTime;
+import java.util.concurrent.*;
 
 public class EchoClient {
 
@@ -50,6 +52,8 @@ public class EchoClient {
         }
     }
 
+    private static ExecutorService executor = Executors.newFixedThreadPool(4);
+
     public static void main(String[] args) throws Exception {
 //        if (args.length != 2) {
 //            System.err.println(
@@ -61,6 +65,19 @@ public class EchoClient {
         final String host = "localhost";
         final int port = 8080;
 
-        new EchoClient(host, port).start();
+        Callable<Integer> callable = () -> {
+            try {
+                new EchoClient(host, port).start();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+            return 0;
+        };
+        Future future1 = executor.submit(callable);
+        Future future2 = executor.submit(callable);
+        future1.get();
+        future2.get();
+
+        executor.shutdown();
     }
 }

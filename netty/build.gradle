@@ -4,9 +4,11 @@ plugins {
 
 version '0.0.1-SNAPSHOT'
 
-
 dependencies {
     implementation('io.netty:netty-all:4.1.41.Final')
+    // https://mvnrepository.com/artifact/org.eclipse.jetty/jetty-server
+    implementation ('org.eclipse.jetty.aggregate:jetty-all:9.4.12.RC2')
+
     implementation('de.javakaffee:kryo-serializers:0.42')
     implementation('org.slf4j:log4j-over-slf4j:1.7.25')
     implementation('org.slf4j:jcl-over-slf4j:1.7.25')
