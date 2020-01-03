@@ -1,5 +1,7 @@
-package com.zzp.learn.walklown.jarkata.mercyblitz.test;
+package com.zzp.learn.walklown.jarkata.interviewing.jackson;
 
+
+import com.zzp.learn.walklown.jarkata.ioc.User;
 
 public class UserMore {
     private String name;
@@ -7,6 +9,16 @@ public class UserMore {
     private String age;
 
     private String idCard;
+
+    private String aName;
+
+    public String getAName() {
+        return aName;
+    }
+
+    public void setAName(String aName) {
+        this.aName = aName;
+    }
 
     private String idCard1;
 

@@ -1,4 +1,4 @@
-package com.zzp.learn.walklown.jarkata.mercyblitz.test;
+package com.zzp.learn.walklown.jarkata.interviewing.jackson;
 
 
 public class UserLess {

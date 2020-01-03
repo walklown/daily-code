@@ -1,9 +1,8 @@
-package com.zzp.learn.walklown.jarkata.interviewing;
+package com.zzp.learn.walklown.jarkata.interviewing.jackson;
 
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
-import java.time.LocalDateTime;
 import java.util.Date;
 import java.util.LinkedList;
 import java.util.List;

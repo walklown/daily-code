@@ -9,7 +9,6 @@ import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
 
 import java.net.InetSocketAddress;
-import java.time.LocalDateTime;
 import java.util.concurrent.*;
 
 public class EchoClient {
@@ -52,18 +51,24 @@ public class EchoClient {
         }
     }
 
-    private static ExecutorService executor = Executors.newFixedThreadPool(4);
+    private static final ExecutorService executor = Executors.newFixedThreadPool(4);
 
-    public static void main(String[] args) throws Exception {
-//        if (args.length != 2) {
-//            System.err.println(
-//                    "Usage: " + EchoClient.class.getSimpleName() +
-//                            " <host> <port>");
-//            return;
-//        }
-
+    private static final CountDownLatch latch = new CountDownLatch(2);
+    public static void main(String[] args) throws InterruptedException, ExecutionException {
         final String host = "localhost";
         final int port = 8080;
+
+//        Runnable command = () -> {
+//            try {
+//                new EchoClient(host, port).start();
+//            } catch (Exception e) {
+//                e.printStackTrace();
+//            }
+//            latch.countDown();
+//        };
+//        executor.execute(command);
+//        executor.execute(command);
+//        latch.await();
 
         Callable<Integer> callable = () -> {
             try {
@@ -77,7 +82,6 @@ public class EchoClient {
         Future future2 = executor.submit(callable);
         future1.get();
         future2.get();
-
         executor.shutdown();
     }
 }

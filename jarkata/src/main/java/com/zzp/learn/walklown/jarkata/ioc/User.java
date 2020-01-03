@@ -8,6 +8,16 @@ public class User {
 
     private String idCard;
 
+    private String aName;
+
+    public String getAName() {
+        return aName;
+    }
+
+    public void setAName(String aName) {
+        this.aName = aName;
+    }
+
     public String getName() {
         return name;
     }
@@ -30,5 +40,15 @@ public class User {
 
     public void setIdCard(String idCard) {
         this.idCard = idCard;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "name='" + name + '\'' +
+                ", age='" + age + '\'' +
+                ", idCard='" + idCard + '\'' +
+                ", aName='" + aName + '\'' +
+                '}';
     }
 }

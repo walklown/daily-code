@@ -31,7 +31,7 @@ public class EchoServerHandler extends ChannelInboundHandlerAdapter {
         //日志消息输出到控制台pro
         System.out.println(String.format("%s-Server received: %s", Thread.currentThread().getName(), in.toString(CharsetUtil.UTF_8)));
         try {
-            Thread.sleep(60000);
+            Thread.sleep(6000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
