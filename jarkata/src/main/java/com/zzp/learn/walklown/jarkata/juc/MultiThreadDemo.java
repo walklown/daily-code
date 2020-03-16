@@ -19,8 +19,14 @@ public class MultiThreadDemo {
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         //Java 5
-        executorTest();
-        forkJoinTest();
+//        executorTest();
+//        forkJoinTest();
+        int s = Integer.SIZE - 3;
+        System.out.println(Integer.toBinaryString(-1 << s));
+        System.out.println(Integer.toBinaryString(0 << s));
+        System.out.println(Integer.toBinaryString(1 << s));
+        System.out.println(Integer.toBinaryString(2 << s));
+        System.out.println(Integer.toBinaryString(3 << s));
     }
 
     //Java 5
@@ -30,7 +36,7 @@ public class MultiThreadDemo {
             Thread.sleep(3000);
             return 0;
         };
-        executor.execute(()->{
+        executor.execute(() -> {
             System.out.println("Execute Runable");
         });
         Future future1 = executor.submit(callable);
