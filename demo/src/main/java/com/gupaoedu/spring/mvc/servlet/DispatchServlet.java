@@ -1,6 +1,6 @@
 package com.gupaoedu.spring.mvc.servlet;
 
-import com.gupaoedu.vip.spring.annotation.*;
+import com.gupaoedu.spring.annotation.*;
 import com.gupaoedu.vip.spring.aop.GPAopProxyUtils;
 import com.gupaoedu.vip.spring.context.MyApplicationContext;
 import com.gupaoedu.vip.spring.mvc.GPHandlerAdapter;

@@ -20,13 +20,13 @@ public class MultiThreadDemo {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         //Java 5
 //        executorTest();
-//        forkJoinTest();
-        int s = Integer.SIZE - 3;
-        System.out.println(Integer.toBinaryString(-1 << s));
-        System.out.println(Integer.toBinaryString(0 << s));
-        System.out.println(Integer.toBinaryString(1 << s));
-        System.out.println(Integer.toBinaryString(2 << s));
-        System.out.println(Integer.toBinaryString(3 << s));
+        forkJoinTest();
+//        int s = Integer.SIZE - 3;
+//        System.out.println(Integer.toBinaryString(-1 << s));
+//        System.out.println(Integer.toBinaryString(0 << s));
+//        System.out.println(Integer.toBinaryString(1 << s));
+//        System.out.println(Integer.toBinaryString(2 << s));
+//        System.out.println(Integer.toBinaryString(3 << s));
     }
 
     //Java 5
@@ -43,26 +43,43 @@ public class MultiThreadDemo {
         future1.get();
     }
 
-    private static ForkJoinTask forkJoinTask = new ForkJoinTask() {
-        @Override
-        public Object getRawResult() {
-            return null;
-        }
-
-        @Override
-        protected void setRawResult(Object value) {
-
-        }
-
-        @Override
-        protected boolean exec() {
-            return false;
-        }
-    };
-
     public static void forkJoinTest() {
-        ForkJoinPool.commonPool().execute(forkJoinTask);
-        forkJoinTask.invoke();
+        StringForkJoinTask forkJoinTask = new StringForkJoinTask(0, 10);
+        Future<String> result = ForkJoinPool.commonPool().submit(forkJoinTask);
+        try {
+            System.out.println(String.format("%s-%s", Thread.currentThread().getName(), result.get()));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
     }
 
+}
+
+class StringForkJoinTask extends RecursiveTask<String> {
+
+    private final int from;
+
+    private final int to;
+
+    public StringForkJoinTask(int from, int to) {
+        this.from = from;
+        this.to = to;
+    }
+
+    @Override
+    protected String compute() {
+        System.out.println(Thread.currentThread().getName());
+        if (from < 2 && to < 9) {
+            return "0";
+        }
+        StringForkJoinTask left = new StringForkJoinTask(from, (to - from) / 2);
+        StringForkJoinTask right = new StringForkJoinTask((to - from) / 2 + 1, to);
+        left.fork();
+        right.fork();
+        left.join();
+        right.join();
+        return Integer.valueOf(from + to).toString();
+    }
 }

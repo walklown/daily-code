@@ -11,6 +11,7 @@ dependencies {
     implementation(libraries."fastjson")
     implementation(libraries."mysql-connector-java")
     implementation(libraries."slf4j-api")
+    implementation(libraries."servlet-api")
 //    compile 'ch.qos.logback:logback-core:1.1.7'
 //    compile 'ch.qos.logback:logback-classic:1.1.7'
     implementation("org.springframework:spring-aspects:${spring_framework}")
