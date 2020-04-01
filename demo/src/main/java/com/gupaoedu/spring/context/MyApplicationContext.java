@@ -1,10 +1,10 @@
-package com.gupaoedu.vip.spring.context;
+package com.gupaoedu.spring.context;
 
-import com.gupaoedu.vip.spring.beans.BeanDefinition;
-import com.gupaoedu.vip.spring.beans.BeanPostProcessor;
-import com.gupaoedu.vip.spring.beans.BeanWrapper;
-import com.gupaoedu.vip.spring.core.BeanFactory;
-import com.gupaoedu.vip.spring.core.suport.BeanDefinitionReader;
+import com.gupaoedu.spring.beans.BeanDefinition;
+import com.gupaoedu.spring.beans.BeanPostProcessor;
+import com.gupaoedu.spring.beans.BeanWrapper;
+import com.gupaoedu.spring.core.BeanFactory;
+import com.gupaoedu.spring.core.suport.BeanDefinitionReader;
 
 import java.util.HashMap;
 import java.util.List;

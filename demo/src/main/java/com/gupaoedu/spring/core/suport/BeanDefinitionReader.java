@@ -1,6 +1,6 @@
-package com.gupaoedu.vip.spring.core.suport;
+package com.gupaoedu.spring.core.suport;
 
-import com.gupaoedu.vip.spring.beans.BeanDefinition;
+import com.gupaoedu.spring.beans.BeanDefinition;
 
 import java.io.File;
 import java.io.IOException;

@@ -1,9 +1,9 @@
-package com.gupaoedu.vip.demo.mvc.action;
+package com.gupaoedu.spring.demo.mvc.action;
 
-import com.gupaoedu.vip.demo.service.IDemoService;
-import com.gupaoedu.vip.spring.annotation.Autowried;
-import com.gupaoedu.vip.spring.annotation.Controller;
-import com.gupaoedu.vip.spring.annotation.RequestMapping;
+import com.gupaoedu.spring.demo.service.IDemoService;
+import com.gupaoedu.spring.annotation.Autowried;
+import com.gupaoedu.spring.annotation.Controller;
+import com.gupaoedu.spring.annotation.RequestMapping;
 
 @Controller
 public class MyAction {

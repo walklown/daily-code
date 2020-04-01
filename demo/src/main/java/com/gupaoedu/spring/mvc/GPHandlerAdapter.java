@@ -1,4 +1,4 @@
-package com.gupaoedu.vip.spring.mvc;
+package com.gupaoedu.spring.mvc;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

@@ -1,4 +1,4 @@
-package com.gupaoedu.vip.spring.aop;
+package com.gupaoedu.spring.aop;
 
 import java.lang.reflect.Method;
 import java.util.HashMap;

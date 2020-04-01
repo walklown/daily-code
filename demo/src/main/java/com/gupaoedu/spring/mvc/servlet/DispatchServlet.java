@@ -1,11 +1,11 @@
 package com.gupaoedu.spring.mvc.servlet;
 
 import com.gupaoedu.spring.annotation.*;
-import com.gupaoedu.vip.spring.aop.GPAopProxyUtils;
-import com.gupaoedu.vip.spring.context.MyApplicationContext;
-import com.gupaoedu.vip.spring.mvc.GPHandlerAdapter;
-import com.gupaoedu.vip.spring.mvc.GPHandlerMapping;
-import com.gupaoedu.vip.spring.mvc.GPViewResolver;
+import com.gupaoedu.spring.aop.GPAopProxyUtils;
+import com.gupaoedu.spring.context.MyApplicationContext;
+import com.gupaoedu.spring.mvc.GPHandlerAdapter;
+import com.gupaoedu.spring.mvc.GPHandlerMapping;
+import com.gupaoedu.spring.mvc.GPViewResolver;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;

@@ -1,8 +1,8 @@
-package com.gupaoedu.vip.demo.service.impl;
+package com.gupaoedu.spring.demo.service.impl;
 
 
-import com.gupaoedu.vip.demo.service.IDemoService;
-import com.gupaoedu.vip.spring.annotation.Service;
+import com.gupaoedu.spring.demo.service.IDemoService;
+import com.gupaoedu.spring.annotation.Service;
 
 @Service
 public class DemoService implements IDemoService {

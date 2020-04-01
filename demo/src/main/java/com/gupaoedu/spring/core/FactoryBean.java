@@ -1,4 +1,4 @@
-package com.gupaoedu.vip.spring.core;
+package com.gupaoedu.spring.core;
 
 public class FactoryBean {
 }

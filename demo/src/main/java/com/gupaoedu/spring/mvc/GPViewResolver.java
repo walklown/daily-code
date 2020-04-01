@@ -1,4 +1,4 @@
-package com.gupaoedu.vip.spring.mvc;
+package com.gupaoedu.spring.mvc;
 
 import java.io.File;
 import java.io.RandomAccessFile;

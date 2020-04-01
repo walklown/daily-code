@@ -1,4 +1,4 @@
-package com.gupaoedu.vip.spring.beans;
+package com.gupaoedu.spring.beans;
 
 public class BeanDefinition {
     private String beanClassName;

@@ -1,4 +1,4 @@
-package com.gupaoedu.vip.spring.mvc;
+package com.gupaoedu.spring.mvc;
 
 import java.lang.reflect.Method;
 import java.util.regex.Pattern;
