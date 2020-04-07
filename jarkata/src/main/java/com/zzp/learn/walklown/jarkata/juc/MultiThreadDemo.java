@@ -15,12 +15,19 @@ import java.util.concurrent.*;
  */
 public class MultiThreadDemo {
 
-    private static final ExecutorService executor = Executors.newFixedThreadPool(4);
+    // RUNNING    11100000000000000000000000000000 -1
+    // SHUTDOWN   0                                 0
+    // STOP       00100000000000000000000000000000  1
+    // TIDYING    01000000000000000000000000000000  2
+    // TERMINATED 01100000000000000000000000000000  3
+    private static final ExecutorService executor = new ThreadPoolExecutor(1, 2,
+            0L, TimeUnit.MILLISECONDS,
+            new LinkedBlockingQueue<Runnable>());
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         //Java 5
-//        executorTest();
-        forkJoinTest();
+        executorTest();
+//        forkJoinTest();
 //        int s = Integer.SIZE - 3;
 //        System.out.println(Integer.toBinaryString(-1 << s));
 //        System.out.println(Integer.toBinaryString(0 << s));
@@ -33,14 +40,27 @@ public class MultiThreadDemo {
     public static void executorTest() throws ExecutionException, InterruptedException {
         Callable<Integer> callable = () -> {
             System.out.println("Execute Callable");
-            Thread.sleep(3000);
+            Thread.sleep(3000 * 1000);
             return 0;
         };
         executor.execute(() -> {
-            System.out.println("Execute Runable");
+            System.out.println("Execute Runable1");
+            try {
+                Thread.sleep(3000 * 1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         });
-        Future future1 = executor.submit(callable);
-        future1.get();
+        executor.execute(() -> {
+            System.out.println("Execute Runable2");
+            try {
+                Thread.sleep(3000 * 1000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        });
+//        Future future1 = executor.submit(callable);
+//        future1.get();
     }
 
     public static void forkJoinTest() {
