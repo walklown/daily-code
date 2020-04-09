@@ -7,7 +7,7 @@ public class SingleTest {
         //反射入侵，强制初始化
         Constructor c = null;
         try {
-            c = SingleDemo.class.getDeclaredConstructor(null);
+            c = SingleDemo.class.getDeclaredConstructor();
             c.setAccessible(true);
             Object o1 = c.newInstance();
             Object o2 = c.newInstance();

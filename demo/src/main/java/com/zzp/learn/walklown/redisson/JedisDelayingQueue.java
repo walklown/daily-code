@@ -29,9 +29,8 @@ public class JedisDelayingQueue<T> {
         JedisPoolConfig jedisPoolConfig = new JedisPoolConfig();
         jedisPoolConfig.setMaxTotal(10);
         JedisPool pool = new JedisPool(jedisPoolConfig,
-                "r-bp18f2292281c704.redis.rds.aliyuncs.com",
-                6379, 3000,
-                "secret#123456#");
+                "192.168.8.4",
+                6379, 3000);
         jedis = pool.getResource();
     }
 
