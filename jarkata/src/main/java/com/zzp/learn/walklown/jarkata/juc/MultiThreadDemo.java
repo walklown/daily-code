@@ -37,6 +37,17 @@ public class MultiThreadDemo {
     }
 
     //Java 5
+    /**
+     * java.util.concurrent.ThreadPoolExecutor#execute(java.lang.Runnable)
+     * 共三步：
+     * 1、 如果当前线程数小于 core 线程数，尝试为 Task 开启新的核心线程。成功直接返回，失败
+     * 往下进行。
+     * 2、 如果当前线程池状态是 RUNNING，尝试加入待执行 Queue，成功则再次检查线程池状态，不
+     * 是 RUNNING 就回滚（remove 当前任务），并执行 reject。是 RUNNING 或者回滚失败，且
+     * 当前已经没有工作线程，就开启一个非核心线程。
+     * 3、 对于非 RUNNING 的线程池，尝试为 Task 开启一个非核心线程池，如果失败，就执行
+     * reject。
+     */
     public static void executorTest() throws ExecutionException, InterruptedException {
         Callable<Integer> callable = () -> {
             System.out.println("Execute Callable");
