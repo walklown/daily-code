@@ -6,10 +6,11 @@ import java.net.URLClassLoader;
 import java.util.Arrays;
 
 /**
- * 与普通程序不同的是。Java程序（class文件）并不是本地的可执行程序。当运行Java程序时，首先运行JVM（Java虚拟机），然后再把Java class加载到JVM 里头运行，负责加载Java class的这部分就叫做Class
- * Loader。 JVM本身包含了一个ClassLoader称为Bootstrap ClassLoader，和JVM一样，BootstrapClassLoader是用本地代码实现的，它负责加载核心JavaClass
- * （即所有java.*开头的类）。另外JVM还会提供两个ClassLoader，它们都是用Java语言编写的，由BootstrapClassLoader加载；其中Extension Clas-
- * -sLoader负责加载扩展的Javaclass（例如所有javax.*开头的类和存放在JRE的ext目录下的类），ApplicationClassLoader负责加载应用程序自身的类。
+ * 与普通程序不同的是。Java程序（class文件）并不是本地的可执行程序。当运行Java程序时，首先运行JVM（Java虚拟机），然后再把Java class加载到JVM
+ * 里运行，负责加载Java class的这部分就叫做Class Loader。 JVM本身包含了一个ClassLoader称为Bootstrap ClassLoader，和JVM一样，
+ * BootstrapClassLoader是用本地代码实现的，它负责加载核心 JavaClass （即所有java.*开头的类）。另外JVM还会提供两个ClassLoader，它们都是用
+ * Java语言编写的，由BootstrapClassLoader加载；其中 Extension ClassLoader 负责加载扩展的Javaclass（例如所有javax.*开头的类和存放在JRE
+ * 的ext目录下的类），ApplicationClassLoader负责加载应用程序自身的类。
  *
  * @author shoujing
  * @date 2020/2/10 19:01
