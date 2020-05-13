@@ -15,7 +15,14 @@ package com.zzp.learn.walklown.jarkata.algorithm;
 public class CheckTree {
 
     public static void main(String[] args) {
-        TreeNode root = new TreeNode(3);
+        CheckTree checkTree = new CheckTree();
+        System.out.println(checkTree.isValidBST(checkTree.root));
+    }
+
+    private TreeNode root;
+
+    public CheckTree() {
+        root = new TreeNode(3);
 
         root.left = new TreeNode(1);
         root.right = new TreeNode(5);
@@ -26,8 +33,6 @@ public class CheckTree {
         root.right.right = new TreeNode(6);
 
         root.left.right.right = new TreeNode(3);
-        CheckTree checkTree = new CheckTree();
-        System.out.println(checkTree.isValidBST(root));
     }
 
     public boolean isValidBST(TreeNode root) {
@@ -54,14 +59,16 @@ public class CheckTree {
         }
         return true;
     }
-}
 
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
 
-    TreeNode(int x) {
-        val = x;
+    public class TreeNode {
+        int val;
+        TreeNode left;
+        TreeNode right;
+
+        TreeNode(int x) {
+            val = x;
+        }
     }
 }
+
