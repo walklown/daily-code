@@ -1,0 +1,50 @@
+@startuml
+
+    package "sdk" #DDDDDD {
+        package "sdk-order" #DDDDDD {
+            interface OrderService {
+                Result createOrder(Input input);
+            }
+        }
+        package "sdk-billingcenter" #DDDDDD {
+            interface BillingCenterService {
+                Result createPayOrder(Input input);
+            }
+        }
+    }
+
+package "basicbs-billing-order" {
+    package "basicbs-billing-order-facade" {
+        interface GiftService {
+            Result createOrder(Input input);
+        }
+    }
+    package "basicbs-billing-order-service-impl" {
+        class GiftServiceImpl {
+        }
+        class OrderServiceImpl {
+        }
+    }
+}
+
+package "billingcenter-account" {
+    package "billingcenter-account-facade" {
+        interface WalletService {
+            Result createOrder(Input input);
+        }
+    }
+    package "billingcenter-account-service-impl" {
+        class WalletServiceImpl {
+        }
+        class BillingCenterServiceImpl {
+        }
+    }
+}
+
+OrderService <|-- OrderServiceImpl
+WalletService <|-- WalletServiceImpl
+
+BillingCenterService <|-- BillingCenterServiceImpl
+GiftService <|-- GiftServiceImpl
+
+@enduml

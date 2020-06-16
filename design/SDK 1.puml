@@ -1,0 +1,55 @@
+@startuml
+
+package "basicbs-billing-manager" {
+    package "basicbs-billing-manager-sdk" #DDDDDD {
+        interface RpcOrderService {
+            Result createOrder(Request req);
+        }
+        interface RpcBillingCenterService {
+            Result createPayOrder(Request req);
+        }
+    }
+    package "basicbs-billing-manager-service-impl" #DDDDDD {
+        class RpcOrderServiceImpl {
+            -OrderService orderService;
+        }
+        class RpcBillingCenterServiceImpl {
+            -OrderService orderService;
+        }
+
+    }
+}
+
+package "basicbs-billing-order" {
+    package "basicbs-billing-order-facade" {
+        interface OrderService {
+            Result createOrder(Input input);
+        }
+    }
+    package "basicbs-billing-order-service-impl" {
+        class OrderServiceImpl {
+        }
+    }
+}
+
+package "billingcenter-account" {
+    package "billingcenter-account-facade" {
+        interface BillingCenterService {
+            Result createPayOrder(Input input);
+        }
+    }
+    package "billingcenter-account-service-impl" {
+        class BillingCenterServiceImpl {
+        }
+    }
+}
+
+RpcOrderService <|-- RpcOrderServiceImpl
+OrderService <|-- OrderServiceImpl
+RpcOrderServiceImpl *-- OrderService
+
+RpcBillingCenterService <|-- RpcBillingCenterServiceImpl
+BillingCenterService <|-- BillingCenterServiceImpl
+RpcBillingCenterServiceImpl *-- BillingCenterService
+
+@enduml

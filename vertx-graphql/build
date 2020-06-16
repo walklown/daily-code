@@ -1,0 +1,16 @@
+apply {
+    plugin 'application'
+}
+
+// ext 用于定义动态属性
+ext {
+    vertxVersion = "3.7.0"
+}
+
+dependencies {
+    implementation("io.vertx:vertx-web-graphql:3.7.0")
+}
+
+application {
+    mainClassName = "io.vertx.howtos.graphql.GraphQLVerticle"
+}

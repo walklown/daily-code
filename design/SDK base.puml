@@ -1,0 +1,31 @@
+@startuml
+
+package "basicbs-billing-order" {
+    package "basicbs-billing-order-facade" {
+        interface OrderService {
+            Result createOrder(Input input);
+        }
+    }
+    package "basicbs-billing-order-service-impl" {
+        class OrderServiceImpl {
+        }
+    }
+}
+
+package "billingcenter-account" {
+    package "billingcenter-account-facade" {
+        interface BillingCenterService {
+            Result createPayOrder(Input input);
+        }
+    }
+    package "billingcenter-account-service-impl" {
+        class BillingCenterServiceImpl {
+        }
+    }
+}
+
+OrderService <|-- OrderServiceImpl
+
+BillingCenterService <|-- BillingCenterServiceImpl
+
+@enduml
