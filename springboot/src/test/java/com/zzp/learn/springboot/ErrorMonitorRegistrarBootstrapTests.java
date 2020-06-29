@@ -1,5 +1,6 @@
 package com.zzp.learn.springboot;
 
+import com.zzp.learn.springboot.core.ErrorMonitorRegistrarBootstrap;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,8 +12,8 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Lock;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@SpringBootTest(classes = {SpringbootApplication.class})
-public class SpringbootApplicationTests {
+@SpringBootTest(classes = {ErrorMonitorRegistrarBootstrap.class})
+public class ErrorMonitorRegistrarBootstrapTests {
 
     @Autowired
     private RedisLockRegistry redisLockRegistry;
