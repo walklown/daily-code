@@ -1,5 +1,6 @@
-package com.zzp.learn.springboot.imports.annotation;
+package com.zzp.learn.springboot.imports;
 
+import com.zzp.learn.springboot.imports.annotation.EnableHelloWorld;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 import org.springframework.context.annotation.Configuration;
 

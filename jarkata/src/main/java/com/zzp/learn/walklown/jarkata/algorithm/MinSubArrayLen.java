@@ -1,9 +1,5 @@
 package com.zzp.learn.walklown.jarkata.algorithm;
 
-import org.springframework.util.Assert;
-
-import java.math.BigDecimal;
-
 /**
  * 给定一个含有 n 个正整数的数组和一个正整数 s ，找出该数组中满足其和 ≥ s 的长度最小的连续子数组，并返回其长度。如果不存在符合条件的连续子数组，返回 0。
  * <p>
@@ -18,13 +14,13 @@ import java.math.BigDecimal;
  * @author walklown
  * @date 2020/6/28 23:21
  */
-class Solution {
+class MinSubArrayLen {
 
     public static void main(String[] args) {
-        Solution solution = new Solution();
+        MinSubArrayLen minSubArrayLen = new MinSubArrayLen();
         int s = 7;
         int[] nums = new int[]{1, 2, 3, 4};
-        System.out.println(solution.minSubArrayLen(s, nums));
+        System.out.println(minSubArrayLen.minSubArrayLen(s, nums));
     }
 
     public int minSubArrayLen(int s, int[] nums) {

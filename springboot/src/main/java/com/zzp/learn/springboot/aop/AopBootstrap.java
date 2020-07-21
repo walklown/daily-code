@@ -12,7 +12,7 @@ import org.springframework.context.ConfigurableApplicationContext;
  * 态代理两大类，其中静态代理是指使用 AOP 框架提供的命令进行编译，从而在编译阶段就可生成 AOP 代理类，因此也称为编译时增
  * 强；而动态代理则在运行时借助于 JDK 动态代理、CGLIB 等在内存中“临时”生成 AOP 动态代理类，因此也被称为运行时增强。
  */
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = "com.zzp.learn.springboot.aop")
 @Slf4j
 public class AopBootstrap {
 
