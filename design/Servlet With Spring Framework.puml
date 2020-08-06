@@ -1,0 +1,88 @@
+@startuml
+
+package javax.servlet #DDDDDD {
+}
+interface javax.servlet.ServletContext {
+    Dynamic addServlet(String servletName, String className);
+}
+interface javax.servlet.ServletContainerInitializer {
+    void onStartup(Set<Class<?>> c, ServletContext ctx);
+}
+interface javax.servlet.ServletContextListener {
+    void contextInitialized(ServletContextEvent sce);
+    void contextDestroyed(ServletContextEvent sce);
+}
+note bottom of javax.servlet
+ 根据 Servlet 3.0 描述，只能在 ServletContainerInitializer.onStartup 或 ServletContextListener.contextInitialized & contextDestroyed
+ 调用 ServletContext 的配置方法。
+end note
+
+package org.apache.catalina.core #Yellow{
+}
+class org.apache.catalina.core.ApplicationContext {
+    Dynamic addServlet(String servletName, String className);
+}
+note bottom of org.apache.catalina.core.ApplicationContext: Tomcat 的实现
+
+package org.springframework.web #22db41 {
+}
+package org.springframework.web.context #22db41 {
+}
+package org.springframework.web.servlet.support #22db41 {
+}
+class org.springframework.web.SpringServletContainerInitializer {
+    @HandlesTypes(WebApplicationInitializer.class);
+    void onStartup(Set<Class<?>> c, ServletContext ctx);
+}
+note top of org.springframework.web.SpringServletContainerInitializer
+    1、通过 SPI 方式装配
+    2、@HandlesTypes(WebApplicationInitializer.class) 加载 WebApplicationInitializer
+end note
+
+class org.springframework.web.context.ContextLoaderListener {
+    void contextInitialized(ServletContextEvent sce);
+    void contextDestroyed(ServletContextEvent sce);
+}
+note left of org.springframework.web.context.ContextLoaderListener
+ 5、Root WebApplicationContext 与 ServletContext 一对一绑定
+ 6、configureAndRefreshWebApplicationContext 自动化装配
+end note
+
+interface org.springframework.web.WebApplicationInitializer {
+    void onStartup(ServletContext servletContext);
+}
+note right of org.springframework.web.WebApplicationInitializer
+ 3、创建 Root WebApplicationContext，new ContextLoaderListener(Root WebApplicationContext)
+ 4、将 ContextLoaderListener 注册到 ServletContext
+end note
+
+abstract org.springframework.web.context.AbstractContextLoaderInitializer {
+    void onStartup(ServletContext servletContext);
+    abstract WebApplicationContext createRootApplicationContext();
+}
+abstract org.springframework.web.servlet.support.AbstractDispatcherServletInitializer {
+    void onStartup(ServletContext servletContext);
+    abstract WebApplicationContext createRootApplicationContext();
+}
+abstract org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer {
+    void onStartup(ServletContext servletContext);
+}
+class org.springframework.boot.web.servlet.support.SpringBootServletInitializer {
+    void onStartup(ServletContext servletContext);
+}
+
+org.springframework.web.SpringServletContainerInitializer  *-- org.apache.catalina.core.ApplicationContext
+org.springframework.web.context.ContextLoaderListener *-- org.apache.catalina.core.ApplicationContext
+org.apache.catalina.core.ApplicationContext <|-- javax.servlet.ServletContext
+org.springframework.web.SpringServletContainerInitializer <|-- javax.servlet.ServletContainerInitializer
+org.springframework.web.context.ContextLoaderListener <|-- javax.servlet.ServletContextListener
+
+org.springframework.web.SpringServletContainerInitializer *-- org.springframework.web.WebApplicationInitializer
+org.springframework.web.context.AbstractContextLoaderInitializer <|-- org.springframework.web.WebApplicationInitializer
+org.springframework.web.servlet.support.AbstractDispatcherServletInitializer <|-- org.springframework.web.context.AbstractContextLoaderInitializer
+org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer <|-- org.springframework.web.servlet.support.AbstractDispatcherServletInitializer
+org.springframework.boot.web.servlet.support.SpringBootServletInitializer <|-- org.springframework.web.WebApplicationInitializer
+
+
+
+@enduml

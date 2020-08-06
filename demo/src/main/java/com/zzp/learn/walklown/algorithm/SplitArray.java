@@ -1,4 +1,4 @@
-package com.zzp.learn.walklown.jarkata.algorithm;
+package com.zzp.learn.walklown.algorithm;
 
 class SplitArray {
 

@@ -1,4 +1,4 @@
-package com.zzp.learn.walklown.jarkata.algorithm;
+package com.zzp.learn.walklown.algorithm;
 
 /**
  * 实现 int sqrt(int x) 函数。

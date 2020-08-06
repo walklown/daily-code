@@ -1,4 +1,4 @@
-package com.zzp.learn.walklown.jarkata.algorithm;
+package com.zzp.learn.walklown.algorithm;
 
 /**
  * 实现 pow(x, n) ，即计算 x 的 n 次幂函数。

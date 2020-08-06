@@ -1,10 +1,16 @@
 package com.zzp.learn.springboot.aop;
 
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.zzp.learn.springboot.aop.impl.ComponentDemo;
+import com.zzp.learn.springboot.aop.impl.ConfigurationDemo;
 import com.zzp.learn.springboot.aop.impl.Sleepable;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * AOP（Aspect Orient Programming），作为面向对象编程的一种补充，广泛应用于处理一些具有横切性质的系统级服务，如事务
@@ -14,7 +20,20 @@ import org.springframework.context.ConfigurableApplicationContext;
  */
 @SpringBootApplication(scanBasePackages = "com.zzp.learn.springboot.aop")
 @Slf4j
+@RestController
 public class AopBootstrap {
+
+    @Autowired
+    private ObjectMapper objectMapper;
+
+    @Autowired
+    private ObjectMapper objectMapper1;
+
+    @Autowired
+    private ConfigurationDemo configurationDemo;
+
+    @Autowired
+    private ComponentDemo componentDemo;
 
     // GenericApplicationListener
     public static void main(String[] args) {
@@ -22,5 +41,10 @@ public class AopBootstrap {
         ConfigurableApplicationContext context = springApplication.run(args);
         Sleepable result = context.getBean(Sleepable.class);
         result.sleep();
+    }
+
+    @GetMapping(path = "test")
+    public String mapping() {
+        return "success";
     }
 }
