@@ -14,6 +14,14 @@
     <url>https://walklown.github.io/</url>
     <description>Learn Application Parent</description>
 
+    <modules>
+        <module>demo</module>
+        <module>eureka</module>
+        <module>jarkata</module>
+        <module>netty</module>
+        <module>springboot</module>
+    </modules>
+
     <properties>
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
