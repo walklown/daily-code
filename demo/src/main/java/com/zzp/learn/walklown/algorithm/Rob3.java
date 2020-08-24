@@ -40,12 +40,12 @@ import java.util.Map;
 public class Rob3 {
 
     public static void main(String[] args) {
-        Rob3.TreeNode root = new Rob3.TreeNode(3);
-        Rob3.TreeNode node1 = new Rob3.TreeNode(4);
-        Rob3.TreeNode node2 = new Rob3.TreeNode(5);
-        Rob3.TreeNode node3 = new Rob3.TreeNode(1);
-        Rob3.TreeNode node4 = new Rob3.TreeNode(3);
-        Rob3.TreeNode node6 = new Rob3.TreeNode(1);
+        TreeNode root = new TreeNode(3);
+        TreeNode node1 = new TreeNode(4);
+        TreeNode node2 = new TreeNode(5);
+        TreeNode node3 = new TreeNode(1);
+        TreeNode node4 = new TreeNode(3);
+        TreeNode node6 = new TreeNode(1);
         root.left = node1;
         root.right = node2;
         node1.left = node3;
@@ -85,16 +85,6 @@ public class Rob3 {
             int result = rob(node.left, false) + rob(node.right, false);
             SKIP_CACHE.put(node, result);
             return result;
-        }
-    }
-
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
         }
     }
 }

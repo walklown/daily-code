@@ -1,5 +1,7 @@
 package com.zzp.learn.walklown.algorithm;
 
+import com.zzp.learn.walklown.algorithm.base.TreeNode;
+
 /**
  * 二叉搜索树中的两个节点被错误地交换。
  * <p>
@@ -82,24 +84,5 @@ public class RecoverTree {
         }
         pre = node;
         readNode(node.right);
-    }
-
-    static class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode() {
-        }
-
-        TreeNode(int val) {
-            this.val = val;
-        }
-
-        TreeNode(int val, TreeNode left, TreeNode right) {
-            this.val = val;
-            this.left = left;
-            this.right = right;
-        }
     }
 }

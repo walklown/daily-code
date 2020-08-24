@@ -1,5 +1,7 @@
 package com.zzp.learn.walklown.algorithm;
 
+import com.zzp.learn.walklown.algorithm.base.TreeNode;
+
 import java.util.LinkedList;
 import java.util.List;
 
@@ -57,29 +59,5 @@ class GenerateTrees {
             }
         }
         return treeNodes;
-    }
-}
-
-class TreeNode {
-    int val;
-    TreeNode left;
-    TreeNode right;
-
-    TreeNode() {
-    }
-
-    TreeNode(int val) {
-        this.val = val;
-    }
-
-    TreeNode(int val, TreeNode left, TreeNode right) {
-        this.val = val;
-        this.left = left;
-        this.right = right;
-    }
-
-    @Override
-    public String toString() {
-        return "" + this.val + "," + this.left + "," + this.right;
     }
 }

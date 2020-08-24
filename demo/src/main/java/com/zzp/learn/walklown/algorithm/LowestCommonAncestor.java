@@ -1,5 +1,7 @@
 package com.zzp.learn.walklown.algorithm;
 
+import com.zzp.learn.walklown.algorithm.base.TreeNode;
+
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -102,16 +104,6 @@ class LowestCommonAncestor {
         public NodeGroup add(int num) {
             this.count += num;
             return this;
-        }
-    }
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
         }
     }
 }

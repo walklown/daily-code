@@ -1,5 +1,7 @@
 package com.zzp.learn.walklown.algorithm;
 
+import com.zzp.learn.walklown.algorithm.base.TreeNode;
+
 import java.util.AbstractList;
 import java.util.LinkedList;
 import java.util.List;
@@ -75,16 +77,6 @@ class LevelOrder {
             currentLevel = new LinkedList<>();
         }
         return result;
-    }
-
-    public class TreeNode {
-        int val;
-        TreeNode left;
-        TreeNode right;
-
-        TreeNode(int x) {
-            val = x;
-        }
     }
 
     public class MyList extends AbstractList {
