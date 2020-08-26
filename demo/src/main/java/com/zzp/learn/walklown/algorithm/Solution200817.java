@@ -33,10 +33,10 @@ package com.zzp.learn.walklown.algorithm;
  *  4   4
  * 返回 false 。
  */
-public class Solution20200817 {
+public class Solution200817 {
 
     public static void main(String[] args) {
-        Solution20200817 solution = new Solution20200817();
+        Solution200817 solution = new Solution200817();
         TreeNode treeNode = new TreeNode(1);
         TreeNode treeNode1 = new TreeNode(2);
         TreeNode treeNode2 = new TreeNode(2);
