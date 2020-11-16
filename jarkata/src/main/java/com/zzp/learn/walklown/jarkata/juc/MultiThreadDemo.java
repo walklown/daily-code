@@ -20,13 +20,13 @@ public class MultiThreadDemo {
     // STOP       00100000000000000000000000000000  1
     // TIDYING    01000000000000000000000000000000  2
     // TERMINATED 01100000000000000000000000000000  3
-    private static final ExecutorService executor = new ThreadPoolExecutor(1, 2,
+    private static final ExecutorService executor = new ThreadPoolExecutor(4, 4,
             0L, TimeUnit.MILLISECONDS,
             new LinkedBlockingQueue<Runnable>());
 
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         //Java 5
-        executorTest();
+//        executorTest();
 //        forkJoinTest();
 //        int s = Integer.SIZE - 3;
 //        System.out.println(Integer.toBinaryString(-1 << s));
@@ -34,6 +34,26 @@ public class MultiThreadDemo {
 //        System.out.println(Integer.toBinaryString(1 << s));
 //        System.out.println(Integer.toBinaryString(2 << s));
 //        System.out.println(Integer.toBinaryString(3 << s));
+        CompletableFuture future = CompletableFuture
+                .runAsync(()->{
+                    System.out.println("runAsync:" + Thread.currentThread().getName());
+                }, executor)
+                .whenCompleteAsync((v, t) -> {
+                    System.out.println("whenCompleteAsync:" + Thread.currentThread().getName());
+                });
+        CompletableFuture future1 = CompletableFuture
+                .runAsync(()->{
+                    System.out.println("runAsync1:" + Thread.currentThread().getName());
+                    throw new NullPointerException("a");
+                }, executor)
+                .whenComplete((v, t) -> {
+                    System.out.println(v);
+                    System.out.println(t);
+                    System.out.println("whenComplete:" + Thread.currentThread().getName());
+                });
+        System.out.println("main:" + Thread.currentThread().getName());
+        future.get();
+        future1.get();
     }
 
     //Java 5
