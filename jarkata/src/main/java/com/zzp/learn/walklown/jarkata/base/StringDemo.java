@@ -28,7 +28,9 @@ public class StringDemo {
 //            return s;
 //        };
 //        System.out.println(myFunction.apply("aa"));
-        Byte a = Byte.valueOf((byte) 1);
-        System.out.println(a.equals((byte)1));
+//        Byte a = Byte.valueOf((byte) 1);
+//        System.out.println(a.equals((byte)1));
     }
+
+
 }

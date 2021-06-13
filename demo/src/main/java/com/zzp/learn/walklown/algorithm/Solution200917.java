@@ -4,11 +4,11 @@ package com.zzp.learn.walklown.algorithm;
 import java.util.LinkedList;
 import java.util.List;
 
-class Solution20200917 {
+class Solution200917 {
 
     public static void main(String[] args) {
         int[][] edges = new int[][] {{1,2}, {2,3}, {3,4}, {4,1}, {1,5}};
-        Solution20200917 solution = new Solution20200917();
+        Solution200917 solution = new Solution200917();
         int[] a = solution.findRedundantDirectedConnection(edges);
         for (int i : a) {
             System.out.println(i);
