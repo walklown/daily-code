@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+main -> SpringApplication.run
+SpringApplication.run -> SpringApplication.run : getRunListeners 获取spring.factories配置的\nSpringApplicationRunListener类实例
+SpringApplication.run -> SpringApplication.run : prepareEnvironment 构建Environment
+SpringApplication.run -> SpringApplication.run : printBanner
+SpringApplication.run -> SpringApplication.run : createApplicationContext
+SpringApplication.run -> SpringApplication.prepareContext
+SpringApplication.prepareContext -> SpringApplication.prepareContext : postProcessApplicationContext\n应用任何相关的后处理 ApplicationContext。 \n子类可以根据需要应用额外的处理。
+SpringApplication.prepareContext -> SpringApplication.prepareContext : applyInitializers\n执行ApplicationContextInitializer
+SpringApplication.prepareContext --> SpringApplication.run : prepareContext
+SpringApplication.run -> SpringApplication.run : refreshContext
+SpringApplication.run -> SpringApplication.run : afterRefresh
+SpringApplication.run -> SpringApplication.run : afterRefresh
+SpringApplication.run -> SpringApplication.run : listeners.started
+SpringApplication.run -> SpringApplication.run : callRunners
+SpringApplication.run --> main
+
+@enduml
