@@ -32,10 +32,10 @@
         <maven.compiler.compilerVersion>11</maven.compiler.compilerVersion>
 
         <mandarin.version>2.8.5.3-RELEASE</mandarin.version>
-        <netty.version>4.1.41.Final</netty.version>
-        <springboot.version>2.6.0-RC1</springboot.version>
+        <netty.version>4.1.47.Final</netty.version>
+        <springboot.version>2.5.7</springboot.version>
         <springcloud.version>2020.0.4</springcloud.version>
-        <springframework.version>5.2.2.RELEASE</springframework.version>
+        <springframework.version>5.3.13</springframework.version>
         <log4j2.version>2.8.2</log4j2.version>
         <org.mapstruct.version>1.4.2.Final</org.mapstruct.version>
         <jackson.version>2.13.0</jackson.version>
@@ -127,13 +127,20 @@
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
-                <version>8.0.18</version>
+                <version>8.0.27</version>
             </dependency>
             <dependency>
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis</artifactId>
-                <version>3.5.5</version>
+                <version>3.5.7</version>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus -->
+            <dependency>
+                <groupId>com.baomidou</groupId>
+                <artifactId>mybatis-plus</artifactId>
+                <version>3.4.3.4</version>
+            </dependency>
+
 
             <dependency>
                 <groupId>org.redisson</groupId>
@@ -237,12 +244,27 @@
         <repository>
             <id>aliyun</id>
             <name>aliyun</name>
-            <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+            <url>https://maven.aliyun.com/repository/public</url>
         </repository>
         <repository>
             <id>Central</id>
             <name>Central</name>
             <url>https://repo1.maven.org/maven2/</url>
+        </repository>
+        <repository>
+            <id>spring</id>
+            <name>spring</name>
+            <url>https://maven.aliyun.com/repository/spring</url>
+        </repository>
+        <repository>
+            <id>spring-plugin</id>
+            <name>spring-plugin</name>
+            <url>https://maven.aliyun.com/repository/spring-plugin</url>
+        </repository>
+        <repository>
+            <id>grails</id>
+            <name>grails</name>
+            <url>https://maven.aliyun.com/repository/grails-core</url>
         </repository>
     </repositories>
 </project>
