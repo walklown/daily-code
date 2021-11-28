@@ -1,0 +1,88 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class AnnotationConfigServletWebServerApplicationContext
+class ServletWebServerApplicationContext
+interface AnnotationConfigRegistry
+
+AnnotationConfigServletWebServerApplicationContext <|-- ServletWebServerApplicationContext
+AnnotationConfigServletWebServerApplicationContext <|-- AnnotationConfigRegistry
+
+interface ConfigurableWebServerApplicationContext
+class GenericWebApplicationContext
+
+ServletWebServerApplicationContext <|-- GenericWebApplicationContext
+ServletWebServerApplicationContext <|-- ConfigurableWebServerApplicationContext
+
+interface ConfigurableApplicationContext
+interface WebServerApplicationContext
+interface ApplicationContext
+
+ConfigurableWebServerApplicationContext <|-- ConfigurableApplicationContext
+ConfigurableWebServerApplicationContext <|-- WebServerApplicationContext
+WebServerApplicationContext <|-- ApplicationContext
+
+abstract class AbstractApplicationContext
+class GenericApplicationContext
+class DefaultResourceLoader
+interface ResourceLoader
+interface ThemeSource
+
+interface EnvironmentCapable
+interface ListableBeanFactory
+interface HierarchicalBeanFactory
+interface MessageSource
+interface ApplicationEventPublisher
+interface ResourcePatternResolver
+
+interface Lifecycle
+interface Closeable
+interface BeanDefinitionRegistry
+interface AliasRegistry
+interface ConfigurableWebApplicationContext
+interface WebApplicationContext
+
+interface BeanFactory
+
+GenericWebApplicationContext <|-- GenericApplicationContext
+GenericApplicationContext <|-- AbstractApplicationContext
+AbstractApplicationContext <|-- DefaultResourceLoader
+DefaultResourceLoader <|-- ResourceLoader
+
+AbstractApplicationContext <|-- ConfigurableApplicationContext
+
+GenericApplicationContext <|-- BeanDefinitionRegistry
+BeanDefinitionRegistry <|-- AliasRegistry
+
+GenericWebApplicationContext <|-- ConfigurableWebApplicationContext
+GenericWebApplicationContext <|-- ThemeSource
+ConfigurableWebApplicationContext <|-- WebApplicationContext
+ConfigurableWebApplicationContext <|-- ConfigurableApplicationContext
+
+ConfigurableApplicationContext <|-- ApplicationContext
+ConfigurableApplicationContext <|-- Lifecycle
+ConfigurableApplicationContext <|-- Closeable
+
+ApplicationContext <|-- EnvironmentCapable
+ApplicationContext <|-- ListableBeanFactory
+ApplicationContext <|-- HierarchicalBeanFactory
+ApplicationContext <|-- MessageSource
+ApplicationContext <|-- ApplicationEventPublisher
+ApplicationContext <|-- ResourcePatternResolver
+
+ListableBeanFactory <|-- BeanFactory
+HierarchicalBeanFactory <|-- BeanFactory
+ResourcePatternResolver <|-- ResourceLoader
+
+'class ArrayList {
+'Object[] elementData
+'size()
+'}
+'
+'enum TimeUnit {
+'DAYS
+'HOURS
+'MINUTES
+'}
+
+@enduml

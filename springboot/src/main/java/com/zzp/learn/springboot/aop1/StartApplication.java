@@ -23,21 +23,21 @@ import org.springframework.scheduling.annotation.EnableScheduling;
  * @author 守愚（张智沛）
  * @date 2021-01-07
  */
-@SpringBootApplication(scanBasePackages = { "com.zzp.learn.springboot.aop1" }, exclude = {
+@SpringBootApplication(scanBasePackages = {"com.zzp.learn.springboot.aop1"}, exclude = {
         DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class,
         ActiveMQAutoConfiguration.class, RedisAutoConfiguration.class, KafkaAutoConfiguration.class,
-        JpaRepositoriesAutoConfiguration.class })
+        JpaRepositoriesAutoConfiguration.class})
 @EnableAsync
-@EnableScheduling
-@EnableRetry
+//@EnableScheduling
+//@EnableRetry
 @EnableAspectJAutoProxy(proxyTargetClass = true)
-@ImportResource(locations = { "classpath:spring-config.xml" })
+//@ImportResource(locations = {"classpath:spring-config.xml"})
 public class StartApplication {
 
     public static void main(String[] args) {
         System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "/Users/zhangzhipei/workspace");
         ConfigurableApplicationContext applicationContext = SpringApplication.run(StartApplication.class, args);
-       SiteManagerBusinessApiService
+        SiteManagerBusinessApiService
                 siteManagerBusinessApiService = applicationContext.getBean(SiteManagerBusinessApiService.class);
         siteManagerBusinessApiService.getSite("", "");
         siteManagerBusinessApiService.getSite1("", "");
