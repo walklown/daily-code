@@ -14,6 +14,17 @@ SpringApplication.prepareContext -> SpringApplication.prepareContext : postProce
 SpringApplication.prepareContext -> SpringApplication.prepareContext : applyInitializers\n执行ApplicationContextInitializer
 SpringApplication.prepareContext -> SpringApplication.prepareContext : listeners.contextPrepared\n处理本地事件
 SpringApplication.prepareContext -> SpringApplication.prepareContext : bootstrapContext.close\n关闭启动引导，并发送事件
+SpringApplication.prepareContext -> SpringApplication.prepareContext : register springApplicationArguments bean and springBootBanner bean
+SpringApplication.prepareContext -> SpringApplication.prepareContext : set allowBeanDefinitionOverriding
+SpringApplication.prepareContext -> SpringApplication.prepareContext : if lazyInitialization, add LazyInitializationBeanFactoryPostProcessor
+SpringApplication.prepareContext -> SpringApplication.prepareContext : getAllSources[primarySource(eg. MyApplication), sources]
+SpringApplication.prepareContext -> SpringApplication.load : load
+SpringApplication.load -> SpringApplication.load : create BeanDefinitionLoader
+SpringApplication.load -> BeanDefinitionLoader.load : load
+BeanDefinitionLoader.load -> BeanDefinitionLoader.load : AnnotatedBeanDefinitionReader.register(MyApplication.class)
+BeanDefinitionLoader.load --> SpringApplication.load
+SpringApplication.load --> SpringApplication.prepareContext
+SpringApplication.prepareContext -> SpringApplication.prepareContext : listeners.contextLoaded(context)\n发送contextLoaded事件
 SpringApplication.prepareContext --> SpringApplication.run
 SpringApplication.run -> SpringApplication.run : refreshContext
 SpringApplication.run -> SpringApplication.run : afterRefresh
