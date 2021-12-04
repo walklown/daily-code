@@ -15,7 +15,6 @@ SpringApplication.run -> SpringApplication.run : createApplicationContext
 SpringApplication.run -> SpringApplication.run : prepareContext
 SpringApplication.run -> SpringApplication.run : refreshContext
 SpringApplication.run -> SpringApplication.run : afterRefresh
-SpringApplication.run -> SpringApplication.run : afterRefresh
 SpringApplication.run -> SpringApplication.run : listeners.started
 SpringApplication.run -> SpringApplication.run : callRunners
 SpringApplication.run --> main
