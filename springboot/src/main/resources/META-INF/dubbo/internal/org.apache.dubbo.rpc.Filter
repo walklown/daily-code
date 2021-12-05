@@ -1,4 +1,0 @@
-atopServiceResultFilter=com.tuya.tianlu.atop.filter.AtopServiceResultFilter
-dubboServiceResultFilter=com.tuya.tianlu.service.filter.DubboServiceResultFilter
-highwayServiceResultFilter=com.tuya.tianlu.highway.common.filter.HighwayServiceResultFilter
-dubboReferenceResultFilter=com.tuya.tianlu.integration.rpc.filter.DubboReferenceResultFilter

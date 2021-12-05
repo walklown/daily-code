@@ -36,6 +36,8 @@ public class StartApplication {
         ConfigurableApplicationContext applicationContext = SpringApplication.run(StartApplication.class, args);
         SiteManagerBusinessApiService
                 siteManagerBusinessApiService = applicationContext.getBean(SiteManagerBusinessApiService.class);
+        ISiteManagerBusinessApiService
+                iSiteManagerBusinessApiService = applicationContext.getBean(ISiteManagerBusinessApiService.class);
         siteManagerBusinessApiService.getSite("", "");
         siteManagerBusinessApiService.getSite1("", "");
     }

@@ -23,7 +23,7 @@ public class SensitiveAspect1 {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(SensitiveAspect1.class);
 
-    @Pointcut("@annotation(com.tuya.tianlu.starter.sensitive.Sensitive)")
+    @Pointcut("@annotation(com.zzp.learn.springboot.aop1.sensitive.Sensitive)")
     public void pointcut() {
     }
 
