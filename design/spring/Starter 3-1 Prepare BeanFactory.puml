@@ -1,0 +1,22 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+AbstractApplicationContext.refresh -> AbstractApplicationContext.prepareRefresh
+AbstractApplicationContext.prepareRefresh -> AbstractApplicationContext.prepareRefresh : (parent) GenericWebApplicationContext.initPropertySources\n绑定servlet参数
+AbstractApplicationContext.prepareRefresh -> AbstractApplicationContext.prepareRefresh : earlyApplicationListeners
+AbstractApplicationContext.prepareRefresh --> AbstractApplicationContext.refresh
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : obtainFreshBeanFactory 标记refresh（只能执行一次）
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : prepareBeanFactory
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : postProcessBeanFactory
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : invokeBeanFactoryPostProcessors
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : registerBeanPostProcessors
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : initMessageSource
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : initApplicationEventMulticaster
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : onRefresh
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : registerListeners
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : finishBeanFactoryInitialization
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : finishRefresh
+
+@enduml

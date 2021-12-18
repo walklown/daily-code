@@ -5,7 +5,12 @@ autonumber
 
 AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : prepareRefresh
 AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : obtainFreshBeanFactory
-AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : prepareBeanFactory
+AbstractApplicationContext.refresh -> AbstractApplicationContext.prepareBeanFactory : setBeanExpressionResolver\n设置beanFactory的表达式语言处理器，Spring3增加了表达式语言的支持\n默认可以使用#{bean.xxx}的形式来调用和注入相关属性值
+AbstractApplicationContext.prepareBeanFactory -> AbstractApplicationContext.prepareBeanFactory : addPropertyEditorRegistrar\n添加默认的Bean属性解析\n可通过配置CustomEditorConfigurer自定义属性类型解析
+AbstractApplicationContext.prepareBeanFactory -> AbstractApplicationContext.prepareBeanFactory : addBeanPostProcessor\n实现这些Aware接口的bean在被初始化之后，可以取得一些对应的资源
+AbstractApplicationContext.prepareBeanFactory -> AbstractApplicationContext.prepareBeanFactory : prepareBeanFactory
+AbstractApplicationContext.prepareBeanFactory -> AbstractApplicationContext.prepareBeanFactory : prepareBeanFactory
+AbstractApplicationContext.prepareBeanFactory -> AbstractApplicationContext.refresh : prepareBeanFactory
 AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : postProcessBeanFactory
 AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : invokeBeanFactoryPostProcessors
 AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : registerBeanPostProcessors
