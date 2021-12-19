@@ -1,5 +1,7 @@
 package com.zzp.learn.walklown.jarkata.base;
 
+import jdk.internal.loader.ClassLoaders;
+
 import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLClassLoader;
@@ -17,28 +19,35 @@ import java.util.Arrays;
  */
 public class ClassLoaderDemo {
 
-    public static void main(String[] args) throws MalformedURLException, ClassNotFoundException {
-//        URL url1=new URL("file:/classpath:/");
-        String[] pathElements = System.getProperty("java.class.path").split(System.getProperty("path.separator"));
-//        URL[] urls = Arrays.stream(pathElements).map(path -> {
-//            try {
-//                return new URL("file:/" + path);
-//            } catch (MalformedURLException e) {
-//                return null;
-//            }
-//        }).toArray(URL[]::new);
-        URL[] urls1 = new URL[]{new URL("file:D:\\workspace\\walklown\\attempt\\jarkata\\out\\production\\classes\\")};
-        URL[] urls = new URL[]{new URL("file:D:\\workspace\\walklown\\attempt\\netty\\out\\production\\classes\\")};
-        ClassLoader a1 = new URLClassLoader(urls1);
-        ClassLoader b1 = new URLClassLoader(urls1);
-        ClassLoader a = new URLClassLoader(urls);
-        ClassLoader b = new URLClassLoader(urls);
-        Class i0 = a.loadClass("com.zzp.learn.walklown.jarkata.base.ClassLoaderDemo");
-        Class i1 = b.loadClass("com.zzp.learn.walklown.jarkata.base.ClassLoaderDemo");
-        Class i2 = a.loadClass("com.zzp.learn.netty.blocking.BlockingIODemo");
-        Class i3 = b.loadClass("com.zzp.learn.netty.blocking.BlockingIODemo");
-        System.out.println(i0.equals(i1));;
-        System.out.println(i2.equals(i3));;
-//        System.out.println(Class.forName("jdk.internal.loader.BuiltinClassLoader"));
+//    public static void main(String[] args) throws MalformedURLException, ClassNotFoundException {
+////        URL url1=new URL("file:/classpath:/");
+//        String[] pathElements = System.getProperty("java.class.path").split(System.getProperty("path.separator"));
+////        URL[] urls = Arrays.stream(pathElements).map(path -> {
+////            try {
+////                return new URL("file:/" + path);
+////            } catch (MalformedURLException e) {
+////                return null;
+////            }
+////        }).toArray(URL[]::new);
+//        URL[] urls1 = new URL[]{new URL("file:D:\\workspace\\walklown\\attempt\\jarkata\\out\\production\\classes\\")};
+//        URL[] urls = new URL[]{new URL("file:D:\\workspace\\walklown\\attempt\\netty\\out\\production\\classes\\")};
+//        ClassLoader a1 = new URLClassLoader(urls1);
+//        ClassLoader b1 = new URLClassLoader(urls1);
+//        ClassLoader a = new URLClassLoader(urls);
+//        ClassLoader b = new URLClassLoader(urls);
+//        Class i0 = a.loadClass("com.zzp.learn.walklown.jarkata.base.ClassLoaderDemo");
+//        Class i1 = b.loadClass("com.zzp.learn.walklown.jarkata.base.ClassLoaderDemo");
+//        Class i2 = a.loadClass("com.zzp.learn.netty.blocking.BlockingIODemo");
+//        Class i3 = b.loadClass("com.zzp.learn.netty.blocking.BlockingIODemo");
+//        System.out.println(i0.equals(i1));;
+//        System.out.println(i2.equals(i3));;
+////        System.out.println(Class.forName("jdk.internal.loader.BuiltinClassLoader"));
+//    }
+
+    public static void main(String[] args) {
+        System.out.println(ClassLoader.getSystemClassLoader());
+        System.out.println(ClassLoader.getSystemClassLoader().getParent());
+        System.out.println(ClassLoader.getSystemClassLoader().getParent().getParent());
+        System.out.println(Integer.class.getClassLoader());
     }
 }

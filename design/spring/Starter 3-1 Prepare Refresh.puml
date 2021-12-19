@@ -7,7 +7,7 @@ AbstractApplicationContext.refresh -> AbstractApplicationContext.prepareRefresh
 AbstractApplicationContext.prepareRefresh -> AbstractApplicationContext.prepareRefresh : (parent) GenericWebApplicationContext.initPropertySources\n绑定servlet参数
 AbstractApplicationContext.prepareRefresh -> AbstractApplicationContext.prepareRefresh : earlyApplicationListeners
 AbstractApplicationContext.prepareRefresh --> AbstractApplicationContext.refresh
-AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : obtainFreshBeanFactory 标记refresh（只能执行一次）
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : obtainFreshBeanFactory 标记refresh（只能执行一次），Tell the subclass to refresh the internal bean factory.（？怀疑与SpringCloud有关）
 AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : prepareBeanFactory
 AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : postProcessBeanFactory
 AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : invokeBeanFactoryPostProcessors

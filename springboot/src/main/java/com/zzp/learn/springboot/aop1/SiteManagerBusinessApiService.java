@@ -2,6 +2,7 @@ package com.zzp.learn.springboot.aop1;
 
 import com.zzp.learn.springboot.aop1.sensitive.Sensitive;
 import com.zzp.learn.springboot.aop1.sensitive.Sensitive2;
+import com.zzp.learn.springboot.aop1.sensitive.SensitiveClass;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Service;
@@ -12,6 +13,7 @@ import org.springframework.stereotype.Service;
  * @since 2021/8/20 9:17 下午
  */
 @Service
+@SensitiveClass
 public class SiteManagerBusinessApiService implements ISiteManagerBusinessApiService {
 
     /**

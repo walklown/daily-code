@@ -12,6 +12,7 @@ import org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration;
 import org.springframework.cglib.core.DebuggingClassWriter;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
+import org.springframework.context.annotation.Import;
 import org.springframework.scheduling.annotation.EnableAsync;
 
 /**
@@ -29,6 +30,7 @@ import org.springframework.scheduling.annotation.EnableAsync;
 //@EnableRetry
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 //@ImportResource(locations = {"classpath:spring-config.xml"})
+@Import(ExtInitConfig.class)
 public class StartApplication {
 
     public static void main(String[] args) {

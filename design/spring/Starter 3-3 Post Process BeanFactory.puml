@@ -1,0 +1,31 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : prepareRefresh
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : obtainFreshBeanFactory
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : prepareBeanFactory
+AbstractApplicationContext.refresh -> AbstractApplicationContext.postProcessBeanFactory : Allows post-processing of the bean factory in context subclasses.
+AbstractApplicationContext.postProcessBeanFactory --> AnnotationConfigServletWebServerApplicationContext.postProcessBeanFactory : 子类实现
+AnnotationConfigServletWebServerApplicationContext.postProcessBeanFactory --> AnnotationConfigServletWebServerApplicationContext.postProcessBeanFactory : ServletWebServerApplicationContext.postProcessBeanFactory\n 处理ServletContextAware
+AnnotationConfigServletWebServerApplicationContext.postProcessBeanFactory --> AnnotationConfigServletWebServerApplicationContext.postProcessBeanFactory : ServletWebServerApplicationContext.postProcessBeanFactory\n registerWebApplicationScopes
+AnnotationConfigServletWebServerApplicationContext.postProcessBeanFactory --> AnnotationConfigServletWebServerApplicationContext.postProcessBeanFactory : ServletWebServerApplicationContext.postProcessBeanFactory\n existingScopes.restore（清空一遍已存在的）
+AnnotationConfigServletWebServerApplicationContext.postProcessBeanFactory --> AnnotationConfigServletWebServerApplicationContext.postProcessBeanFactory : 实际未执行 this.scanner.scan(this.basePackages)
+AnnotationConfigServletWebServerApplicationContext.postProcessBeanFactory --> AnnotationConfigServletWebServerApplicationContext.postProcessBeanFactory : 实际未执行 annotatedClasses
+AnnotationConfigServletWebServerApplicationContext.postProcessBeanFactory --> AbstractApplicationContext.postProcessBeanFactory :
+AbstractApplicationContext.postProcessBeanFactory -> AbstractApplicationContext.postProcessBeanFactory :
+AbstractApplicationContext.postProcessBeanFactory -> AbstractApplicationContext.postProcessBeanFactory :
+AbstractApplicationContext.postProcessBeanFactory -> AbstractApplicationContext.postProcessBeanFactory :
+AbstractApplicationContext.postProcessBeanFactory -> AbstractApplicationContext.postProcessBeanFactory :
+AbstractApplicationContext.postProcessBeanFactory --> AbstractApplicationContext.refresh
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : invokeBeanFactoryPostProcessors
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : registerBeanPostProcessors
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : initMessageSource
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : initApplicationEventMulticaster
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : onRefresh
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : registerListeners
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : finishBeanFactoryInitialization
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : finishRefresh
+
+@enduml
