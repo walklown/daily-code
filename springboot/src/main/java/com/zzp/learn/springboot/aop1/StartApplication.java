@@ -14,6 +14,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Import;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.web.context.ServletContextAware;
 
 /**
  * 启动类
@@ -42,6 +43,9 @@ public class StartApplication {
                 iSiteManagerBusinessApiService = applicationContext.getBean(ISiteManagerBusinessApiService.class);
         siteManagerBusinessApiService.getSite("", "");
         siteManagerBusinessApiService.getSite1("", "");
+
+        ServletContextAwareTest servletContextAware = applicationContext.getBean(ServletContextAwareTest.class);
+        servletContextAware.getSiteManagerBusinessApiService();
     }
 
 }
