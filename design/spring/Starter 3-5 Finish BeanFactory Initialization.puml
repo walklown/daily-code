@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : prepareRefresh
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : obtainFreshBeanFactory
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : prepareBeanFactory
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : postProcessBeanFactory
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : invokeBeanFactoryPostProcessors
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : registerBeanPostProcessors
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : initMessageSource
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : initApplicationEventMulticaster
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : onRefresh
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : registerListeners
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : finishBeanFactoryInitialization 加载Bean
+AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : finishRefresh
+
+@enduml

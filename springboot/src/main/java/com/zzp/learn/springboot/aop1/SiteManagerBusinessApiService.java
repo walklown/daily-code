@@ -26,17 +26,17 @@ public class SiteManagerBusinessApiService implements ISiteManagerBusinessApiSer
      */
     private static final Logger LOGGER = LoggerFactory.getLogger(SiteManagerBusinessApiService.class);
 
-    private ServletContextAware servletContextAware;
-
-    public ServletContextAware getServletContextAware() {
-        return servletContextAware;
-    }
-
-    @Autowired
-    @Qualifier("servletContextAware")
-    public void setServletContextAware(ServletContextAware servletContextAware) {
-        this.servletContextAware = servletContextAware;
-    }
+//    private ServletContextAware servletContextAware;
+//
+//    public ServletContextAware getServletContextAware() {
+//        return servletContextAware;
+//    }
+//
+//    @Autowired
+//    @Qualifier("servletContextAware")
+//    public void setServletContextAware(ServletContextAware servletContextAware) {
+//        this.servletContextAware = servletContextAware;
+//    }
 
     public SiteManagerBusinessApiService() {
         LOGGER.info("init");

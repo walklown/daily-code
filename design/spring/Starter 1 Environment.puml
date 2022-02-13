@@ -11,7 +11,7 @@ SpringApplicationRunListener.environmentPrepared --> SpringApplication.prepareEn
 SpringApplication.prepareEnvironment -> SpringApplication.prepareEnvironment : 绑定属性
 SpringApplication.prepareEnvironment -> SpringApplication.run
 SpringApplication.run -> SpringApplication.run : printBanner
-SpringApplication.run -> SpringApplication.run : createApplicationContext
+SpringApplication.run -> SpringApplication.run : createApplicationContext\n加载5个RootBean的BeanDefinition
 SpringApplication.run -> SpringApplication.run : prepareContext
 SpringApplication.run -> SpringApplication.run : refreshContext
 SpringApplication.run -> SpringApplication.run : afterRefresh

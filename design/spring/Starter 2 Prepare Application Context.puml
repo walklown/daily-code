@@ -16,7 +16,7 @@ SpringApplication.prepareContext -> SpringApplication.prepareContext : listeners
 SpringApplication.prepareContext -> SpringApplication.prepareContext : bootstrapContext.close\n关闭启动引导，并发送事件
 SpringApplication.prepareContext -> SpringApplication.prepareContext : register springApplicationArguments bean and springBootBanner bean
 SpringApplication.prepareContext -> SpringApplication.prepareContext : set allowBeanDefinitionOverriding
-SpringApplication.prepareContext -> SpringApplication.prepareContext : if lazyInitialization, add LazyInitializationBeanFactoryPostProcessor
+SpringApplication.prepareContext -> SpringApplication.prepareContext : if lazyInitialization, add LazyInitializationBeanFactoryPostProcessor[BeanFactoryPostProcessor]
 SpringApplication.prepareContext -> SpringApplication.prepareContext : getAllSources[primarySource(eg. MyApplication), sources]
 SpringApplication.prepareContext -> SpringApplication.load : load
 SpringApplication.load -> SpringApplication.load : create BeanDefinitionLoader

@@ -19,8 +19,7 @@ SpringApplication.refreshContext -> AbstractApplicationContext.refresh
 AbstractApplicationContext.refresh -> AbstractApplicationContext.refresh : Spring容器处理核心流程
 AbstractApplicationContext.refresh --> SpringApplication.refreshContext
 SpringApplication.refreshContext --> SpringApplication.run : refreshContext
-SpringApplication.run -> SpringApplication.afterRefresh : 空实现，提供扩展点
-SpringApplication.afterRefresh --> SpringApplication.run
+SpringApplication.run -> SpringApplication.run : afterRefresh 空实现，提供扩展点
 SpringApplication.run -> SpringApplication.run : listeners.started
 SpringApplication.run -> SpringApplication.run : callRunners
 SpringApplication.run --> main

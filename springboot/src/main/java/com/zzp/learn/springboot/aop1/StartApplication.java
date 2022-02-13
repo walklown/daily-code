@@ -44,8 +44,8 @@ public class StartApplication {
         siteManagerBusinessApiService.getSite("", "");
         siteManagerBusinessApiService.getSite1("", "");
 
-        ServletContextAwareTest servletContextAware = applicationContext.getBean(ServletContextAwareTest.class);
-        servletContextAware.getSiteManagerBusinessApiService();
+//        ServletContextAwareTest servletContextAware = applicationContext.getBean(ServletContextAwareTest.class);
+//        servletContextAware.getSiteManagerBusinessApiService();
     }
 
 }
