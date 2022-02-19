@@ -29,7 +29,8 @@ import org.springframework.web.context.ServletContextAware;
 @EnableAsync
 //@EnableScheduling
 //@EnableRetry
-@EnableAspectJAutoProxy(proxyTargetClass = true)
+@EnableAspectJAutoProxy
+//@EnableAspectJAutoProxy(proxyTargetClass = true)
 //@ImportResource(locations = {"classpath:spring-config.xml"})
 @Import(ExtInitConfig.class)
 public class StartApplication {

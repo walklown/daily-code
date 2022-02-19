@@ -38,8 +38,18 @@ public class SiteManagerBusinessApiService implements ISiteManagerBusinessApiSer
 //        this.servletContextAware = servletContextAware;
 //    }
 
-    public SiteManagerBusinessApiService() {
+    public PersonManager getPersonManager() {
+        return personManager;
+    }
+
+    @Resource
+    private PersonManager personManager1;
+
+    private final PersonManager personManager;
+
+    public SiteManagerBusinessApiService(PersonManager personManager) {
         LOGGER.info("init");
+        this.personManager = personManager;
     }
 
     @Override
