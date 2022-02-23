@@ -15,7 +15,6 @@
     </parent>
 
     <properties>
-        <jackson.version>2.12.0</jackson.version>
         <mapstruct.version>1.4.2.Final</mapstruct.version>
     </properties>
 
