@@ -1,7 +1,8 @@
 package com.zzp.learn.walklown.redisson;
 
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.TypeReference;
+import com.fasterxml.jackson.core.JsonProcessingException;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.zzp.learn.walklown.json.JacksonUtils;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
@@ -19,8 +20,8 @@ public class JedisDelayingQueue<T> {
     }
     // fastjson 序列化对象中存在 generic 类型时，需要使用 TypeReference
 
-    private Type taskType = new TypeReference<TaskItem<T>>() {
-    }.getType();
+    private TypeReference<TaskItem<T>> taskType = new TypeReference<>() {
+    };
     private static Jedis jedis;
     private String queueKey;
 
@@ -42,7 +43,7 @@ public class JedisDelayingQueue<T> {
         TaskItem<T> task = new TaskItem();
         task.id = UUID.randomUUID().toString();  // 分配唯一的 uuid
         task.msg = msg;
-        String s = JSON.toJSONString(task);  // fastjson 序列化
+        String s = JacksonUtils.toJSONString(task);  // fastjson 序列化
         jedis.zadd(queueKey, System.currentTimeMillis() + 5000, s);
 //        RBlockingQueue<String> blockingFairQueue = redissonClient.getBlockingQueue(queueKey);
 //        RDelayedQueue<String> delayedQueue = redissonClient.getDelayedQueue(blockingFairQueue);  // 塞入延时队列 ,5s 后再试
@@ -81,7 +82,12 @@ public class JedisDelayingQueue<T> {
             }
             String s = values.iterator().next();
             if (jedis.zrem(queueKey, s) > 0) {  // 抢到了
-                TaskItem<T> task = JSON.parseObject(s, taskType);
+                TaskItem<T> task = null;
+                try {
+                    task = JacksonUtils.OBJ_MAPPER.readValue(s, taskType);
+                } catch (JsonProcessingException e) {
+                    e.printStackTrace();
+                }
                 // fastjson 反序列化
                 this.handleMsg(task.msg);
             }

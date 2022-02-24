@@ -1,6 +1,6 @@
 package com.zzp.learn.walklown.redisson;
 
-import com.alibaba.fastjson.TypeReference;
+import com.fasterxml.jackson.core.type.TypeReference;
 import redis.clients.jedis.*;
 
 import java.lang.reflect.Type;
@@ -19,8 +19,8 @@ public class JedisStream<T> {
     }
     // fastjson 序列化对象中存在 generic 类型时，需要使用 TypeReference
 
-    private Type taskType = new TypeReference<JedisDelayingQueue.TaskItem<T>>() {
-    }.getType();
+    private TypeReference<JedisDelayingQueue.TaskItem<T>> taskType = new TypeReference<JedisDelayingQueue.TaskItem<T>>() {
+    };
     private static Jedis jedis;
     private String queueKey;
 
