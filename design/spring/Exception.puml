@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/class-diagram
+package checked_exception {
+class Error
+class Throwable
+class Exception
+}
+class RuntimeException
+
+'package 业务异常 {
+    class MyException {
+        int code
+        String message
+    }
+'    class MySubException1 {
+'    }
+'    class MySubException2 {
+'    }
+'}
+
+Throwable <|-- Error
+Throwable <|-- Exception
+Exception <|-- RuntimeException
+RuntimeException <|-- MyException
+'MyException <|-- MySubException1
+'MyException <|-- MySubException2
+
+@enduml
