@@ -7,10 +7,12 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.ServletContextAware;
 
 import javax.annotation.Resource;
+import java.util.Map;
 
 /**
  * @author 【瑞尔】（【辛润峰】【ruier.xin@tuya.com】）
@@ -25,6 +27,12 @@ public class SiteManagerBusinessApiService implements ISiteManagerBusinessApiSer
      * logger
      */
     private static final Logger LOGGER = LoggerFactory.getLogger(SiteManagerBusinessApiService.class);
+
+//    @Value("custom.map")
+//    private Map<String, String> map;
+
+    @Resource
+    private PersonConfigurationProperties personConfigurationProperties;
 
 //    private ServletContextAware servletContextAware;
 //
