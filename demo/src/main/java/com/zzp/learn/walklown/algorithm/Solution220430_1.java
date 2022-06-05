@@ -1,7 +1,10 @@
 package com.zzp.learn.walklown.algorithm;
 
+import reactor.util.concurrent.Queues;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 /**
  * 1823. 找出游戏的获胜者
@@ -53,6 +56,7 @@ class Solution220430_1 {
         Solution220430_1 solution = new Solution220430_1();
         int n = solution.findTheWinner(8, 8);
         System.out.println(n);
+        System.out.println(new char[]{'a','b'});
     }
 
     public int findTheWinner(int n, int k) {
