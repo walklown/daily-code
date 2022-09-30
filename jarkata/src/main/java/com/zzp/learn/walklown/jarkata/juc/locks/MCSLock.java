@@ -1,5 +1,8 @@
 package com.zzp.learn.walklown.jarkata.juc.locks;
 
+import lombok.Getter;
+import lombok.Setter;
+
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicReference;
 import java.util.concurrent.locks.Condition;
@@ -33,7 +36,7 @@ public class MCSLock implements Lock {
             pred.next = qnode;
 
             // wait until predecessor gives up the lock
-            while (qnode.locked) {
+            while (!qnode.locked) {
             }
         }
     }
@@ -73,6 +76,8 @@ public class MCSLock implements Lock {
         return null;
     }
 
+    @Getter
+    @Setter
     class QNode {
         boolean locked = false;
         QNode next = null;
