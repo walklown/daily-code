@@ -12,10 +12,14 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.SerializationFeature;
 import com.fasterxml.jackson.datatype.jsonorg.JsonOrgModule;
 import java.io.IOException;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
 import java.util.Map;
+
+import com.zzp.learn.walklown.test.Node;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
@@ -110,19 +114,34 @@ public class JacksonUtils {
     }
 
     public static void main(String[] args) {
-        String json = "{\n  \"glossary\": {\n    \"title\": \"example glossary\",\n    \"GlossDiv\": {\n      \"title\": \"S\",\n      \"GlossList\": {\n        \"GlossEntry\": {\n          \"ID\": \"SGML\",\n          \"SortAs\": \"SGML\",\n          \"GlossTerm\": \"Standard Generalized Markup Language\",\n          \"Acronym\": \"SGML\",\n          \"Abbrev\": \"ISO 8879:1986\",\n          \"GlossDef\": {\n            \"para\": \"A meta-markup language, used to create markup languages such as DocBook.\",\n            \"GlossSeeAlso\": [\n              \"GML\",\n              \"XML\"\n            ]\n          },\n          \"GlossSee\": \"markup\"\n        }\n      }\n    }\n  }\n}";
-        JSONObject jsonObject = parseObject(json);
-        JSONObject glossary = jsonObject.getJSONObject("glossary");
-        JSONObject glossDiv = glossary.getJSONObject("GlossDiv");
-        JSONObject glossList = glossDiv.getJSONObject("GlossList");
-        JSONObject glossEntry = glossList.getJSONObject("GlossEntry");
-        JSONObject glossDef = glossEntry.getJSONObject("GlossDef");
-        JSONArray glossSeeAlso = glossDef.getJSONArray("GlossSeeAlso");
-        System.out.println(jsonObject);
-        System.out.println(glossSeeAlso);
-        String singleQuote = "['123', '123']";
-        List<String> list = parseArray(singleQuote, String.class);
-        System.out.println(list);
+//        String json = "{\n  \"glossary\": {\n    \"title\": \"example glossary\",\n    \"GlossDiv\": {\n      \"title\": \"S\",\n      \"GlossList\": {\n        \"GlossEntry\": {\n          \"ID\": \"SGML\",\n          \"SortAs\": \"SGML\",\n          \"GlossTerm\": \"Standard Generalized Markup Language\",\n          \"Acronym\": \"SGML\",\n          \"Abbrev\": \"ISO 8879:1986\",\n          \"GlossDef\": {\n            \"para\": \"A meta-markup language, used to create markup languages such as DocBook.\",\n            \"GlossSeeAlso\": [\n              \"GML\",\n              \"XML\"\n            ]\n          },\n          \"GlossSee\": \"markup\"\n        }\n      }\n    }\n  }\n}";
+//        JSONObject jsonObject = parseObject(json);
+//        JSONObject glossary = jsonObject.getJSONObject("glossary");
+//        JSONObject glossDiv = glossary.getJSONObject("GlossDiv");
+//        JSONObject glossList = glossDiv.getJSONObject("GlossList");
+//        JSONObject glossEntry = glossList.getJSONObject("GlossEntry");
+//        JSONObject glossDef = glossEntry.getJSONObject("GlossDef");
+//        JSONArray glossSeeAlso = glossDef.getJSONArray("GlossSeeAlso");
+//        System.out.println(jsonObject);
+//        System.out.println(glossSeeAlso);
+//        String singleQuote = "['123', '123']";
+//        List<String> list = parseArray(singleQuote, String.class);
+//        System.out.println(list);
+        Object o = JacksonUtils.testDecode("{\"id\":\"123\", \"name\":\"a\"}", Node.class);
+        System.out.println(o);
+        Object o1 = JacksonUtils.testDecode("{\"id\":\"123\", \"name\":\"a\", \"child\":{\"id\":\"4\", \"name\":\"b\"}}", Node.class.getGenericSuperclass());
+        System.out.println(o1);
+    }
+
+    public static Object testDecode(String json, Type type) {
+        if (type instanceof java.lang.reflect.ParameterizedType) {
+            Type rawType = ((ParameterizedType) type).getRawType();
+            return JacksonUtils.parseObject(json, (Class<? extends Object>) rawType);
+        } else if (type instanceof Class) {
+            return JacksonUtils.parseObject(json, (Class<? extends Object>) type);
+        } else {
+            return null;
+        }
     }
 
     static {
