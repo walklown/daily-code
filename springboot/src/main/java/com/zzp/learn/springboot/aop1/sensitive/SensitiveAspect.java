@@ -6,6 +6,10 @@ import org.aopalliance.intercept.MethodInvocation;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.core.PriorityOrdered;
+import org.springframework.core.annotation.AnnotationUtils;
+
+import java.lang.annotation.Annotation;
+import java.lang.reflect.Method;
 
 /**
  * <p> 脱敏切面
@@ -25,6 +29,19 @@ public class SensitiveAspect implements MethodInterceptor, PriorityOrdered {
             SensitiveAspectSupport.sensitive(methodInvocation, returnValue);
         }
         return returnValue;
+    }
+
+    public static <T extends Annotation> T getAnnotation(MethodInvocation methodInvocation, Class<T> annotationClass) {
+        Method realMethod = null;
+        try {
+            realMethod =
+                    methodInvocation.getThis().getClass()
+                            .getMethod(methodInvocation.getMethod().getName(), methodInvocation.getMethod().getParameterTypes());
+        } catch (NoSuchMethodException e) {
+            LOGGER.info("Not found method", e);
+            return null;
+        }
+        return AnnotationUtils.findAnnotation(realMethod, annotationClass);
     }
 
     /**

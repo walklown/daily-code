@@ -3,7 +3,6 @@ package com.zzp.learn.springboot.aop1.sensitive;
 import java.lang.annotation.Documented;
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Inherited;
-import java.lang.annotation.Repeatable;
 import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
@@ -18,8 +17,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD})
 @Inherited
-@Repeatable(Sensitives.class)
-public @interface Sensitive {
+public @interface Sensitives {
 
-    String value() default "";
+    Sensitive[] value();
 }

@@ -3,6 +3,7 @@ package com.zzp.learn.springboot.aop1;
 import com.zzp.learn.springboot.aop1.sensitive.Sensitive;
 import com.zzp.learn.springboot.aop1.sensitive.Sensitive2;
 import com.zzp.learn.springboot.aop1.sensitive.SensitiveClass;
+import com.zzp.learn.springboot.aop1.sensitive.Sensitives;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -46,19 +47,19 @@ public class SiteManagerBusinessApiService implements ISiteManagerBusinessApiSer
 //        this.servletContextAware = servletContextAware;
 //    }
 
-    public PersonManager getPersonManager() {
-        return personManager;
-    }
+//    public PersonManager getPersonManager() {
+//        return personManager;
+//    }
 
-    @Resource
-    private PersonManager personManager1;
-
-    private final PersonManager personManager;
-
-    public SiteManagerBusinessApiService(PersonManager personManager) {
-        LOGGER.info("init");
-        this.personManager = personManager;
-    }
+//    @Resource
+//    private PersonManager personManager1;
+//
+//    private final PersonManager personManager;
+//
+//    public SiteManagerBusinessApiService(PersonManager personManager) {
+//        LOGGER.info("init");
+//        this.personManager = personManager;
+//    }
 
     @Override
     @Sensitive()
@@ -67,6 +68,10 @@ public class SiteManagerBusinessApiService implements ISiteManagerBusinessApiSer
         return;
     }
 
+//    @Sensitives({
+//            @Sensitive()
+//    })
+    @Sensitive(value = "1")
     @Override
     public void getSite1(String blockId, String siteId) {
         return;

@@ -34,19 +34,19 @@ import org.springframework.web.context.ServletContextAware;
 @EnableAspectJAutoProxy
 //@EnableAspectJAutoProxy(proxyTargetClass = true)
 //@ImportResource(locations = {"classpath:spring-config.xml"})
-@Import(ExtInitConfig.class)
+//@Import(ExtInitConfig.class)
 public class StartApplication {
 
     public static void main(String[] args) {
-        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "/Users/zhangzhipei/workspace");
+//        System.setProperty(DebuggingClassWriter.DEBUG_LOCATION_PROPERTY, "/Users/zhangzhipei/workspace");
         ConfigurableApplicationContext applicationContext = new SpringApplicationBuilder(StartApplication.class)
-                .web(WebApplicationType.NONE)
+//                .web(WebApplicationType.NONE)
                 .run(args);
         SiteManagerBusinessApiService
                 siteManagerBusinessApiService = applicationContext.getBean(SiteManagerBusinessApiService.class);
-        ISiteManagerBusinessApiService
-                iSiteManagerBusinessApiService = applicationContext.getBean(ISiteManagerBusinessApiService.class);
-        siteManagerBusinessApiService.getSite("", "");
+//        ISiteManagerBusinessApiService
+//                siteManagerBusinessApiService = applicationContext.getBean(ISiteManagerBusinessApiService.class);
+//        siteManagerBusinessApiService.getSite("", "");
         siteManagerBusinessApiService.getSite1("", "");
 
 //        ServletContextAwareTest servletContextAware = applicationContext.getBean(ServletContextAwareTest.class);

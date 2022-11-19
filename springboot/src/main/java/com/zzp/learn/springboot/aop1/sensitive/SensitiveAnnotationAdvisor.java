@@ -52,7 +52,7 @@ public class SensitiveAnnotationAdvisor extends AbstractPointcutAdvisor implemen
 	 */
 	public SensitiveAnnotationAdvisor() {
 		Set<Class<? extends Annotation>> asyncAnnotationTypes = new LinkedHashSet<>(2);
-		asyncAnnotationTypes.add(Sensitive.class);
+		asyncAnnotationTypes.add(SensitiveClass.class);
 		this.advice = new SensitiveAspect();
 		this.pointcut = buildPointcut(asyncAnnotationTypes);
 	}
