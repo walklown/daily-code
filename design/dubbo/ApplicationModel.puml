@@ -1,15 +1,41 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-interface org.apache.dubbo.common.extension.ExtensionAccessor
-abstract class org.apache.dubbo.rpc.model.ScopeModel
-class ApplicationModel
-class FrameworkModel
+class DubboSpringInitializer {
+# 初始化入口
+static Map<BeanDefinitionRegistry, DubboSpringInitContext> contextMap;
+}
+class DubboSpringInitContext {
+# 持有Dubbo和Spring上下文
+BeanDefinitionRegistry registry;
+ConfigurableListableBeanFactory beanFactory;
+ApplicationContext applicationContext;
+ModuleModel moduleModel;
+}
+class DubboBootstrap {
+# 启动类；静态/单例；进程范围
+}
+class DefaultApplicationDeployer {
+# 启动应用实例
+}
+interface ExtensionAccessor
+abstract class ScopeModel
+class ApplicationModel {
+# 静态/单例；进程范围
+final FrameworkModel frameworkModel;
+ModuleModel internalModule;
+volatile ModuleModel defaultModule;
+}
+class FrameworkModel {
+# dubbo框架模型，可与多个应用共享
+FrameworkServiceRepository serviceRepository;
+}
 class ModuleModel
 
-org.apache.dubbo.common.extension.ExtensionAccessor <|-- org.apache.dubbo.rpc.model.ScopeModel
-org.apache.dubbo.rpc.model.ScopeModel <|-- ApplicationModel
-org.apache.dubbo.rpc.model.ScopeModel <|-- FrameworkModel
-org.apache.dubbo.rpc.model.ScopeModel <|-- ModuleModel
+ExtensionAccessor <|-- ScopeModel
+ScopeModel <|-- ApplicationModel
+ScopeModel <|-- FrameworkModel
+ScopeModel <|-- ModuleModel
+DubboBootstrap <-- ApplicationModel
 
 @enduml
