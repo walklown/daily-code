@@ -1,7 +1,7 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-class DubboSpringInitializer {
+static class DubboSpringInitializer {
 # 初始化入口
 static Map<BeanDefinitionRegistry, DubboSpringInitContext> contextMap;
 }
@@ -15,7 +15,10 @@ ModuleModel moduleModel;
 class DubboBootstrap {
 # 启动类；静态/单例；进程范围
 }
-class DefaultApplicationDeployer {
+class ApplicationDeployer {
+# 启动应用实例
+}
+class ModuleDeployer {
 # 启动应用实例
 }
 interface ExtensionAccessor
@@ -32,10 +35,13 @@ FrameworkServiceRepository serviceRepository;
 }
 class ModuleModel
 
+DubboSpringInitializer <-- DubboSpringInitContext
+DubboSpringInitContext <-- ModuleModel
 ExtensionAccessor <|-- ScopeModel
 ScopeModel <|-- ApplicationModel
 ScopeModel <|-- FrameworkModel
 ScopeModel <|-- ModuleModel
-DubboBootstrap <-- ApplicationModel
+ApplicationModel <|-- ApplicationDeployer
+ModuleModel <|-- ModuleDeployer
 
 @enduml
