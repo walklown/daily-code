@@ -35,7 +35,7 @@ public class ConsumerDemo {
         ConfigurableApplicationContext context = SpringApplication.run(ConsumerDemo.class, args);
         System.out.println("dubbo service started");
 
-        ConsumerService1 demoService = context.getBean("consumerService", ConsumerService1.class);
+        ConsumerService1 demoService = context.getBean("consumerService1", ConsumerService1.class);
         String hello = demoService.sayHello("world");
         System.out.println(hello);
         new CountDownLatch(1).await();
