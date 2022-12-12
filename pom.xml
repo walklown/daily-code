@@ -21,6 +21,7 @@
         <module>netty</module>
         <module>springboot</module>
         <module>dubbo</module>
+        <module>learn-mybatis</module>
         <!--        <module>java-processor</module>-->
     </modules>
 
