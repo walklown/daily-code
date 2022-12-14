@@ -7,6 +7,7 @@
         <groupId>com.walklown.attempt.learn</groupId>
         <artifactId>learn-parent</artifactId>
         <version>1.0.0-SNAPSHOT</version>
+        <relativePath>../pom.xml</relativePath>
     </parent>
 
     <artifactId>learn-mybatis</artifactId>
@@ -15,13 +16,11 @@
         <dependency>
             <groupId>org.mybatis</groupId>
             <artifactId>mybatis</artifactId>
-            <version>3.5.7</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus -->
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus</artifactId>
-            <version>3.4.3.4</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
