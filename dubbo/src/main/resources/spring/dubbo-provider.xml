@@ -25,13 +25,13 @@
 
     <dubbo:application name="demo-provider"/>
 
-    <dubbo:registry address="zookeeper://${zookeeper.address:127.0.0.1}:2181"/>
+    <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
 
     <dubbo:protocol name="dubbo" host="127.0.0.1" port="20880"/>
 
     <bean id="target" class="com.walklown.attempt.dubbo.provider.DemoServiceImpl"/>
 
-    <dubbo:service interface="com.walklown.attempt.dubbo.provider.DemoService" ref="target"/>
+    <dubbo:service interface="com.walklown.attempt.dubbo.provider.DemoService" ref="target" protocol="dubbo"/>
 
 <!--    <dubbo:reference id="demoService" interface="org.apache.dubbo.samples.local.api.DemoService"/>-->
 

@@ -138,7 +138,7 @@
             <dependency>
                 <groupId>org.apache.zookeeper</groupId>
                 <artifactId>zookeeper</artifactId>
-                <version>3.8.0</version>
+                <version>3.5.6</version>
             </dependency>
             <dependency>
                 <groupId>org.eclipse.jetty.aggregate</groupId>
@@ -304,6 +304,10 @@
                         <arg>jdk.compiler/com.sun.tools.javac.tree=ALL-UNNAMED</arg>
                         <arg>--add-exports</arg>
                         <arg>jdk.compiler/com.sun.tools.javac.code=ALL-UNNAMED</arg>
+                        <arg>--add-exports</arg>
+                        <arg>jdk.base/java.lang=ALL-UNNAMED</arg>
+                        <arg>--add-exports</arg>
+                        <arg>jdk.base/java.math=ALL-UNNAMED</arg>
                     </compilerArgs>
                     <annotationProcessorPaths>
                         <!--                            <path>-->

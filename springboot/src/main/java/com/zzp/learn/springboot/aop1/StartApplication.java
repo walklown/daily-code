@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfig
 import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceTransactionManagerAutoConfiguration;
-import org.springframework.boot.autoconfigure.jms.activemq.ActiveMQAutoConfiguration;
+import org.springframework.boot.autoconfigure.jms.JmsAutoConfiguration;
 import org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.cglib.core.DebuggingClassWriter;
@@ -26,7 +26,7 @@ import org.springframework.web.context.ServletContextAware;
  */
 @SpringBootApplication(scanBasePackages = {"com.zzp.learn.springboot.aop1"}, exclude = {
         DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class,
-        ActiveMQAutoConfiguration.class, RedisAutoConfiguration.class, KafkaAutoConfiguration.class,
+        JmsAutoConfiguration.class, RedisAutoConfiguration.class, KafkaAutoConfiguration.class,
         JpaRepositoriesAutoConfiguration.class})
 @EnableAsync
 //@EnableScheduling

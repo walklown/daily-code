@@ -12,7 +12,6 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.context.ServletContextAware;
 
-import javax.annotation.Resource;
 import java.util.Map;
 
 /**
@@ -32,7 +31,7 @@ public class SiteManagerBusinessApiService implements ISiteManagerBusinessApiSer
 //    @Value("custom.map")
 //    private Map<String, String> map;
 
-    @Resource
+    @Autowired
     private PersonConfigurationProperties personConfigurationProperties;
 
 //    private ServletContextAware servletContextAware;

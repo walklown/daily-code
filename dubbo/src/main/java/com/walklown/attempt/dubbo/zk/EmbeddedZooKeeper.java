@@ -22,7 +22,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.SmartLifecycle;
 import org.springframework.util.ErrorHandler;
-import org.springframework.util.SocketUtils;
+//import org.springframework.util.SocketUtils;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -79,13 +79,6 @@ public class EmbeddedZooKeeper implements SmartLifecycle {
     private ErrorHandler errorHandler;
 
     private boolean daemon = true;
-
-    /**
-     * Construct an EmbeddedZooKeeper with a random port.
-     */
-    public EmbeddedZooKeeper() {
-        clientPort = SocketUtils.findAvailableTcpPort();
-    }
 
     /**
      * Construct an EmbeddedZooKeeper with the provided port.
