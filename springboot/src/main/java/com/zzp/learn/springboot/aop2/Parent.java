@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 
 @Component
 @A1
-public class Root {
+public class Parent {
 
     public void sayHello() {
         System.out.println("Root: hello!");

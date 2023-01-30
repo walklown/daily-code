@@ -6,17 +6,19 @@ import com.fasterxml.jackson.databind.JavaType;
 import lombok.Getter;
 import lombok.Setter;
 
-import java.lang.reflect.GenericArrayType;
 import java.lang.reflect.Method;
-import java.lang.reflect.ParameterizedType;
 import java.lang.reflect.Type;
-import java.lang.reflect.TypeVariable;
-import java.lang.reflect.WildcardType;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.StringJoiner;
 
+/**
+ * Jackson处理泛型
+ * {@link com.zzp.learn.walklown.jarkata.base.GenericParameterTypeDemo}
+ *
+ * @author 守愚（张智沛）
+ * @date 2023-01-30
+ */
 public class JacksonUtilsTest {
 
     public static void main(String[] args) throws NoSuchFieldException, NoSuchMethodException, JsonProcessingException {

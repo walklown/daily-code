@@ -14,7 +14,7 @@
 
     <logger name="com.gupaoedu.mybatis.mapper" level="DEBUG"/>
 
-    <root level="DEBUG">
+    <parent level="DEBUG">
         <appender-ref ref="console"/>
-    </root>
+    </parent>
 </configuration>

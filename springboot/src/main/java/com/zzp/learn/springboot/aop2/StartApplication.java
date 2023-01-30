@@ -27,10 +27,10 @@ public class StartApplication {
         child2.sayHello();
         child2.sayYes();
         child2.run();
-        Root root = (Root) applicationContext.getBean("root");
-        root.sayHello();
-        root.sayYes();
-        root.run();
+        Parent parent = (Parent) applicationContext.getBean("parent");
+        parent.sayHello();
+        parent.sayYes();
+        parent.run();
     }
 
 }
