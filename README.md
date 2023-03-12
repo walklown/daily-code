@@ -1,3 +1,1 @@
-### 项目目标
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;练习用代码记录，具体内容参考[个人博客](https://walklown.github.io/)。
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;个人学习代码，算法练习、工具使用技巧Demo等，具体学习内容见[个人博客](https://walklown.github.io/)。
