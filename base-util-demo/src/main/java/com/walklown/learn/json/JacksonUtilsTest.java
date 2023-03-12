@@ -12,6 +12,13 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
+/**
+ * Jackson处理泛型
+ * {@link com.zzp.learn.walklown.jarkata.base.GenericParameterTypeDemo}
+ *
+ * @author 守愚（张智沛）
+ * @date 2023-01-30
+ */
 public class JacksonUtilsTest {
 
     public static void main(String[] args) throws NoSuchFieldException, NoSuchMethodException, JsonProcessingException {

@@ -3,7 +3,7 @@ package com.zzp.learn.springboot.aop2;
 import org.springframework.stereotype.Component;
 
 @Component
-public class Child2 extends Root {
+public class Child2 extends Parent {
 
     @Override
     public void run() {
