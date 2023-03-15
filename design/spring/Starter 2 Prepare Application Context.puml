@@ -4,13 +4,13 @@
 autonumber
 
 main -> SpringApplication.run
+SpringApplication.run -> SpringApplication.run : context.setEnvironment(environment); 设置环境变量
 SpringApplication.run -> SpringApplication.run : createBootstrapContext\n执行SPI注册的BootstrapRegistryInitializer
 SpringApplication.run -> SpringApplication.run : getRunListeners 获取spring.factories配置的\nSpringApplicationRunListener类实例
-SpringApplication.run -> SpringApplication.run : prepareEnvironment 构建Environment
 SpringApplication.run -> SpringApplication.run : printBanner
 SpringApplication.run -> SpringApplication.run : createApplicationContext\n（策略模式，SERVLET:AnnotationConfigServletWebServerApplicationContext）
 SpringApplication.run -> SpringApplication.prepareContext
-SpringApplication.prepareContext -> SpringApplication.prepareContext : postProcessApplicationContext\n应用任何相关的后处理 ApplicationContext。 \n子类可以根据需要应用额外的处理。
+SpringApplication.prepareContext -> SpringApplication.prepareContext : postProcessApplicationContext\n提供关于名称、类加载、配置转换的扩展
 SpringApplication.prepareContext -> SpringApplication.prepareContext : applyInitializers\n执行ApplicationContextInitializer
 SpringApplication.prepareContext -> SpringApplication.prepareContext : listeners.contextPrepared\n处理本地事件
 SpringApplication.prepareContext -> SpringApplication.prepareContext : bootstrapContext.close\n关闭启动引导，并发送事件

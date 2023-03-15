@@ -19,12 +19,43 @@ package com.zzp.learn.walklown.jarkata.base.classloading;
  */
 public class ClassLoadingOrderDemo {
 
+    private String a;
+
+    private static String b = "b";
+
     public static void main(String[] args) {
         System.out.printf("%d,%d\n%d,%d\n",
                 SingleTon.getInstance().count1, SingleTon.getInstance().count2,
                 SingleTon.count3, SingleTon.count4
         );
     }
+
+    public static Sfc getSfc() {
+        return new Sfc();
+    }
+
+    public class InnerClass {
+
+        public InnerClass() {
+            System.out.println(ClassLoadingOrderDemo.b);
+            ClassLoadingOrderDemo demo = new ClassLoadingOrderDemo();
+            System.out.println(demo.a);
+        }
+
+    }
+
+    public static class StaticInnerClass {
+
+        public static void log() {
+            System.out.println(ClassLoadingOrderDemo.b);
+            ClassLoadingOrderDemo demo = new ClassLoadingOrderDemo();
+            System.out.println(demo.a);
+        }
+    }
+}
+
+class Sfc {
+
 }
 
 class SingleTon {

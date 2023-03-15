@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.web.context.ServletContextAware;
 
 import java.util.Map;
@@ -71,6 +72,7 @@ public class SiteManagerBusinessApiService implements ISiteManagerBusinessApiSer
 //            @Sensitive()
 //    })
     @Sensitive(value = "1")
+    @Transactional
     @Override
     public void getSite1(String blockId, String siteId) {
         return;

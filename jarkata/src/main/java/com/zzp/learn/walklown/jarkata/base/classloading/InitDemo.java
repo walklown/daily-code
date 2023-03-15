@@ -18,10 +18,11 @@ public class InitDemo {
 	 */
 	public static void main(String[] args) throws Exception{
 	//  主动引用引起类的初始化一: new对象、读取或设置类的静态变量、调用类的静态方法。
-	//	new InitClass();
-	//	InitClass.a = "";
-	//	String a = InitClass.a;
-	//	InitClass.method();
+//		new InitClass();
+//		InitClass.a = "";
+//		String a = InitClass.a;
+//		InitClass.method();
+		InitClass.method();Sfc sfc = ClassLoadingOrderDemo.getSfc();
 		
 	//  主动引用引起类的初始化二：通过反射实例化对象、读取或设置类的静态变量、调用类的静态方法。
 	//	Class cls = InitClass.class;

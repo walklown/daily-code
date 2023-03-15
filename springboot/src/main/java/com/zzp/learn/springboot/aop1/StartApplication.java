@@ -1,6 +1,9 @@
 
 package com.zzp.learn.springboot.aop1;
 
+import com.zzp.learn.springboot.aop1.aggregate.Aggregate;
+import com.zzp.learn.springboot.aop1.aggregate.CustomBeanFactory;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -16,6 +19,7 @@ import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.EnableAspectJAutoProxy;
 import org.springframework.context.annotation.Import;
 import org.springframework.scheduling.annotation.EnableAsync;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 import org.springframework.web.context.ServletContextAware;
 
 /**
@@ -25,16 +29,13 @@ import org.springframework.web.context.ServletContextAware;
  * @date 2021-01-07
  */
 @SpringBootApplication(scanBasePackages = {"com.zzp.learn.springboot.aop1"}, exclude = {
-        DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class,
+//        DataSourceAutoConfiguration.class, DataSourceTransactionManagerAutoConfiguration.class,
         JmsAutoConfiguration.class, RedisAutoConfiguration.class, KafkaAutoConfiguration.class,
         JpaRepositoriesAutoConfiguration.class})
 @EnableAsync
-//@EnableScheduling
-//@EnableRetry
 @EnableAspectJAutoProxy
-//@EnableAspectJAutoProxy(proxyTargetClass = true)
-//@ImportResource(locations = {"classpath:spring-config.xml"})
-//@Import(ExtInitConfig.class)
+@EnableTransactionManagement
+@Slf4j
 public class StartApplication {
 
     public static void main(String[] args) {
@@ -42,15 +43,25 @@ public class StartApplication {
         ConfigurableApplicationContext applicationContext = new SpringApplicationBuilder(StartApplication.class)
 //                .web(WebApplicationType.NONE)
                 .run(args);
-        SiteManagerBusinessApiService
-                siteManagerBusinessApiService = applicationContext.getBean(SiteManagerBusinessApiService.class);
-//        ISiteManagerBusinessApiService
-//                siteManagerBusinessApiService = applicationContext.getBean(ISiteManagerBusinessApiService.class);
+//        SiteManagerBusinessApiService
+//                siteManagerBusinessApiService = applicationContext.getBean(SiteManagerBusinessApiService.class);
+        ISiteManagerBusinessApiService
+                siteManagerBusinessApiService = applicationContext.getBean(ISiteManagerBusinessApiService.class);
 //        siteManagerBusinessApiService.getSite("", "");
         siteManagerBusinessApiService.getSite1("", "");
 
 //        ServletContextAwareTest servletContextAware = applicationContext.getBean(ServletContextAwareTest.class);
 //        servletContextAware.getSiteManagerBusinessApiService();
+
+
+        CustomBeanFactory customBeanFactory = applicationContext.getBean(CustomBeanFactory.class);
+        Aggregate aggregate = customBeanFactory.wire("123");
+        aggregate.log();
+        log.info("bean:{}", aggregate);
+
+        Aggregate aggregate1 = customBeanFactory.wire("456");
+        aggregate1.log();
+        log.info("bean1:{}", aggregate1);
     }
 
 }
