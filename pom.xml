@@ -10,18 +10,18 @@
 
     <packaging>pom</packaging>
 
-    <name>learn-parent</name>
+    <name>learn-demo</name>
     <url>https://walklown.github.io/</url>
     <description>Learn Application Parent</description>
 
     <modules>
-        <module>demo</module>
+        <module>base-util-demo</module>
         <!--        <module>eureka</module>-->
-        <module>jarkata</module>
-        <module>netty</module>
-        <module>springboot</module>
-        <module>dubbo</module>
-        <module>learn-mybatis</module>
+        <module>jarkata-new-demo</module>
+        <module>netty-demo</module>
+        <module>springboot-demo</module>
+        <module>dubbo-demo</module>
+        <module>mybatis-demo</module>
         <!--        <module>java-processor</module>-->
     </modules>
 
@@ -41,6 +41,7 @@
         <resilience4jVersion>2.0.2</resilience4jVersion>
         <jackson.version>2.14.1</jackson.version>
         <lombok.version>1.18.22</lombok.version>
+        <mapstruct.version>1.4.2.Final</mapstruct.version>
         <validation.api.version>2.0.1.Final</validation.api.version>
         <dubbo.version>3.2.0-beta.2</dubbo.version>
     </properties>
@@ -73,11 +74,11 @@
                 <artifactId>json</artifactId>
                 <version>20220924</version>
             </dependency>
-
+            <!-- https://mvnrepository.com/artifact/org.apache.httpcomponents.client5/httpclient5 -->
             <dependency>
-                <groupId>org.apache.httpcomponents</groupId>
-                <artifactId>httpclient</artifactId>
-                <version>4.5.5</version>
+                <groupId>org.apache.httpcomponents.client5</groupId>
+                <artifactId>httpclient5</artifactId>
+                <version>5.2.1</version>
             </dependency>
             <dependency>
                 <groupId>com.google.code.gson</groupId>
@@ -219,7 +220,7 @@
             <dependency>
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons-lang3</artifactId>
-                <version>3.8</version>
+                <version>3.8.1</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.commons</groupId>
@@ -312,7 +313,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-compiler-plugin</artifactId>
-                <version>3.8.1</version>
+                <version>3.9.0</version>
                 <configuration>
                     <source>${maven.compiler.source}</source> <!-- 源代码使用的开发版本 -->
                     <target>${maven.compiler.target}</target> <!-- 需要生成的目标class文件的编译版本 -->
@@ -352,11 +353,11 @@
                             <artifactId>lombok</artifactId>
                             <version>${lombok.version}</version>
                         </path>
-                        <!--                        <path>-->
-                        <!--                            <groupId>org.mapstruct</groupId>-->
-                        <!--                            <artifactId>mapstruct-processor</artifactId>-->
-                        <!--                            <version>${mapstruct.version}</version>-->
-                        <!--                        </path>-->
+                        <path>
+                            <groupId>org.mapstruct</groupId>
+                            <artifactId>mapstruct-processor</artifactId>
+                            <version>${mapstruct.version}</version>
+                        </path>
                     </annotationProcessorPaths>
                 </configuration>
             </plugin>
