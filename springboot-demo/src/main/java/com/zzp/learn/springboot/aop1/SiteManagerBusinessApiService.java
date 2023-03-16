@@ -1,9 +1,12 @@
 package com.zzp.learn.springboot.aop1;
 
+import com.zzp.learn.springboot.aop1.aggregate.Aggregate;
+import com.zzp.learn.springboot.aop1.aggregate.CustomBeanFactory;
 import com.zzp.learn.springboot.aop1.sensitive.Sensitive;
 import com.zzp.learn.springboot.aop1.sensitive.Sensitive2;
 import com.zzp.learn.springboot.aop1.sensitive.SensitiveClass;
 import com.zzp.learn.springboot.aop1.sensitive.Sensitives;
+import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,6 +25,7 @@ import java.util.Map;
  */
 @Service
 @SensitiveClass
+@Slf4j
 public class SiteManagerBusinessApiService implements ISiteManagerBusinessApiService {
 
     /**
@@ -29,37 +33,12 @@ public class SiteManagerBusinessApiService implements ISiteManagerBusinessApiSer
      */
     private static final Logger LOGGER = LoggerFactory.getLogger(SiteManagerBusinessApiService.class);
 
-//    @Value("custom.map")
-//    private Map<String, String> map;
+    @Autowired
+    private CustomBeanFactory customBeanFactory;
 
     @Autowired
     private PersonConfigurationProperties personConfigurationProperties;
 
-//    private ServletContextAware servletContextAware;
-//
-//    public ServletContextAware getServletContextAware() {
-//        return servletContextAware;
-//    }
-//
-//    @Autowired
-//    @Qualifier("servletContextAware")
-//    public void setServletContextAware(ServletContextAware servletContextAware) {
-//        this.servletContextAware = servletContextAware;
-//    }
-
-//    public PersonManager getPersonManager() {
-//        return personManager;
-//    }
-
-//    @Resource
-//    private PersonManager personManager1;
-//
-//    private final PersonManager personManager;
-//
-//    public SiteManagerBusinessApiService(PersonManager personManager) {
-//        LOGGER.info("init");
-//        this.personManager = personManager;
-//    }
 
     @Override
     @Sensitive()
@@ -75,6 +54,10 @@ public class SiteManagerBusinessApiService implements ISiteManagerBusinessApiSer
     @Transactional
     @Override
     public void getSite1(String blockId, String siteId) {
-        return;
+        Aggregate aggregate = customBeanFactory.wire("123");
+        log.info("bean:{}", aggregate);
+
+        Aggregate aggregate1 = customBeanFactory.wire("456");
+        log.info("bean1:{}", aggregate1);
     }
 }

@@ -3,11 +3,12 @@ package com.zzp.learn.springboot.aop1.aggregate;
 import com.zzp.learn.springboot.aop1.ISiteManagerBusinessApiService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.InitializingBean;
 import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
 @Transactional
-public class Aggregate {
+public class Aggregate implements InitializingBean {
 
     @Resource
     private ISiteManagerBusinessApiService siteManagerBusinessApiService;
@@ -18,8 +19,12 @@ public class Aggregate {
         this.phone = phone;
     }
 
-    @Transactional
     public void log() {
         log.info("siteManagerBusinessApiService:{}", siteManagerBusinessApiService);
+    }
+
+    @Override
+    public void afterPropertiesSet() throws Exception {
+        log.info("afterPropertiesSet");
     }
 }

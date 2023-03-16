@@ -43,25 +43,15 @@ public class StartApplication {
         ConfigurableApplicationContext applicationContext = new SpringApplicationBuilder(StartApplication.class)
 //                .web(WebApplicationType.NONE)
                 .run(args);
-//        SiteManagerBusinessApiService
-//                siteManagerBusinessApiService = applicationContext.getBean(SiteManagerBusinessApiService.class);
         ISiteManagerBusinessApiService
                 siteManagerBusinessApiService = applicationContext.getBean(ISiteManagerBusinessApiService.class);
-//        siteManagerBusinessApiService.getSite("", "");
-        siteManagerBusinessApiService.getSite1("", "");
-
-//        ServletContextAwareTest servletContextAware = applicationContext.getBean(ServletContextAwareTest.class);
-//        servletContextAware.getSiteManagerBusinessApiService();
-
 
         CustomBeanFactory customBeanFactory = applicationContext.getBean(CustomBeanFactory.class);
-        Aggregate aggregate = customBeanFactory.wire("123");
-        aggregate.log();
-        log.info("bean:{}", aggregate);
 
-        Aggregate aggregate1 = customBeanFactory.wire("456");
-        aggregate1.log();
-        log.info("bean1:{}", aggregate1);
+        Thread a = new Thread(()->{
+            siteManagerBusinessApiService.getSite1("", "");
+        });
+        a.start();
     }
 
 }
