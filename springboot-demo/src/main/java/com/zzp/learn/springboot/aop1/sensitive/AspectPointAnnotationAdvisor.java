@@ -29,12 +29,12 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 /**
- * 切点处理类
+ * Spring拦截器配置
  *
- * @author 守愚（张智沛）
- * @date 2021-08-14
+ * @author Walklown
+ * @date 2023-03-16
  */
-public class SensitiveAnnotationAdvisor extends AbstractPointcutAdvisor implements BeanFactoryAware {
+public class AspectPointAnnotationAdvisor extends AbstractPointcutAdvisor implements BeanFactoryAware {
 
 	/**
 	 * 处理执行类
@@ -49,11 +49,14 @@ public class SensitiveAnnotationAdvisor extends AbstractPointcutAdvisor implemen
 
 	/**
 	 * Create a new {@code AsyncAnnotationAdvisor} for bean-style configuration.
+	 *
+	 * @date 2023-03-16
+	 * @author Walklown
 	 */
-	public SensitiveAnnotationAdvisor() {
+	public AspectPointAnnotationAdvisor() {
 		Set<Class<? extends Annotation>> asyncAnnotationTypes = new LinkedHashSet<>(2);
-		asyncAnnotationTypes.add(SensitiveClass.class);
-		this.advice = new SensitiveAspect();
+		asyncAnnotationTypes.add(AspectClassPoint.class);
+		this.advice = new InterceptorToAspect();
 		this.pointcut = buildPointcut(asyncAnnotationTypes);
 	}
 

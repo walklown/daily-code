@@ -17,7 +17,7 @@ public class SensitiveInterceptorPostProcessor extends AbstractBeanFactoryAwareA
     public void setBeanFactory(BeanFactory beanFactory) {
         super.setBeanFactory(beanFactory);
 
-        SensitiveAnnotationAdvisor advisor = new SensitiveAnnotationAdvisor();
+        AspectPointAnnotationAdvisor advisor = new AspectPointAnnotationAdvisor();
         advisor.setBeanFactory(beanFactory);
         this.advisor = advisor;
     }

@@ -1,6 +1,6 @@
 package com.zzp.learn.springboot.aop1.aggregate;
 
-import com.zzp.learn.springboot.aop1.ISiteManagerBusinessApiService;
+import com.zzp.learn.springboot.aop1.IRpcApiService;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
@@ -11,7 +11,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class Aggregate implements InitializingBean {
 
     @Resource
-    private ISiteManagerBusinessApiService siteManagerBusinessApiService;
+    private IRpcApiService siteManagerBusinessApiService;
 
     private String phone;
 

@@ -11,17 +11,17 @@ import org.springframework.core.annotation.Order;
 import org.springframework.stereotype.Component;
 
 /**
- * <p> 脱敏切面
+ * Aspect切面1
  *
- * @author 【千殇】（【罗玉华】qianshang.luo@tuya.com）
- * @since 2021/8/26 10:37 下午
+ * @author Walklown
+ * @date 2023-03-16
  */
 @Aspect
 @Order(30)
 @Component
-public class SensitiveAspect2 {
+public class AspectByAnnotation1 {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(SensitiveAspect2.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AspectByAnnotation1.class);
 
     @Pointcut("@annotation(com.zzp.learn.springboot.aop1.sensitive.Sensitive2)")
     public void pointcut() {
