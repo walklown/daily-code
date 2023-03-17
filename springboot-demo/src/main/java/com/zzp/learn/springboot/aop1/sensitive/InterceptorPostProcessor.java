@@ -2,6 +2,8 @@ package com.zzp.learn.springboot.aop1.sensitive;
 
 import org.springframework.aop.framework.autoproxy.AbstractBeanFactoryAwareAdvisingPostProcessor;
 import org.springframework.beans.factory.BeanFactory;
+import org.springframework.core.Ordered;
+import org.springframework.core.PriorityOrdered;
 import org.springframework.stereotype.Component;
 
 /**
@@ -11,7 +13,7 @@ import org.springframework.stereotype.Component;
  * @date 2021-08-13
  */
 @Component
-public class SensitiveInterceptorPostProcessor extends AbstractBeanFactoryAwareAdvisingPostProcessor {
+public class InterceptorPostProcessor extends AbstractBeanFactoryAwareAdvisingPostProcessor implements PriorityOrdered {
 
     @Override
     public void setBeanFactory(BeanFactory beanFactory) {
@@ -24,6 +26,6 @@ public class SensitiveInterceptorPostProcessor extends AbstractBeanFactoryAwareA
 
     @Override
     public int getOrder() {
-        return 10;
+        return Ordered.HIGHEST_PRECEDENCE;
     }
 }

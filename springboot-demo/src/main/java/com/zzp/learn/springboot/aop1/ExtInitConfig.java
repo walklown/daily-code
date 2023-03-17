@@ -1,6 +1,6 @@
 package com.zzp.learn.springboot.aop1;
 
-import com.zzp.learn.springboot.aop1.sensitive.AspectClassPoint;
+import com.zzp.learn.springboot.aop1.sensitive.ClassAnnotation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;
@@ -29,7 +29,7 @@ public class ExtInitConfig implements ImportBeanDefinitionRegistrar, ResourceLoa
     public void registerBeanDefinitions(AnnotationMetadata importingClassMetadata, BeanDefinitionRegistry registry) {
         ClassPathScanningCandidateComponentProvider provider = getScanner();
         //设置扫描器
-        provider.addIncludeFilter(new AnnotationTypeFilter(AspectClassPoint.class));
+        provider.addIncludeFilter(new AnnotationTypeFilter(ClassAnnotation.class));
         //扫描此包下的所有带有@RpcClient的注解的类
         Set<BeanDefinition> beanDefinitionSet = provider.findCandidateComponents("com.zzp.learn.springboot.aop1");
         for (BeanDefinition beanDefinition : beanDefinitionSet) {

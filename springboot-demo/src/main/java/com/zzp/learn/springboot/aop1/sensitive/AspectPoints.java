@@ -19,5 +19,5 @@ import java.lang.annotation.Target;
 @Inherited
 public @interface AspectPoints {
 
-    AspectPoint[] value();
+    MethodAnnotation[] value();
 }

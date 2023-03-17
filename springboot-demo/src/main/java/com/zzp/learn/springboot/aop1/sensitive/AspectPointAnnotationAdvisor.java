@@ -55,7 +55,7 @@ public class AspectPointAnnotationAdvisor extends AbstractPointcutAdvisor implem
 	 */
 	public AspectPointAnnotationAdvisor() {
 		Set<Class<? extends Annotation>> asyncAnnotationTypes = new LinkedHashSet<>(2);
-		asyncAnnotationTypes.add(AspectClassPoint.class);
+		asyncAnnotationTypes.add(ClassAnnotation.class);
 		this.advice = new InterceptorToAspect();
 		this.pointcut = buildPointcut(asyncAnnotationTypes);
 	}

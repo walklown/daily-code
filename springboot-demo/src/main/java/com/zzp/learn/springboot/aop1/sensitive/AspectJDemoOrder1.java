@@ -19,9 +19,9 @@ import org.springframework.stereotype.Component;
 @Aspect
 @Order(30)
 @Component
-public class AspectByAnnotation1 {
+public class AspectJDemoOrder1 {
 
-    private static final Logger LOGGER = LoggerFactory.getLogger(AspectByAnnotation1.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AspectJDemoOrder1.class);
 
     @Pointcut("@annotation(com.zzp.learn.springboot.aop1.sensitive.Sensitive2)")
     public void pointcut() {
