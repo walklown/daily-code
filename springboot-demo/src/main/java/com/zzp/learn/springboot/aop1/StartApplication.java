@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  * 启动类
+ * AopConfigUtils 设置了AspectJ的代理在order中优先级最高
  *
  * @author 守愚（张智沛）
  * @date 2021-01-07
@@ -36,7 +37,7 @@ public class StartApplication {
         IRpcApiService
                 serviceSite = applicationContext.getBean(IRpcApiService.class);
 
-        CustomBeanFactory customBeanFactory = applicationContext.getBean(CustomBeanFactory.class);
+//        CustomBeanFactory customBeanFactory = applicationContext.getBean(CustomBeanFactory.class);
 
         Thread a = new Thread(()->{
             serviceSite.get1("");
