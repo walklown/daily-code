@@ -23,7 +23,7 @@ public class AspectJDemo {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(AspectJDemo.class);
 
-    @Pointcut("@annotation(com.zzp.learn.springboot.aop1.sensitive.AspectPoint)")
+    @Pointcut("@annotation(com.zzp.learn.springboot.aop1.sensitive.MethodAnnotation)")
     public void pointcut() {
     }
 

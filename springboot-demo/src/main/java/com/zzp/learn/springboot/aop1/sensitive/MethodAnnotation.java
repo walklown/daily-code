@@ -18,7 +18,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Target({ElementType.METHOD})
 @Inherited
-@Repeatable(AspectPoints.class)
+@Repeatable(MethodAnnotations.class)
 public @interface MethodAnnotation {
 
     String value() default "";
