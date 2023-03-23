@@ -13,7 +13,7 @@ import org.springframework.stereotype.Component;
  * @date 2021-08-13
  */
 @Component
-public class InterceptorPostProcessor extends AbstractBeanFactoryAwareAdvisingPostProcessor implements PriorityOrdered {
+public class InterceptorPostProcessor extends AbstractBeanFactoryAwareAdvisingPostProcessor {
 
     @Override
     public void setBeanFactory(BeanFactory beanFactory) {
