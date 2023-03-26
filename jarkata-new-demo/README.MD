@@ -1,4 +1,16 @@
 #### Java 8 新特性
+https://www.oracle.com/java/technologies/javase/8-whats-new.html
+
+* Java编程语法
+  * Lambda表达式
+  * 方法引用
+    * Class::new
+    * Class::static_method
+    * Class::method
+    * instance::method
+  * 
+
+
 #### Java 9 新特性
 #### Java 10 新特性
 #### Java 11 新特性
