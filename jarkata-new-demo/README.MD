@@ -10,6 +10,16 @@ https://www.oracle.com/java/technologies/javase/8-whats-new.html
     * instance::method
   * 接口类支持【default】方法：默认方法使您能够向库的接口添加新功能，并确保与为这些接口的旧版本编写的代码的二进制兼容性。
     * 如【java.util.Collection】中新增了【Spliterator<E> spliterator()】、【Stream<E> stream()】、【Stream<E> parallelStream()】三个默认方法以支持流API，其子类无需变更即可使用
+  * 重复注释【java.lang.annotation.Repeatable】提供了将相同注释类型多次应用于相同声明或类型使用的能力。
+  * 注释的【@Target】范围枚举【ElementType】增加【TYPE_PARAMETER】、【TYPE_USE】，与可插入类型系统一起使用，此功能可以改进代码的类型检查。
+    * 【TYPE_PARAMETER】：
+    * 【TYPE_USE】（Question：How the annotations work？https://checkerframework.org/）
+      * @NotNull String str1 = ...
+      * Map.@NonNull Entry = ...
+      * new @Interned MyObject()
+      * 。。。
+  * 改进的类型推断
+    * [示例](./src/main/java/com/walklown/learn/jarkata/base/TypeInferenceDemo.java)
 
 
 #### Java 9 新特性
