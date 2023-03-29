@@ -2,13 +2,14 @@
 https://www.oracle.com/java/technologies/javase/8-whats-new.html
 
 * Java编程语法
-  * Lambda表达式
-  * 方法引用
+  * Lambda表达式（Lambda Expressions）
+  * 方法引用（Method references）
     * Class::new
     * Class::static_method
     * Class::method
     * instance::method
-  * 
+  * 接口类支持【default】方法：默认方法使您能够向库的接口添加新功能，并确保与为这些接口的旧版本编写的代码的二进制兼容性。
+    * 如【java.util.Collection】中新增了【Spliterator<E> spliterator()】、【Stream<E> stream()】、【Stream<E> parallelStream()】三个默认方法以支持流API，其子类无需变更即可使用
 
 
 #### Java 9 新特性
