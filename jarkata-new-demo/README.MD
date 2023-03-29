@@ -20,6 +20,8 @@ https://www.oracle.com/java/technologies/javase/8-whats-new.html
       * 。。。
   * 改进的类型推断
     * [示例](./src/main/java/com/walklown/learn/jarkata/base/TypeInferenceDemo.java)
+  * 方法参数反射
+    * 【Method method = MyClass.class.getMethod("methodName", String.class)】，【Method】新增抽象父类【java.lang.reflect.Executable】，以支持
 
 
 #### Java 9 新特性
