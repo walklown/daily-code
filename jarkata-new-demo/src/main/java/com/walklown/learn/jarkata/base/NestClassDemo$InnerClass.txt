@@ -1,0 +1,23 @@
+Compiled from "NestClassDemo.java"
+public class com.walklown.learn.jarkata.base.NestClassDemo$InnerClass {
+  final com.walklown.learn.jarkata.base.NestClassDemo this$0;
+
+  public com.walklown.learn.jarkata.base.NestClassDemo$InnerClass(com.walklown.learn.jarkata.base.NestClassDemo);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: putfield      #1                  // Field this$0:Lcom/walklown/learn/jarkata/base/NestClassDemo;
+       5: aload_0
+       6: invokespecial #7                  // Method java/lang/Object."<init>":()V
+       9: return
+
+  public java.lang.String getA();
+    Code:
+       0: new           #13                 // class com/walklown/learn/jarkata/base/NestClassDemo
+       3: dup
+       4: invokespecial #15                 // Method com/walklown/learn/jarkata/base/NestClassDemo."<init>":()V
+       7: astore_1
+       8: aload_1
+       9: getfield      #16                 // Field com/walklown/learn/jarkata/base/NestClassDemo.a:Ljava/lang/String;
+      12: areturn
+}
