@@ -28,14 +28,14 @@ public class CglibProxy implements MethodInterceptor {
         return null;
     }
 
-//    public static void main(String[] args) {
-////        CglibProxy cglibProxy = new CglibProxy();
-//        CglibProxy cglibProxy = new CglibProxy(new Me());
-//        Enhancer enhancer = new Enhancer();
-////        enhancer.setSuperclass(Sleepable.class);
-//        enhancer.setSuperclass(Me.class);
-//        enhancer.setCallback(cglibProxy);
-//        Sleepable userDao = (Sleepable) enhancer.create();
-//        userDao.sleep();
-//    }
+    public static void main(String[] args) {
+//        CglibProxy cglibProxy = new CglibProxy();
+        CglibProxy cglibProxy = new CglibProxy(new Me());
+        Enhancer enhancer = new Enhancer();
+//        enhancer.setSuperclass(Sleepable.class);
+        enhancer.setSuperclass(Me.class);
+        enhancer.setCallback(cglibProxy);
+        Sleepable userDao = (Sleepable) enhancer.create();
+        userDao.sleep();
+    }
 }
