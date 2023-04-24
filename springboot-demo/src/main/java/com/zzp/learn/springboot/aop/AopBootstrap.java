@@ -24,12 +24,6 @@ import org.springframework.web.bind.annotation.RestController;
 public class AopBootstrap {
 
     @Autowired
-    private ObjectMapper objectMapper;
-
-    @Autowired
-    private ObjectMapper objectMapper1;
-
-    @Autowired
     private ConfigurationDemo configurationDemo;
 
     @Autowired
