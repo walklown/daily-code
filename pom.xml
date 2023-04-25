@@ -81,11 +81,6 @@
                 <version>5.2.1</version>
             </dependency>
             <dependency>
-                <groupId>com.google.code.gson</groupId>
-                <artifactId>gson</artifactId>
-                <version>2.10</version>
-            </dependency>
-            <dependency>
                 <groupId>com.google.guava</groupId>
                 <artifactId>guava</artifactId>
                 <version>31.1-jre</version>
@@ -96,15 +91,6 @@
                 <artifactId>druid</artifactId>
                 <version>1.2.15</version>
             </dependency>
-
-            <!--            <dependency>-->
-            <!--                &lt;!&ndash; Import dependency management from Spring Cloud &ndash;&gt;-->
-            <!--                <groupId>org.springframework.cloud</groupId>-->
-            <!--                <artifactId>spring-cloud-dependencies</artifactId>-->
-            <!--                <version>${springcloud.version}</version>-->
-            <!--                <type>pom</type>-->
-            <!--                <scope>import</scope>-->
-            <!--            </dependency>-->
 
             <dependency>
                 <!-- Import dependency management from Spring Boot -->
