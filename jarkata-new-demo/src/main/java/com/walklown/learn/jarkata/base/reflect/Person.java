@@ -38,8 +38,8 @@ public class Person {
                 '}';
     }
 
-    private void sleep() {
-        System.out.println("sleeping");
+    private void sleep(String time) {
+        System.out.println("sleeping:" + time);
     }
 
     public static String transfer(String param) {
