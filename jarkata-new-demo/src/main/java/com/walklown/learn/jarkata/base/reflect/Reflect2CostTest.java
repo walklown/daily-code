@@ -17,6 +17,11 @@ import java.lang.reflect.Method;
  */
 public class Reflect2CostTest {
 
+    /**
+     *
+     * @param args
+     * @throws Throwable
+     */
     public static void main(String[] args) throws Throwable {
         MethodHandles.Lookup lookup = MethodHandles.lookup();
 
