@@ -46,7 +46,7 @@ public class ReflectDemo {
         MethodHandle nameMh= lookup.findGetter(Person.class,"name", String.class);
         System.out.println((String) nameMh.invoke(con1Mh.invoke()));
         //访问private的属性，需要借助反射
-        Field nameField = Person.class.getDeclaredField("name");
+        Field nameField = Person.class.getDeclaredField("mobile");
         nameField.setAccessible(true);
         MethodHandle nameFromRefMh = lookup.unreflectGetter(nameField);
         System.out.println((String) nameFromRefMh.invoke(target1));

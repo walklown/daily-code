@@ -2,7 +2,7 @@ package com.walklown.learn.jarkata.base.reflect;
 
 public class Person {
 
-    private String name;
+    public String name;
 
     private String mobile;
 
