@@ -14,7 +14,7 @@ public class Person {
         this.mobile = mobile;
     }
 
-    public String getName() {
+    private String getName() {
         return name;
     }
 

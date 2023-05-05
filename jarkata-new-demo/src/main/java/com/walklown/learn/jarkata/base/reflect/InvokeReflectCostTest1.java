@@ -5,7 +5,6 @@ import org.apache.commons.lang3.time.StopWatch;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodType;
-import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
 /**
@@ -15,7 +14,7 @@ import java.lang.reflect.Method;
  *
  * @author walklown
  */
-public class Reflect2CostTest {
+public class InvokeReflectCostTest1 {
 
     /**
      *
@@ -31,7 +30,7 @@ public class Reflect2CostTest {
 
         //调用非private实例方法
         Method learnMethod = Person.class.getDeclaredMethod("getName");
-//        learnMethod.setAccessible(true);
+        learnMethod.setAccessible(true);
         MethodHandle learnProMh = lookup.unreflect(learnMethod);
         StopWatch stopWatch = StopWatch.createStarted();
         for (int i = 0; i < 10000000; i++) {

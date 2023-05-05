@@ -14,7 +14,7 @@ import java.lang.reflect.Method;
  *
  * @author walklown
  */
-public class Reflect3CostTest {
+public class InvokeReflectCostTest2 {
 
     public static void main(String[] args) throws Throwable {
         MethodHandles.Lookup lookup = MethodHandles.publicLookup();
@@ -23,7 +23,7 @@ public class Reflect3CostTest {
         MethodHandle con2Mh = lookup.findConstructor(Person.class, con2Mt);
         Object target2 = con2Mh.invoke("zhang", "12133445566");
 
-        Method learnMethod = Person.class.getDeclaredMethod("getName");
+        Method learnMethod = Person.class.getDeclaredMethod("getMobile");
 //        learnMethod.setAccessible(true);
         MethodHandle learnProMh = lookup.unreflect(learnMethod);
         StopWatch stopWatch = StopWatch.createStarted();
@@ -39,6 +39,17 @@ public class Reflect3CostTest {
         stopWatch.start();
         for (int i = 0; i < 10000000; i++) {
             String name = (String) learnProMh.invoke(target2);
+//            System.out.println(name);
+        }
+        stopWatch.stop();
+        System.out.println("stopWatch:" + stopWatch);
+
+        Method learnMethod1 = Person.class.getDeclaredMethod("getName");
+        learnMethod1.setAccessible(true);
+        stopWatch.reset();
+        stopWatch.start();
+        for (int i = 0; i < 10000000; i++) {
+            String name = (String) learnMethod1.invoke(target2);
 //            System.out.println(name);
         }
         stopWatch.stop();

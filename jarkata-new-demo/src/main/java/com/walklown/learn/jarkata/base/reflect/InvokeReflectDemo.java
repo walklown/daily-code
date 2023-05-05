@@ -11,7 +11,7 @@ import java.lang.reflect.Method;
  *
  * @author walklown
  */
-public class ReflectDemo {
+public class InvokeReflectDemo {
 
     public static void main(String[] args) throws Throwable {
         MethodHandles.Lookup lookup = MethodHandles.lookup();
