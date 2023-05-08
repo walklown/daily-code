@@ -8,7 +8,7 @@ import java.lang.reflect.Method;
 
 /*
  * https://www.optaplanner.org/blog/2018/01/09/JavaReflectionButMuchFaster.html
- * 性能测试 {@link com.walklown.learn.jarkata.base.reflect.InvokeReflectCostTest2}
+ * 性能测试 com.walklown.learn.jarkata.base.reflect.InvokeReflectCostTest
  *
  * @author walklown
  */
@@ -18,21 +18,33 @@ public class InvokeReflectDemo {
         MethodHandles.Lookup lookup = MethodHandles.lookup();
         MethodHandles.Lookup publicLookup = MethodHandles.publicLookup();
 
-        MethodType con1Mt = MethodType.methodType(void.class);
+        MethodType con1Mt = MethodType.methodType(void.class, String.class, String.class);
         MethodHandle con1Mh = publicLookup.findConstructor(Person.class, con1Mt);
-        Object target1 = con1Mh.invoke();
-        System.out.println(target1);
+        Object target1 = con1Mh.invoke("zhang", "12133445566");
+        System.out.println("init:" + target1);
 
-        MethodType con2Mt = MethodType.methodType(void.class, String.class, String.class);
-        MethodHandle con2Mh = lookup.findConstructor(Person.class, con2Mt);
-        Object target2 = con2Mh.invoke("zhang", "12133445566");
-        System.out.println(target2);
-
-        //调用非private实例方法
+        // 调用public方法
         MethodType getterMt = MethodType.methodType(String.class);
-        MethodHandle getterMh = lookup.findVirtual(Person.class, "getName", getterMt);
-        String name = (String) getterMh.invoke(target2);
-        System.out.println(name);
+        MethodHandle publicGetterMh = lookup.findVirtual(Person.class, "getName", getterMt);
+        System.out.println(publicGetterMh.invoke(target1));
+        // 调用private方法，实际上无访问权限，会报错
+        try {
+            MethodHandle privateGetterMh = lookup.findVirtual(Person.class, "privateGetMobile", getterMt);
+            System.out.println(privateGetterMh.invoke(target1));
+        } catch (Exception e) {
+            System.out.println("调用private方法，实际上无访问权限，会报错:" + e.getMessage());
+        }
+        // 调用protect方法
+        MethodHandle protectGetterMh = lookup.findVirtual(Person.class, "getMobile", getterMt);
+        System.out.println(protectGetterMh.invoke(target1));
+        // publicLookUp调用protect方法，即使有访问权限，非public也会报错
+        try {
+            MethodHandle protectGetterMhOfPublicLookUp = publicLookup.findVirtual(Person.class, "getMobile", getterMt);
+            System.out.println(protectGetterMhOfPublicLookUp.invoke(target1));
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+        }
+
         //访问private方法
         Method learnMethod = Person.class.getDeclaredMethod("sleep", String.class);
         learnMethod.setAccessible(true);
@@ -44,8 +56,8 @@ public class InvokeReflectDemo {
         String dec = (String) decMh.invoke("abc");
         System.out.println(dec);
         //访问非private属性
-        MethodHandle nameMh = lookup.findGetter(Person.class,"name", String.class);
-        System.out.println((String) nameMh.invoke(con1Mh.invoke()));
+        MethodHandle nameMh = lookup.findGetter(Person.class, "name", String.class);
+        System.out.println((String) nameMh.invoke(target1));
         //访问private的属性，需要借助反射
         Field nameField = Person.class.getDeclaredField("mobile");
         nameField.setAccessible(true);
@@ -54,8 +66,7 @@ public class InvokeReflectDemo {
         //增强MethodHandle
         MethodType setterMt = MethodType.methodType(void.class, String.class);
         MethodHandle setterMh = lookup.findVirtual(Person.class, "setName", setterMt);
-        MethodHandle bindedSetterMh = setterMh.bindTo(target2);
+        MethodHandle bindedSetterMh = setterMh.bindTo(target1);
         bindedSetterMh.invoke("love CuiHuaNiu");
-        System.out.println((String) getterMh.invoke(target2));
     }
 }

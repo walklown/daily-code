@@ -1,15 +1,15 @@
 package com.walklown.learn.jarkata.base.reflect;
 
-public class Person {
+public class TestPerson {
 
     public String name;
 
     private String mobile;
 
-    public Person() {
+    public TestPerson() {
     }
 
-    public Person(String name, String mobile) {
+    public TestPerson(String name, String mobile) {
         this.name = name;
         this.mobile = mobile;
     }
