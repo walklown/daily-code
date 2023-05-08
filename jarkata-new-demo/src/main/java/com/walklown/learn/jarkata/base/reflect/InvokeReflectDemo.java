@@ -7,7 +7,8 @@ import java.lang.reflect.Field;
 import java.lang.reflect.Method;
 
 /*
- * https://blog.csdn.net/ShuSheng0007/article/details/107066856
+ * https://www.optaplanner.org/blog/2018/01/09/JavaReflectionButMuchFaster.html
+ * 性能测试 {@link com.walklown.learn.jarkata.base.reflect.InvokeReflectCostTest2}
  *
  * @author walklown
  */
