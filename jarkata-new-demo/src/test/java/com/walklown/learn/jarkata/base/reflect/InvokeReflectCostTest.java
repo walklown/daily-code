@@ -33,10 +33,20 @@ import java.util.concurrent.TimeUnit;
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @Warmup(iterations = 3, time = 1, timeUnit = TimeUnit.SECONDS)
 @BenchmarkMode(Mode.AverageTime)
-@Measurement(iterations = 3)
+@Measurement(iterations = 7)
 public class InvokeReflectCostTest {
 
-    private static MethodHandle staticPublicMethodHandle;
+    private static final MethodHandle staticPublicMethodHandle;
+
+    static {
+        try {
+            MethodHandles.Lookup lookup = MethodHandles.lookup();
+            Method learnMethod = TestPerson.class.getDeclaredMethod("getName");
+            staticPublicMethodHandle = lookup.unreflect(learnMethod);
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
 
     private MethodHandle protectMethodHandle;
 
@@ -64,16 +74,6 @@ public class InvokeReflectCostTest {
 
             protectMethodHandle = lookup.findVirtual(TestPerson.class, "getMobile", getterMt);
             privateAccessiableGetMethodHandle = lookup.unreflect(privateAccessiableGetMethod);
-        } catch (Throwable e) {
-            e.printStackTrace();
-        }
-    }
-
-    static {
-        MethodHandles.Lookup lookup = MethodHandles.lookup();
-        try {
-            Method learnMethod = TestPerson.class.getDeclaredMethod("getName");
-            staticPublicMethodHandle = lookup.unreflect(learnMethod);
         } catch (Throwable e) {
             e.printStackTrace();
         }
