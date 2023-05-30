@@ -1,4 +1,4 @@
-package com.zzp.learn.springboot.aop1.configuration;
+package com.zzp.learn.springboot.ddd.configuration;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.context.annotation.Bean;

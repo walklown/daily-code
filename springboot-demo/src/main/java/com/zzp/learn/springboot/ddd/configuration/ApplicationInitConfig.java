@@ -1,4 +1,4 @@
-package com.zzp.learn.springboot.aop1.configuration;
+package com.zzp.learn.springboot.ddd.configuration;
 
 import org.springframework.context.ApplicationContextInitializer;
 import org.springframework.context.ConfigurableApplicationContext;

@@ -1,11 +1,12 @@
 
-package com.zzp.learn.springboot.aop1;
+package com.zzp.learn.springboot.ddd;
 
-import com.zzp.learn.springboot.aop1.aggregate.CustomBeanFactory;
+import com.zzp.learn.springboot.ddd.aggregate.Aggregate;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.data.jpa.JpaRepositoriesAutoConfiguration;
 import org.springframework.boot.autoconfigure.data.redis.RedisAutoConfiguration;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.autoconfigure.jms.JmsAutoConfiguration;
 import org.springframework.boot.autoconfigure.kafka.KafkaAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
@@ -23,7 +24,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
  */
 @SpringBootApplication(scanBasePackages = {"com.zzp.learn.springboot.aop1"}, exclude = {
         JmsAutoConfiguration.class, RedisAutoConfiguration.class, KafkaAutoConfiguration.class,
-        JpaRepositoriesAutoConfiguration.class})
+        JpaRepositoriesAutoConfiguration.class, DataSourceAutoConfiguration.class})
 @EnableAsync
 @EnableAspectJAutoProxy
 @EnableTransactionManagement
@@ -34,13 +35,14 @@ public class StartApplication {
         ConfigurableApplicationContext applicationContext = new SpringApplicationBuilder(StartApplication.class)
 //                .web(WebApplicationType.NONE)
                 .run(args);
-        IRpcApiService
-                serviceSite = applicationContext.getBean(IRpcApiService.class);
+        IRpcApiService serviceSite = applicationContext.getBean(IRpcApiService.class);
 
 //        CustomBeanFactory customBeanFactory = applicationContext.getBean(CustomBeanFactory.class);
 
         Thread a = new Thread(()->{
             serviceSite.get1("");
+            Aggregate aggregate = applicationContext.getBean(Aggregate.class);
+            log.info("bean3:{}", aggregate);
         });
         a.start();
     }

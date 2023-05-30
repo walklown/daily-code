@@ -1,7 +1,9 @@
 package com.zzp.learn.springboot.aop;
 
 import com.zzp.learn.springboot.aop.impl.Me;
+import com.zzp.learn.springboot.aop.impl.Me1;
 import com.zzp.learn.springboot.aop.impl.Sleepable;
+import com.zzp.learn.springboot.aop.impl.Sleepable1;
 import org.springframework.cglib.proxy.Enhancer;
 import org.springframework.cglib.proxy.MethodInterceptor;
 import org.springframework.cglib.proxy.MethodProxy;
@@ -32,8 +34,9 @@ public class CglibProxy implements MethodInterceptor {
 //        CglibProxy cglibProxy = new CglibProxy();
         CglibProxy cglibProxy = new CglibProxy(new Me());
         Enhancer enhancer = new Enhancer();
-//        enhancer.setSuperclass(Sleepable.class);
-        enhancer.setSuperclass(Me.class);
+        enhancer.setInterfaces(new Class[]{Sleepable.class, Sleepable1.class});
+        enhancer.setContextClass(Sleepable.class);
+//        enhancer.setSuperclass(Me.class);
         enhancer.setCallback(cglibProxy);
         Sleepable userDao = (Sleepable) enhancer.create();
         userDao.sleep();

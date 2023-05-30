@@ -1,6 +1,6 @@
-package com.zzp.learn.springboot.aop1;
+package com.zzp.learn.springboot.ddd;
 
-import com.zzp.learn.springboot.aop1.sensitive.ClassAnnotation;
+import com.zzp.learn.springboot.ddd.sensitive.ClassAnnotation;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.BeanFactory;

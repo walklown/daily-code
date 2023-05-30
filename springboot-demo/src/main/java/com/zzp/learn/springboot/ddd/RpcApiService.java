@@ -1,14 +1,16 @@
-package com.zzp.learn.springboot.aop1;
+package com.zzp.learn.springboot.ddd;
 
-import com.zzp.learn.springboot.aop1.aggregate.Aggregate;
-import com.zzp.learn.springboot.aop1.aggregate.CustomBeanFactory;
-import com.zzp.learn.springboot.aop1.sensitive.ClassAnnotation;
-import com.zzp.learn.springboot.aop1.sensitive.MethodAnnotation;
-import com.zzp.learn.springboot.aop1.sensitive.MethodAnnotation1;
+import com.zzp.learn.springboot.ddd.aggregate.Aggregate;
+import com.zzp.learn.springboot.ddd.aggregate.CustomBeanFactory;
+import com.zzp.learn.springboot.ddd.aggregate.IAggregate;
+import com.zzp.learn.springboot.ddd.sensitive.ClassAnnotation;
+import com.zzp.learn.springboot.ddd.sensitive.MethodAnnotation;
+import com.zzp.learn.springboot.ddd.sensitive.MethodAnnotation1;
 import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Service;
 
 /**
@@ -29,6 +31,10 @@ public class RpcApiService implements IRpcApiService {
     @Autowired
     private CustomBeanFactory customBeanFactory;
 
+    @Autowired
+    @Qualifier("aggregate")
+    private Aggregate aggregate;
+
     @Override
     @MethodAnnotation()
     @MethodAnnotation1()
@@ -40,10 +46,12 @@ public class RpcApiService implements IRpcApiService {
 //    @Transactional
     @Override
     public void get1(String name) {
-        Aggregate aggregate = customBeanFactory.wire("123");
-        log.info("bean:{}", aggregate);
-
-        Aggregate aggregate1 = customBeanFactory.wire("456");
+        IAggregate aggregate1 = customBeanFactory.wire();
         log.info("bean1:{}", aggregate1);
+
+        IAggregate aggregate2 = customBeanFactory.wire();
+        log.info("bean2:{}", aggregate2);
+
+        log.info("bean:{}", aggregate);
     }
 }

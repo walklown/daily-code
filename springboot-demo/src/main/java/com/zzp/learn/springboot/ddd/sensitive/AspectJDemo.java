@@ -1,4 +1,4 @@
-package com.zzp.learn.springboot.aop1.sensitive;
+package com.zzp.learn.springboot.ddd.sensitive;
 
 
 import org.aspectj.lang.ProceedingJoinPoint;

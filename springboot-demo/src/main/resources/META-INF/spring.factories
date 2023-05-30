@@ -1,4 +1,4 @@
 
 # Auto Configure
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-  com.zzp.learn.springboot.aop1.configuration.SpiConfiguration
+  com.zzp.learn.springboot.ddd.configuration.SpiConfiguration

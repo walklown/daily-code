@@ -1,4 +1,4 @@
-package com.zzp.learn.springboot.aop1.sensitive;
+package com.zzp.learn.springboot.ddd.sensitive;
 
 
 import lombok.extern.slf4j.Slf4j;

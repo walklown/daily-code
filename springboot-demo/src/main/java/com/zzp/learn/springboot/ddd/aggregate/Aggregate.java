@@ -1,26 +1,25 @@
-package com.zzp.learn.springboot.aop1.aggregate;
+package com.zzp.learn.springboot.ddd.aggregate;
 
-import com.zzp.learn.springboot.aop1.IRpcApiService;
+import com.zzp.learn.springboot.ddd.aggregate.share.DBClient;
 import jakarta.annotation.Resource;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.InitializingBean;
+import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
 
 @Slf4j
 @Transactional
-public class Aggregate implements InitializingBean {
+@Component
+public class Aggregate implements InitializingBean,IAggregate {
 
     @Resource
-    private IRpcApiService siteManagerBusinessApiService;
+    private DBClient dbClient;
 
-    private String phone;
-
-    public Aggregate(String phone) {
-        this.phone = phone;
+    public Aggregate() {
     }
 
     public void log() {
-        log.info("siteManagerBusinessApiService:{}", siteManagerBusinessApiService);
+        log.info("dbClient:{}", dbClient);
     }
 
     @Override

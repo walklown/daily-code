@@ -1,9 +1,8 @@
-package com.zzp.learn.springboot.aop1.sensitive;
+package com.zzp.learn.springboot.ddd.sensitive;
 
 import org.springframework.aop.framework.autoproxy.AbstractBeanFactoryAwareAdvisingPostProcessor;
 import org.springframework.beans.factory.BeanFactory;
 import org.springframework.core.Ordered;
-import org.springframework.core.PriorityOrdered;
 import org.springframework.stereotype.Component;
 
 /**

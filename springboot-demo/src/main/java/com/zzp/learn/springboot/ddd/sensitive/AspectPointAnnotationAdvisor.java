@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.zzp.learn.springboot.aop1.sensitive;
+package com.zzp.learn.springboot.ddd.sensitive;
 
 import org.aopalliance.aop.Advice;
 import org.springframework.aop.Pointcut;
