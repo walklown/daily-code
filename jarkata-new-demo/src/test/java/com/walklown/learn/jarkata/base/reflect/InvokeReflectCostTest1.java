@@ -32,9 +32,9 @@ import java.util.function.Function;
 @State(Scope.Thread)
 @Fork(1)
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
-@Warmup(iterations = 3, time = 1, timeUnit = TimeUnit.SECONDS)
+@Warmup(iterations = 5, time = 1, timeUnit = TimeUnit.SECONDS)
 @BenchmarkMode(Mode.AverageTime)
-@Measurement(iterations = 7)
+@Measurement(iterations = 20)
 public class InvokeReflectCostTest1 {
 
     private Function getterFunction;
@@ -71,7 +71,7 @@ public class InvokeReflectCostTest1 {
     }
 
     @Benchmark
-    public void lookUp(Blackhole bh) throws Throwable {
+    public void lambdaMetaFactoryLookUp(Blackhole bh) throws Throwable {
         // lookup可直接访问有访问权限的非public方法
         String name = (String) getterFunction.apply(person);
         bh.consume(name);
