@@ -15,11 +15,14 @@ import java.lang.reflect.Method;
 public class InvokeReflectDemo {
 
     public static void main(String[] args) throws Throwable {
+        // 获取 Lookup
         MethodHandles.Lookup lookup = MethodHandles.lookup();
         MethodHandles.Lookup publicLookup = MethodHandles.publicLookup();
-
+        // 构建方法类型描述符，描述参数与结果集类型
         MethodType con1Mt = MethodType.methodType(void.class, String.class, String.class);
+        // 获取方法句柄
         MethodHandle con1Mh = publicLookup.findConstructor(Person.class, con1Mt);
+        // 直接执行方法
         Object target1 = con1Mh.invoke("zhang", "12133445566");
         System.out.println("init:" + target1);
 

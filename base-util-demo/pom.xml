@@ -80,6 +80,10 @@
             <artifactId>rxjava</artifactId>
             <version>3.0.0-RC5</version>
         </dependency>
+        <dependency>
+            <groupId>org.mapstruct</groupId>
+            <artifactId>mapstruct</artifactId>
+        </dependency>
     </dependencies>
 
 

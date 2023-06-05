@@ -13,12 +13,15 @@ import org.openjdk.jmh.annotations.State;
 import org.openjdk.jmh.annotations.Warmup;
 import org.openjdk.jmh.infra.Blackhole;
 
+import java.lang.invoke.CallSite;
+import java.lang.invoke.LambdaMetafactory;
 import java.lang.invoke.MethodHandle;
 import java.lang.invoke.MethodHandles;
 import java.lang.invoke.MethodType;
 import java.lang.reflect.Method;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.TimeUnit;
+import java.util.function.Function;
 
 /**
  * 基于 MethodHandle 的反射
@@ -33,7 +36,7 @@ import java.util.concurrent.TimeUnit;
 @OutputTimeUnit(TimeUnit.NANOSECONDS)
 @Warmup(iterations = 3, time = 1, timeUnit = TimeUnit.SECONDS)
 @BenchmarkMode(Mode.AverageTime)
-@Measurement(iterations = 7)
+@Measurement(iterations = 20)
 public class InvokeReflectCostTest {
 
     private static final MethodHandle staticPublicMethodHandle;
@@ -58,10 +61,12 @@ public class InvokeReflectCostTest {
 
     private Method privateAccessiableGetMethod;
 
+    private Function getterFunction;
+
     private static final TestPerson person = new TestPerson("zhang", "12345678");
 
     @Setup(Level.Iteration)
-    public void initMethod() {
+    public void initMethod() throws Throwable {
         MethodHandles.Lookup lookup = MethodHandles.lookup();
         MethodHandles.Lookup publicLookup = MethodHandles.publicLookup();
 
@@ -74,6 +79,14 @@ public class InvokeReflectCostTest {
 
             protectMethodHandle = lookup.findVirtual(TestPerson.class, "getMobile", getterMt);
             privateAccessiableGetMethodHandle = lookup.unreflect(privateAccessiableGetMethod);
+
+            CallSite site = LambdaMetafactory.metafactory(lookup,
+                    "apply",
+                    MethodType.methodType(Function.class),
+                    MethodType.methodType(Object.class, Object.class),
+                    lookup.findVirtual(TestPerson.class, "getName", MethodType.methodType(String.class)),
+                    MethodType.methodType(String.class, TestPerson.class));
+            getterFunction = (Function) site.getTarget().invokeExact();
         } catch (Throwable e) {
             e.printStackTrace();
         }
@@ -134,6 +147,19 @@ public class InvokeReflectCostTest {
     public void staticLookUp(Blackhole bh) throws Throwable {
         // lookup创建的static句柄访问
         String name = (String) staticPublicMethodHandle.invoke(person);
+        bh.consume(name);
+    }
+
+    /**
+     * 使用 LambdaMetaFactory
+     *
+     * @param bh 输出黑洞
+     * @throws Throwable 异常
+     */
+    @Benchmark
+    public void lambdaMetaFactoryLookUp(Blackhole bh) throws Throwable {
+        // lookup可直接访问有访问权限的非public方法
+        String name = (String) getterFunction.apply(person);
         bh.consume(name);
     }
 }
