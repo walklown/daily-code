@@ -1,0 +1,8 @@
+Compiled from "InvokeReflectCostTest_jmhType.java"
+public class com.tuya.jmh_generated.InvokeReflectCostTest_jmhType extends com.tuya.jmh_generated.InvokeReflectCostTest_jmhType_B3 {
+  public com.tuya.jmh_generated.InvokeReflectCostTest_jmhType();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method com/tuya/jmh_generated/InvokeReflectCostTest_jmhType_B3."<init>":()V
+       4: return
+}

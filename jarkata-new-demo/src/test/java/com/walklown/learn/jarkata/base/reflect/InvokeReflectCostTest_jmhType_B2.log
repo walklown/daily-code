@@ -1,0 +1,60 @@
+Compiled from "InvokeReflectCostTest_jmhType_B2.java"
+public class com.tuya.jmh_generated.InvokeReflectCostTest_jmhType_B2 extends com.tuya.jmh_generated.InvokeReflectCostTest_jmhType_B1 {
+  public volatile int setupTrialMutex;
+
+  public volatile int tearTrialMutex;
+
+  public static final java.util.concurrent.atomic.AtomicIntegerFieldUpdater<com.tuya.jmh_generated.InvokeReflectCostTest_jmhType_B2> setupTrialMutexUpdater;
+
+  public static final java.util.concurrent.atomic.AtomicIntegerFieldUpdater<com.tuya.jmh_generated.InvokeReflectCostTest_jmhType_B2> tearTrialMutexUpdater;
+
+  public volatile int setupIterationMutex;
+
+  public volatile int tearIterationMutex;
+
+  public static final java.util.concurrent.atomic.AtomicIntegerFieldUpdater<com.tuya.jmh_generated.InvokeReflectCostTest_jmhType_B2> setupIterationMutexUpdater;
+
+  public static final java.util.concurrent.atomic.AtomicIntegerFieldUpdater<com.tuya.jmh_generated.InvokeReflectCostTest_jmhType_B2> tearIterationMutexUpdater;
+
+  public volatile int setupInvocationMutex;
+
+  public volatile int tearInvocationMutex;
+
+  public static final java.util.concurrent.atomic.AtomicIntegerFieldUpdater<com.tuya.jmh_generated.InvokeReflectCostTest_jmhType_B2> setupInvocationMutexUpdater;
+
+  public static final java.util.concurrent.atomic.AtomicIntegerFieldUpdater<com.tuya.jmh_generated.InvokeReflectCostTest_jmhType_B2> tearInvocationMutexUpdater;
+
+  public com.tuya.jmh_generated.InvokeReflectCostTest_jmhType_B2();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method com/tuya/jmh_generated/InvokeReflectCostTest_jmhType_B1."<init>":()V
+       4: return
+
+  static {};
+    Code:
+       0: ldc           #7                  // class com/tuya/jmh_generated/InvokeReflectCostTest_jmhType_B2
+       2: ldc           #9                  // String setupTrialMutex
+       4: invokestatic  #11                 // Method java/util/concurrent/atomic/AtomicIntegerFieldUpdater.newUpdater:(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+       7: putstatic     #17                 // Field setupTrialMutexUpdater:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+      10: ldc           #7                  // class com/tuya/jmh_generated/InvokeReflectCostTest_jmhType_B2
+      12: ldc           #21                 // String tearTrialMutex
+      14: invokestatic  #11                 // Method java/util/concurrent/atomic/AtomicIntegerFieldUpdater.newUpdater:(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+      17: putstatic     #23                 // Field tearTrialMutexUpdater:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+      20: ldc           #7                  // class com/tuya/jmh_generated/InvokeReflectCostTest_jmhType_B2
+      22: ldc           #26                 // String setupIterationMutex
+      24: invokestatic  #11                 // Method java/util/concurrent/atomic/AtomicIntegerFieldUpdater.newUpdater:(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+      27: putstatic     #28                 // Field setupIterationMutexUpdater:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+      30: ldc           #7                  // class com/tuya/jmh_generated/InvokeReflectCostTest_jmhType_B2
+      32: ldc           #31                 // String tearIterationMutex
+      34: invokestatic  #11                 // Method java/util/concurrent/atomic/AtomicIntegerFieldUpdater.newUpdater:(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+      37: putstatic     #33                 // Field tearIterationMutexUpdater:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+      40: ldc           #7                  // class com/tuya/jmh_generated/InvokeReflectCostTest_jmhType_B2
+      42: ldc           #36                 // String setupInvocationMutex
+      44: invokestatic  #11                 // Method java/util/concurrent/atomic/AtomicIntegerFieldUpdater.newUpdater:(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+      47: putstatic     #38                 // Field setupInvocationMutexUpdater:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+      50: ldc           #7                  // class com/tuya/jmh_generated/InvokeReflectCostTest_jmhType_B2
+      52: ldc           #41                 // String tearInvocationMutex
+      54: invokestatic  #11                 // Method java/util/concurrent/atomic/AtomicIntegerFieldUpdater.newUpdater:(Ljava/lang/Class;Ljava/lang/String;)Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+      57: putstatic     #43                 // Field tearInvocationMutexUpdater:Ljava/util/concurrent/atomic/AtomicIntegerFieldUpdater;
+      60: return
+}

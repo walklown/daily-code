@@ -33,16 +33,15 @@
         <maven.compiler.target>17</maven.compiler.target>
         <maven.compiler.compilerVersion>17</maven.compiler.compilerVersion>
 
-        <netty.version>4.1.86.Final</netty.version>
-        <springboot.version>3.0.6</springboot.version>
+        <netty.version>4.1.93.Final</netty.version>
+        <springboot.version>3.1.0</springboot.version>
         <!--        <springcloud.version>2020.0.4</springcloud.version>-->
-        <springframework.version>6.0.8</springframework.version>
-        <org.mapstruct.version>1.5.4.Final</org.mapstruct.version>
+        <springframework.version>6.0.9</springframework.version>
+        <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
         <resilience4jVersion>2.0.2</resilience4jVersion>
-        <jackson.version>2.15.0</jackson.version>
-        <lombok.version>1.18.22</lombok.version>
-        <validation.api.version>2.0.1.Final</validation.api.version>
-        <dubbo.version>3.2.0-beta.2</dubbo.version>
+        <jackson.version>2.15.1</jackson.version>
+        <lombok.version>1.18.28</lombok.version>
+        <dubbo.version>3.2.1</dubbo.version>
         <jmh.version>1.36</jmh.version>
     </properties>
 
@@ -126,14 +125,21 @@
             <dependency>
                 <groupId>org.apache.zookeeper</groupId>
                 <artifactId>zookeeper</artifactId>
-                <version>3.5.6</version>
+                <version>3.8.1</version>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/org.apache.curator/curator-framework -->
             <dependency>
-                <groupId>org.eclipse.jetty.aggregate</groupId>
-                <artifactId>jetty-all</artifactId>
-                <version>9.4.17.v20190418</version>
-                <type>pom</type>
+                <groupId>org.apache.curator</groupId>
+                <artifactId>curator-framework</artifactId>
+                <version>5.5.0</version>
             </dependency>
+
+            <!--            <dependency>-->
+<!--                <groupId>org.eclipse.jetty.aggregate</groupId>-->
+<!--                <artifactId>jetty-all</artifactId>-->
+<!--                <version>9.4.17.v20190418</version>-->
+<!--                <type>pom</type>-->
+<!--            </dependency>-->
             <dependency>
                 <groupId>com.squareup.okhttp3</groupId>
                 <artifactId>okhttp</artifactId>

@@ -1,0 +1,1430 @@
+Compiled from "InvokeReflectCostTest_lambdaMetaFactoryLookUp_jmhTest.java"
+public final class com.tuya.jmh_generated.InvokeReflectCostTest_lambdaMetaFactoryLookUp_jmhTest {
+  byte p000;
+
+  byte p001;
+
+  byte p002;
+
+  byte p003;
+
+  byte p004;
+
+  byte p005;
+
+  byte p006;
+
+  byte p007;
+
+  byte p008;
+
+  byte p009;
+
+  byte p010;
+
+  byte p011;
+
+  byte p012;
+
+  byte p013;
+
+  byte p014;
+
+  byte p015;
+
+  byte p016;
+
+  byte p017;
+
+  byte p018;
+
+  byte p019;
+
+  byte p020;
+
+  byte p021;
+
+  byte p022;
+
+  byte p023;
+
+  byte p024;
+
+  byte p025;
+
+  byte p026;
+
+  byte p027;
+
+  byte p028;
+
+  byte p029;
+
+  byte p030;
+
+  byte p031;
+
+  byte p032;
+
+  byte p033;
+
+  byte p034;
+
+  byte p035;
+
+  byte p036;
+
+  byte p037;
+
+  byte p038;
+
+  byte p039;
+
+  byte p040;
+
+  byte p041;
+
+  byte p042;
+
+  byte p043;
+
+  byte p044;
+
+  byte p045;
+
+  byte p046;
+
+  byte p047;
+
+  byte p048;
+
+  byte p049;
+
+  byte p050;
+
+  byte p051;
+
+  byte p052;
+
+  byte p053;
+
+  byte p054;
+
+  byte p055;
+
+  byte p056;
+
+  byte p057;
+
+  byte p058;
+
+  byte p059;
+
+  byte p060;
+
+  byte p061;
+
+  byte p062;
+
+  byte p063;
+
+  byte p064;
+
+  byte p065;
+
+  byte p066;
+
+  byte p067;
+
+  byte p068;
+
+  byte p069;
+
+  byte p070;
+
+  byte p071;
+
+  byte p072;
+
+  byte p073;
+
+  byte p074;
+
+  byte p075;
+
+  byte p076;
+
+  byte p077;
+
+  byte p078;
+
+  byte p079;
+
+  byte p080;
+
+  byte p081;
+
+  byte p082;
+
+  byte p083;
+
+  byte p084;
+
+  byte p085;
+
+  byte p086;
+
+  byte p087;
+
+  byte p088;
+
+  byte p089;
+
+  byte p090;
+
+  byte p091;
+
+  byte p092;
+
+  byte p093;
+
+  byte p094;
+
+  byte p095;
+
+  byte p096;
+
+  byte p097;
+
+  byte p098;
+
+  byte p099;
+
+  byte p100;
+
+  byte p101;
+
+  byte p102;
+
+  byte p103;
+
+  byte p104;
+
+  byte p105;
+
+  byte p106;
+
+  byte p107;
+
+  byte p108;
+
+  byte p109;
+
+  byte p110;
+
+  byte p111;
+
+  byte p112;
+
+  byte p113;
+
+  byte p114;
+
+  byte p115;
+
+  byte p116;
+
+  byte p117;
+
+  byte p118;
+
+  byte p119;
+
+  byte p120;
+
+  byte p121;
+
+  byte p122;
+
+  byte p123;
+
+  byte p124;
+
+  byte p125;
+
+  byte p126;
+
+  byte p127;
+
+  byte p128;
+
+  byte p129;
+
+  byte p130;
+
+  byte p131;
+
+  byte p132;
+
+  byte p133;
+
+  byte p134;
+
+  byte p135;
+
+  byte p136;
+
+  byte p137;
+
+  byte p138;
+
+  byte p139;
+
+  byte p140;
+
+  byte p141;
+
+  byte p142;
+
+  byte p143;
+
+  byte p144;
+
+  byte p145;
+
+  byte p146;
+
+  byte p147;
+
+  byte p148;
+
+  byte p149;
+
+  byte p150;
+
+  byte p151;
+
+  byte p152;
+
+  byte p153;
+
+  byte p154;
+
+  byte p155;
+
+  byte p156;
+
+  byte p157;
+
+  byte p158;
+
+  byte p159;
+
+  byte p160;
+
+  byte p161;
+
+  byte p162;
+
+  byte p163;
+
+  byte p164;
+
+  byte p165;
+
+  byte p166;
+
+  byte p167;
+
+  byte p168;
+
+  byte p169;
+
+  byte p170;
+
+  byte p171;
+
+  byte p172;
+
+  byte p173;
+
+  byte p174;
+
+  byte p175;
+
+  byte p176;
+
+  byte p177;
+
+  byte p178;
+
+  byte p179;
+
+  byte p180;
+
+  byte p181;
+
+  byte p182;
+
+  byte p183;
+
+  byte p184;
+
+  byte p185;
+
+  byte p186;
+
+  byte p187;
+
+  byte p188;
+
+  byte p189;
+
+  byte p190;
+
+  byte p191;
+
+  byte p192;
+
+  byte p193;
+
+  byte p194;
+
+  byte p195;
+
+  byte p196;
+
+  byte p197;
+
+  byte p198;
+
+  byte p199;
+
+  byte p200;
+
+  byte p201;
+
+  byte p202;
+
+  byte p203;
+
+  byte p204;
+
+  byte p205;
+
+  byte p206;
+
+  byte p207;
+
+  byte p208;
+
+  byte p209;
+
+  byte p210;
+
+  byte p211;
+
+  byte p212;
+
+  byte p213;
+
+  byte p214;
+
+  byte p215;
+
+  byte p216;
+
+  byte p217;
+
+  byte p218;
+
+  byte p219;
+
+  byte p220;
+
+  byte p221;
+
+  byte p222;
+
+  byte p223;
+
+  byte p224;
+
+  byte p225;
+
+  byte p226;
+
+  byte p227;
+
+  byte p228;
+
+  byte p229;
+
+  byte p230;
+
+  byte p231;
+
+  byte p232;
+
+  byte p233;
+
+  byte p234;
+
+  byte p235;
+
+  byte p236;
+
+  byte p237;
+
+  byte p238;
+
+  byte p239;
+
+  byte p240;
+
+  byte p241;
+
+  byte p242;
+
+  byte p243;
+
+  byte p244;
+
+  byte p245;
+
+  byte p246;
+
+  byte p247;
+
+  byte p248;
+
+  byte p249;
+
+  byte p250;
+
+  byte p251;
+
+  byte p252;
+
+  byte p253;
+
+  byte p254;
+
+  byte p255;
+
+  int startRndMask;
+
+  org.openjdk.jmh.infra.BenchmarkParams benchmarkParams;
+
+  org.openjdk.jmh.infra.IterationParams iterationParams;
+
+  org.openjdk.jmh.infra.ThreadParams threadParams;
+
+  org.openjdk.jmh.infra.Blackhole blackhole;
+
+  org.openjdk.jmh.infra.Control notifyControl;
+
+  com.tuya.jmh_generated.InvokeReflectCostTest_jmhType f_invokereflectcosttest0_0;
+
+  public com.tuya.jmh_generated.InvokeReflectCostTest_lambdaMetaFactoryLookUp_jmhTest();
+    Code:
+       0: aload_0
+       1: invokespecial #1                  // Method java/lang/Object."<init>":()V
+       4: return
+
+  public org.openjdk.jmh.results.BenchmarkTaskResult lambdaMetaFactoryLookUp_Throughput(org.openjdk.jmh.runner.InfraControl, org.openjdk.jmh.infra.ThreadParams) throws java.lang.Throwable;
+    Code:
+       0: aload_0
+       1: aload_1
+       2: getfield      #7                  // Field org/openjdk/jmh/runner/InfraControl.benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+       5: putfield      #13                 // Field benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+       8: aload_0
+       9: aload_1
+      10: getfield      #16                 // Field org/openjdk/jmh/runner/InfraControl.iterationParams:Lorg/openjdk/jmh/infra/IterationParams;
+      13: putfield      #20                 // Field iterationParams:Lorg/openjdk/jmh/infra/IterationParams;
+      16: aload_0
+      17: aload_2
+      18: putfield      #21                 // Field threadParams:Lorg/openjdk/jmh/infra/ThreadParams;
+      21: aload_0
+      22: aload_1
+      23: getfield      #25                 // Field org/openjdk/jmh/runner/InfraControl.notifyControl:Lorg/openjdk/jmh/infra/Control;
+      26: putfield      #29                 // Field notifyControl:Lorg/openjdk/jmh/infra/Control;
+      29: aload_0
+      30: getfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+      33: ifnonnull     49
+      36: aload_0
+      37: new           #34                 // class org/openjdk/jmh/infra/Blackhole
+      40: dup
+      41: ldc           #36                 // String Today\'s password is swordfish. I understand instantiating Blackholes directly is dangerous.
+      43: invokespecial #38                 // Method org/openjdk/jmh/infra/Blackhole."<init>":(Ljava/lang/String;)V
+      46: putfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+      49: aload_2
+      50: invokevirtual #41                 // Method org/openjdk/jmh/infra/ThreadParams.getSubgroupIndex:()I
+      53: ifne          359
+      56: new           #47                 // class org/openjdk/jmh/results/RawResults
+      59: dup
+      60: invokespecial #49                 // Method org/openjdk/jmh/results/RawResults."<init>":()V
+      63: astore_3
+      64: aload_0
+      65: aload_1
+      66: invokevirtual #50                 // Method _jmh_tryInit_f_invokereflectcosttest0_0:(Lorg/openjdk/jmh/runner/InfraControl;)Lcom/tuya/jmh_generated/InvokeReflectCostTest_jmhType;
+      69: astore        4
+      71: aload_1
+      72: invokevirtual #54                 // Method org/openjdk/jmh/runner/InfraControl.preSetup:()V
+      75: aload_1
+      76: invokevirtual #57                 // Method org/openjdk/jmh/runner/InfraControl.announceWarmupReady:()V
+      79: aload_1
+      80: getfield      #60                 // Field org/openjdk/jmh/runner/InfraControl.warmupShouldWait:Z
+      83: ifeq          108
+      86: aload         4
+      88: aload_0
+      89: getfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+      92: invokevirtual #64                 // Method com/tuya/jmh_generated/InvokeReflectCostTest_jmhType.lambdaMetaFactoryLookUp:(Lorg/openjdk/jmh/infra/Blackhole;)V
+      95: aload_3
+      96: dup
+      97: getfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     100: dconst_1
+     101: dadd
+     102: putfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     105: goto          79
+     108: aload_0
+     109: getfield      #29                 // Field notifyControl:Lorg/openjdk/jmh/infra/Control;
+     112: iconst_1
+     113: putfield      #74                 // Field org/openjdk/jmh/infra/Control.startMeasurement:Z
+     116: aload_1
+     117: aload_3
+     118: aload_0
+     119: getfield      #13                 // Field benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+     122: aload_0
+     123: getfield      #20                 // Field iterationParams:Lorg/openjdk/jmh/infra/IterationParams;
+     126: aload_2
+     127: aload_0
+     128: getfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+     131: aload_0
+     132: getfield      #29                 // Field notifyControl:Lorg/openjdk/jmh/infra/Control;
+     135: aload_0
+     136: getfield      #79                 // Field startRndMask:I
+     139: aload         4
+     141: invokestatic  #83                 // Method lambdaMetaFactoryLookUp_thrpt_jmhStub:(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILcom/tuya/jmh_generated/InvokeReflectCostTest_jmhType;)V
+     144: aload_0
+     145: getfield      #29                 // Field notifyControl:Lorg/openjdk/jmh/infra/Control;
+     148: iconst_1
+     149: putfield      #87                 // Field org/openjdk/jmh/infra/Control.stopMeasurement:Z
+     152: aload_1
+     153: invokevirtual #90                 // Method org/openjdk/jmh/runner/InfraControl.announceWarmdownReady:()V
+     156: aload_1
+     157: getfield      #93                 // Field org/openjdk/jmh/runner/InfraControl.warmdownShouldWait:Z
+     160: ifeq          185
+     163: aload         4
+     165: aload_0
+     166: getfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+     169: invokevirtual #64                 // Method com/tuya/jmh_generated/InvokeReflectCostTest_jmhType.lambdaMetaFactoryLookUp:(Lorg/openjdk/jmh/infra/Blackhole;)V
+     172: aload_3
+     173: dup
+     174: getfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     177: dconst_1
+     178: dadd
+     179: putfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     182: goto          156
+     185: goto          201
+     188: astore        5
+     190: aload         5
+     192: instanceof    #98                 // class java/lang/InterruptedException
+     195: ifne          201
+     198: aload         5
+     200: athrow
+     201: aload_1
+     202: invokevirtual #100                // Method org/openjdk/jmh/runner/InfraControl.preTearDown:()V
+     205: aload_1
+     206: invokevirtual #103                // Method org/openjdk/jmh/runner/InfraControl.isLastIteration:()Z
+     209: ifeq          217
+     212: aload_0
+     213: aconst_null
+     214: putfield      #107                // Field f_invokereflectcosttest0_0:Lcom/tuya/jmh_generated/InvokeReflectCostTest_jmhType;
+     217: aload_3
+     218: dup
+     219: getfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     222: aload_3
+     223: getfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     226: dadd
+     227: putfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     230: aload_0
+     231: getfield      #20                 // Field iterationParams:Lorg/openjdk/jmh/infra/IterationParams;
+     234: invokevirtual #114                // Method org/openjdk/jmh/infra/IterationParams.getBatchSize:()I
+     237: istore        5
+     239: aload_0
+     240: getfield      #13                 // Field benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+     243: invokevirtual #119                // Method org/openjdk/jmh/infra/BenchmarkParams.getOpsPerInvocation:()I
+     246: istore        6
+     248: aload_3
+     249: dup
+     250: getfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     253: iload         6
+     255: i2d
+     256: dmul
+     257: putfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     260: aload_3
+     261: dup
+     262: getfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     265: iload         5
+     267: i2d
+     268: ddiv
+     269: putfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     272: aload_3
+     273: dup
+     274: getfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     277: iload         6
+     279: i2d
+     280: dmul
+     281: putfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     284: aload_3
+     285: dup
+     286: getfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     289: iload         5
+     291: i2d
+     292: ddiv
+     293: putfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     296: new           #124                // class org/openjdk/jmh/results/BenchmarkTaskResult
+     299: dup
+     300: aload_3
+     301: getfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     304: d2l
+     305: aload_3
+     306: getfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     309: d2l
+     310: invokespecial #126                // Method org/openjdk/jmh/results/BenchmarkTaskResult."<init>":(JJ)V
+     313: astore        7
+     315: aload         7
+     317: new           #129                // class org/openjdk/jmh/results/ThroughputResult
+     320: dup
+     321: getstatic     #131                // Field org/openjdk/jmh/results/ResultRole.PRIMARY:Lorg/openjdk/jmh/results/ResultRole;
+     324: ldc           #137                // String lambdaMetaFactoryLookUp
+     326: aload_3
+     327: getfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     330: aload_3
+     331: invokevirtual #138                // Method org/openjdk/jmh/results/RawResults.getTime:()J
+     334: aload_0
+     335: getfield      #13                 // Field benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+     338: invokevirtual #142                // Method org/openjdk/jmh/infra/BenchmarkParams.getTimeUnit:()Ljava/util/concurrent/TimeUnit;
+     341: invokespecial #146                // Method org/openjdk/jmh/results/ThroughputResult."<init>":(Lorg/openjdk/jmh/results/ResultRole;Ljava/lang/String;DJLjava/util/concurrent/TimeUnit;)V
+     344: invokevirtual #149                // Method org/openjdk/jmh/results/BenchmarkTaskResult.add:(Lorg/openjdk/jmh/results/Result;)V
+     347: aload_0
+     348: getfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+     351: ldc           #153                // String Yes, I am Stephen Hawking, and know a thing or two about black holes.
+     353: invokevirtual #155                // Method org/openjdk/jmh/infra/Blackhole.evaporate:(Ljava/lang/String;)V
+     356: aload         7
+     358: areturn
+     359: new           #158                // class java/lang/IllegalStateException
+     362: dup
+     363: ldc           #160                // String Harness failed to distribute threads among groups properly
+     365: invokespecial #162                // Method java/lang/IllegalStateException."<init>":(Ljava/lang/String;)V
+     368: athrow
+    Exception table:
+       from    to  target type
+         156   185   188   Class java/lang/Throwable
+
+  public static void lambdaMetaFactoryLookUp_thrpt_jmhStub(org.openjdk.jmh.runner.InfraControl, org.openjdk.jmh.results.RawResults, org.openjdk.jmh.infra.BenchmarkParams, org.openjdk.jmh.infra.IterationParams, org.openjdk.jmh.infra.ThreadParams, org.openjdk.jmh.infra.Blackhole, org.openjdk.jmh.infra.Control, int, com.tuya.jmh_generated.InvokeReflectCostTest_jmhType) throws java.lang.Throwable;
+    Code:
+       0: lconst_0
+       1: lstore        9
+       3: lconst_0
+       4: lstore        11
+       6: aload_1
+       7: invokestatic  #163                // Method java/lang/System.nanoTime:()J
+      10: putfield      #168                // Field org/openjdk/jmh/results/RawResults.startTime:J
+      13: aload         8
+      15: aload         5
+      17: invokevirtual #64                 // Method com/tuya/jmh_generated/InvokeReflectCostTest_jmhType.lambdaMetaFactoryLookUp:(Lorg/openjdk/jmh/infra/Blackhole;)V
+      20: lload         9
+      22: lconst_1
+      23: ladd
+      24: lstore        9
+      26: aload_0
+      27: getfield      #172                // Field org/openjdk/jmh/runner/InfraControl.isDone:Z
+      30: ifeq          13
+      33: aload_1
+      34: invokestatic  #163                // Method java/lang/System.nanoTime:()J
+      37: putfield      #175                // Field org/openjdk/jmh/results/RawResults.stopTime:J
+      40: aload_1
+      41: lload         11
+      43: putfield      #178                // Field org/openjdk/jmh/results/RawResults.realTime:J
+      46: aload_1
+      47: lload         9
+      49: l2d
+      50: putfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+      53: return
+
+  public org.openjdk.jmh.results.BenchmarkTaskResult lambdaMetaFactoryLookUp_AverageTime(org.openjdk.jmh.runner.InfraControl, org.openjdk.jmh.infra.ThreadParams) throws java.lang.Throwable;
+    Code:
+       0: aload_0
+       1: aload_1
+       2: getfield      #7                  // Field org/openjdk/jmh/runner/InfraControl.benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+       5: putfield      #13                 // Field benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+       8: aload_0
+       9: aload_1
+      10: getfield      #16                 // Field org/openjdk/jmh/runner/InfraControl.iterationParams:Lorg/openjdk/jmh/infra/IterationParams;
+      13: putfield      #20                 // Field iterationParams:Lorg/openjdk/jmh/infra/IterationParams;
+      16: aload_0
+      17: aload_2
+      18: putfield      #21                 // Field threadParams:Lorg/openjdk/jmh/infra/ThreadParams;
+      21: aload_0
+      22: aload_1
+      23: getfield      #25                 // Field org/openjdk/jmh/runner/InfraControl.notifyControl:Lorg/openjdk/jmh/infra/Control;
+      26: putfield      #29                 // Field notifyControl:Lorg/openjdk/jmh/infra/Control;
+      29: aload_0
+      30: getfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+      33: ifnonnull     49
+      36: aload_0
+      37: new           #34                 // class org/openjdk/jmh/infra/Blackhole
+      40: dup
+      41: ldc           #36                 // String Today\'s password is swordfish. I understand instantiating Blackholes directly is dangerous.
+      43: invokespecial #38                 // Method org/openjdk/jmh/infra/Blackhole."<init>":(Ljava/lang/String;)V
+      46: putfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+      49: aload_2
+      50: invokevirtual #41                 // Method org/openjdk/jmh/infra/ThreadParams.getSubgroupIndex:()I
+      53: ifne          359
+      56: new           #47                 // class org/openjdk/jmh/results/RawResults
+      59: dup
+      60: invokespecial #49                 // Method org/openjdk/jmh/results/RawResults."<init>":()V
+      63: astore_3
+      64: aload_0
+      65: aload_1
+      66: invokevirtual #50                 // Method _jmh_tryInit_f_invokereflectcosttest0_0:(Lorg/openjdk/jmh/runner/InfraControl;)Lcom/tuya/jmh_generated/InvokeReflectCostTest_jmhType;
+      69: astore        4
+      71: aload_1
+      72: invokevirtual #54                 // Method org/openjdk/jmh/runner/InfraControl.preSetup:()V
+      75: aload_1
+      76: invokevirtual #57                 // Method org/openjdk/jmh/runner/InfraControl.announceWarmupReady:()V
+      79: aload_1
+      80: getfield      #60                 // Field org/openjdk/jmh/runner/InfraControl.warmupShouldWait:Z
+      83: ifeq          108
+      86: aload         4
+      88: aload_0
+      89: getfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+      92: invokevirtual #64                 // Method com/tuya/jmh_generated/InvokeReflectCostTest_jmhType.lambdaMetaFactoryLookUp:(Lorg/openjdk/jmh/infra/Blackhole;)V
+      95: aload_3
+      96: dup
+      97: getfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     100: dconst_1
+     101: dadd
+     102: putfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     105: goto          79
+     108: aload_0
+     109: getfield      #29                 // Field notifyControl:Lorg/openjdk/jmh/infra/Control;
+     112: iconst_1
+     113: putfield      #74                 // Field org/openjdk/jmh/infra/Control.startMeasurement:Z
+     116: aload_1
+     117: aload_3
+     118: aload_0
+     119: getfield      #13                 // Field benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+     122: aload_0
+     123: getfield      #20                 // Field iterationParams:Lorg/openjdk/jmh/infra/IterationParams;
+     126: aload_2
+     127: aload_0
+     128: getfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+     131: aload_0
+     132: getfield      #29                 // Field notifyControl:Lorg/openjdk/jmh/infra/Control;
+     135: aload_0
+     136: getfield      #79                 // Field startRndMask:I
+     139: aload         4
+     141: invokestatic  #181                // Method lambdaMetaFactoryLookUp_avgt_jmhStub:(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILcom/tuya/jmh_generated/InvokeReflectCostTest_jmhType;)V
+     144: aload_0
+     145: getfield      #29                 // Field notifyControl:Lorg/openjdk/jmh/infra/Control;
+     148: iconst_1
+     149: putfield      #87                 // Field org/openjdk/jmh/infra/Control.stopMeasurement:Z
+     152: aload_1
+     153: invokevirtual #90                 // Method org/openjdk/jmh/runner/InfraControl.announceWarmdownReady:()V
+     156: aload_1
+     157: getfield      #93                 // Field org/openjdk/jmh/runner/InfraControl.warmdownShouldWait:Z
+     160: ifeq          185
+     163: aload         4
+     165: aload_0
+     166: getfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+     169: invokevirtual #64                 // Method com/tuya/jmh_generated/InvokeReflectCostTest_jmhType.lambdaMetaFactoryLookUp:(Lorg/openjdk/jmh/infra/Blackhole;)V
+     172: aload_3
+     173: dup
+     174: getfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     177: dconst_1
+     178: dadd
+     179: putfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     182: goto          156
+     185: goto          201
+     188: astore        5
+     190: aload         5
+     192: instanceof    #98                 // class java/lang/InterruptedException
+     195: ifne          201
+     198: aload         5
+     200: athrow
+     201: aload_1
+     202: invokevirtual #100                // Method org/openjdk/jmh/runner/InfraControl.preTearDown:()V
+     205: aload_1
+     206: invokevirtual #103                // Method org/openjdk/jmh/runner/InfraControl.isLastIteration:()Z
+     209: ifeq          217
+     212: aload_0
+     213: aconst_null
+     214: putfield      #107                // Field f_invokereflectcosttest0_0:Lcom/tuya/jmh_generated/InvokeReflectCostTest_jmhType;
+     217: aload_3
+     218: dup
+     219: getfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     222: aload_3
+     223: getfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     226: dadd
+     227: putfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     230: aload_0
+     231: getfield      #20                 // Field iterationParams:Lorg/openjdk/jmh/infra/IterationParams;
+     234: invokevirtual #114                // Method org/openjdk/jmh/infra/IterationParams.getBatchSize:()I
+     237: istore        5
+     239: aload_0
+     240: getfield      #13                 // Field benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+     243: invokevirtual #119                // Method org/openjdk/jmh/infra/BenchmarkParams.getOpsPerInvocation:()I
+     246: istore        6
+     248: aload_3
+     249: dup
+     250: getfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     253: iload         6
+     255: i2d
+     256: dmul
+     257: putfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     260: aload_3
+     261: dup
+     262: getfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     265: iload         5
+     267: i2d
+     268: ddiv
+     269: putfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     272: aload_3
+     273: dup
+     274: getfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     277: iload         6
+     279: i2d
+     280: dmul
+     281: putfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     284: aload_3
+     285: dup
+     286: getfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     289: iload         5
+     291: i2d
+     292: ddiv
+     293: putfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     296: new           #124                // class org/openjdk/jmh/results/BenchmarkTaskResult
+     299: dup
+     300: aload_3
+     301: getfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     304: d2l
+     305: aload_3
+     306: getfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     309: d2l
+     310: invokespecial #126                // Method org/openjdk/jmh/results/BenchmarkTaskResult."<init>":(JJ)V
+     313: astore        7
+     315: aload         7
+     317: new           #184                // class org/openjdk/jmh/results/AverageTimeResult
+     320: dup
+     321: getstatic     #131                // Field org/openjdk/jmh/results/ResultRole.PRIMARY:Lorg/openjdk/jmh/results/ResultRole;
+     324: ldc           #137                // String lambdaMetaFactoryLookUp
+     326: aload_3
+     327: getfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     330: aload_3
+     331: invokevirtual #138                // Method org/openjdk/jmh/results/RawResults.getTime:()J
+     334: aload_0
+     335: getfield      #13                 // Field benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+     338: invokevirtual #142                // Method org/openjdk/jmh/infra/BenchmarkParams.getTimeUnit:()Ljava/util/concurrent/TimeUnit;
+     341: invokespecial #186                // Method org/openjdk/jmh/results/AverageTimeResult."<init>":(Lorg/openjdk/jmh/results/ResultRole;Ljava/lang/String;DJLjava/util/concurrent/TimeUnit;)V
+     344: invokevirtual #149                // Method org/openjdk/jmh/results/BenchmarkTaskResult.add:(Lorg/openjdk/jmh/results/Result;)V
+     347: aload_0
+     348: getfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+     351: ldc           #153                // String Yes, I am Stephen Hawking, and know a thing or two about black holes.
+     353: invokevirtual #155                // Method org/openjdk/jmh/infra/Blackhole.evaporate:(Ljava/lang/String;)V
+     356: aload         7
+     358: areturn
+     359: new           #158                // class java/lang/IllegalStateException
+     362: dup
+     363: ldc           #160                // String Harness failed to distribute threads among groups properly
+     365: invokespecial #162                // Method java/lang/IllegalStateException."<init>":(Ljava/lang/String;)V
+     368: athrow
+    Exception table:
+       from    to  target type
+         156   185   188   Class java/lang/Throwable
+
+  public static void lambdaMetaFactoryLookUp_avgt_jmhStub(org.openjdk.jmh.runner.InfraControl, org.openjdk.jmh.results.RawResults, org.openjdk.jmh.infra.BenchmarkParams, org.openjdk.jmh.infra.IterationParams, org.openjdk.jmh.infra.ThreadParams, org.openjdk.jmh.infra.Blackhole, org.openjdk.jmh.infra.Control, int, com.tuya.jmh_generated.InvokeReflectCostTest_jmhType) throws java.lang.Throwable;
+    Code:
+       0: lconst_0
+       1: lstore        9
+       3: lconst_0
+       4: lstore        11
+       6: aload_1
+       7: invokestatic  #163                // Method java/lang/System.nanoTime:()J
+      10: putfield      #168                // Field org/openjdk/jmh/results/RawResults.startTime:J
+      13: aload         8
+      15: aload         5
+      17: invokevirtual #64                 // Method com/tuya/jmh_generated/InvokeReflectCostTest_jmhType.lambdaMetaFactoryLookUp:(Lorg/openjdk/jmh/infra/Blackhole;)V
+      20: lload         9
+      22: lconst_1
+      23: ladd
+      24: lstore        9
+      26: aload_0
+      27: getfield      #172                // Field org/openjdk/jmh/runner/InfraControl.isDone:Z
+      30: ifeq          13
+      33: aload_1
+      34: invokestatic  #163                // Method java/lang/System.nanoTime:()J
+      37: putfield      #175                // Field org/openjdk/jmh/results/RawResults.stopTime:J
+      40: aload_1
+      41: lload         11
+      43: putfield      #178                // Field org/openjdk/jmh/results/RawResults.realTime:J
+      46: aload_1
+      47: lload         9
+      49: l2d
+      50: putfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+      53: return
+
+  public org.openjdk.jmh.results.BenchmarkTaskResult lambdaMetaFactoryLookUp_SampleTime(org.openjdk.jmh.runner.InfraControl, org.openjdk.jmh.infra.ThreadParams) throws java.lang.Throwable;
+    Code:
+       0: aload_0
+       1: aload_1
+       2: getfield      #7                  // Field org/openjdk/jmh/runner/InfraControl.benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+       5: putfield      #13                 // Field benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+       8: aload_0
+       9: aload_1
+      10: getfield      #16                 // Field org/openjdk/jmh/runner/InfraControl.iterationParams:Lorg/openjdk/jmh/infra/IterationParams;
+      13: putfield      #20                 // Field iterationParams:Lorg/openjdk/jmh/infra/IterationParams;
+      16: aload_0
+      17: aload_2
+      18: putfield      #21                 // Field threadParams:Lorg/openjdk/jmh/infra/ThreadParams;
+      21: aload_0
+      22: aload_1
+      23: getfield      #25                 // Field org/openjdk/jmh/runner/InfraControl.notifyControl:Lorg/openjdk/jmh/infra/Control;
+      26: putfield      #29                 // Field notifyControl:Lorg/openjdk/jmh/infra/Control;
+      29: aload_0
+      30: getfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+      33: ifnonnull     49
+      36: aload_0
+      37: new           #34                 // class org/openjdk/jmh/infra/Blackhole
+      40: dup
+      41: ldc           #36                 // String Today\'s password is swordfish. I understand instantiating Blackholes directly is dangerous.
+      43: invokespecial #38                 // Method org/openjdk/jmh/infra/Blackhole."<init>":(Ljava/lang/String;)V
+      46: putfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+      49: aload_2
+      50: invokevirtual #41                 // Method org/openjdk/jmh/infra/ThreadParams.getSubgroupIndex:()I
+      53: ifne          377
+      56: new           #47                 // class org/openjdk/jmh/results/RawResults
+      59: dup
+      60: invokespecial #49                 // Method org/openjdk/jmh/results/RawResults."<init>":()V
+      63: astore_3
+      64: aload_0
+      65: aload_1
+      66: invokevirtual #50                 // Method _jmh_tryInit_f_invokereflectcosttest0_0:(Lorg/openjdk/jmh/runner/InfraControl;)Lcom/tuya/jmh_generated/InvokeReflectCostTest_jmhType;
+      69: astore        4
+      71: aload_1
+      72: invokevirtual #54                 // Method org/openjdk/jmh/runner/InfraControl.preSetup:()V
+      75: aload_1
+      76: invokevirtual #57                 // Method org/openjdk/jmh/runner/InfraControl.announceWarmupReady:()V
+      79: aload_1
+      80: getfield      #60                 // Field org/openjdk/jmh/runner/InfraControl.warmupShouldWait:Z
+      83: ifeq          108
+      86: aload         4
+      88: aload_0
+      89: getfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+      92: invokevirtual #64                 // Method com/tuya/jmh_generated/InvokeReflectCostTest_jmhType.lambdaMetaFactoryLookUp:(Lorg/openjdk/jmh/infra/Blackhole;)V
+      95: aload_3
+      96: dup
+      97: getfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     100: dconst_1
+     101: dadd
+     102: putfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     105: goto          79
+     108: aload_0
+     109: getfield      #29                 // Field notifyControl:Lorg/openjdk/jmh/infra/Control;
+     112: iconst_1
+     113: putfield      #74                 // Field org/openjdk/jmh/infra/Control.startMeasurement:Z
+     116: aload_1
+     117: getstatic     #187                // Field java/util/concurrent/TimeUnit.MILLISECONDS:Ljava/util/concurrent/TimeUnit;
+     120: invokevirtual #193                // Method org/openjdk/jmh/runner/InfraControl.getDuration:(Ljava/util/concurrent/TimeUnit;)J
+     123: ldc2_w        #197                // long 20l
+     126: lmul
+     127: l2i
+     128: istore        5
+     130: aload_0
+     131: getfield      #20                 // Field iterationParams:Lorg/openjdk/jmh/infra/IterationParams;
+     134: invokevirtual #114                // Method org/openjdk/jmh/infra/IterationParams.getBatchSize:()I
+     137: istore        6
+     139: aload_0
+     140: getfield      #13                 // Field benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+     143: invokevirtual #119                // Method org/openjdk/jmh/infra/BenchmarkParams.getOpsPerInvocation:()I
+     146: istore        7
+     148: new           #199                // class org/openjdk/jmh/util/SampleBuffer
+     151: dup
+     152: invokespecial #201                // Method org/openjdk/jmh/util/SampleBuffer."<init>":()V
+     155: astore        8
+     157: aload_1
+     158: aload_3
+     159: aload_0
+     160: getfield      #13                 // Field benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+     163: aload_0
+     164: getfield      #20                 // Field iterationParams:Lorg/openjdk/jmh/infra/IterationParams;
+     167: aload_2
+     168: aload_0
+     169: getfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+     172: aload_0
+     173: getfield      #29                 // Field notifyControl:Lorg/openjdk/jmh/infra/Control;
+     176: aload_0
+     177: getfield      #79                 // Field startRndMask:I
+     180: aload         8
+     182: iload         5
+     184: iload         7
+     186: i2l
+     187: iload         6
+     189: aload         4
+     191: invokestatic  #202                // Method lambdaMetaFactoryLookUp_sample_jmhStub:(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;ILorg/openjdk/jmh/util/SampleBuffer;IJILcom/tuya/jmh_generated/InvokeReflectCostTest_jmhType;)V
+     194: aload_0
+     195: getfield      #29                 // Field notifyControl:Lorg/openjdk/jmh/infra/Control;
+     198: iconst_1
+     199: putfield      #87                 // Field org/openjdk/jmh/infra/Control.stopMeasurement:Z
+     202: aload_1
+     203: invokevirtual #90                 // Method org/openjdk/jmh/runner/InfraControl.announceWarmdownReady:()V
+     206: aload_1
+     207: getfield      #93                 // Field org/openjdk/jmh/runner/InfraControl.warmdownShouldWait:Z
+     210: ifeq          235
+     213: aload         4
+     215: aload_0
+     216: getfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+     219: invokevirtual #64                 // Method com/tuya/jmh_generated/InvokeReflectCostTest_jmhType.lambdaMetaFactoryLookUp:(Lorg/openjdk/jmh/infra/Blackhole;)V
+     222: aload_3
+     223: dup
+     224: getfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     227: dconst_1
+     228: dadd
+     229: putfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     232: goto          206
+     235: goto          251
+     238: astore        9
+     240: aload         9
+     242: instanceof    #98                 // class java/lang/InterruptedException
+     245: ifne          251
+     248: aload         9
+     250: athrow
+     251: aload_1
+     252: invokevirtual #100                // Method org/openjdk/jmh/runner/InfraControl.preTearDown:()V
+     255: aload_1
+     256: invokevirtual #103                // Method org/openjdk/jmh/runner/InfraControl.isLastIteration:()Z
+     259: ifeq          267
+     262: aload_0
+     263: aconst_null
+     264: putfield      #107                // Field f_invokereflectcosttest0_0:Lcom/tuya/jmh_generated/InvokeReflectCostTest_jmhType;
+     267: aload_3
+     268: dup
+     269: getfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     272: aload_3
+     273: getfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     276: iload         6
+     278: i2d
+     279: dmul
+     280: dadd
+     281: putfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     284: aload_3
+     285: dup
+     286: getfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     289: iload         7
+     291: i2d
+     292: dmul
+     293: putfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     296: aload_3
+     297: dup
+     298: getfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     301: iload         6
+     303: i2d
+     304: ddiv
+     305: putfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     308: aload_3
+     309: dup
+     310: getfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     313: iload         7
+     315: i2d
+     316: dmul
+     317: putfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     320: new           #124                // class org/openjdk/jmh/results/BenchmarkTaskResult
+     323: dup
+     324: aload_3
+     325: getfield      #70                 // Field org/openjdk/jmh/results/RawResults.allOps:D
+     328: d2l
+     329: aload_3
+     330: getfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     333: d2l
+     334: invokespecial #126                // Method org/openjdk/jmh/results/BenchmarkTaskResult."<init>":(JJ)V
+     337: astore        9
+     339: aload         9
+     341: new           #206                // class org/openjdk/jmh/results/SampleTimeResult
+     344: dup
+     345: getstatic     #131                // Field org/openjdk/jmh/results/ResultRole.PRIMARY:Lorg/openjdk/jmh/results/ResultRole;
+     348: ldc           #137                // String lambdaMetaFactoryLookUp
+     350: aload         8
+     352: aload_0
+     353: getfield      #13                 // Field benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+     356: invokevirtual #142                // Method org/openjdk/jmh/infra/BenchmarkParams.getTimeUnit:()Ljava/util/concurrent/TimeUnit;
+     359: invokespecial #208                // Method org/openjdk/jmh/results/SampleTimeResult."<init>":(Lorg/openjdk/jmh/results/ResultRole;Ljava/lang/String;Lorg/openjdk/jmh/util/SampleBuffer;Ljava/util/concurrent/TimeUnit;)V
+     362: invokevirtual #149                // Method org/openjdk/jmh/results/BenchmarkTaskResult.add:(Lorg/openjdk/jmh/results/Result;)V
+     365: aload_0
+     366: getfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+     369: ldc           #153                // String Yes, I am Stephen Hawking, and know a thing or two about black holes.
+     371: invokevirtual #155                // Method org/openjdk/jmh/infra/Blackhole.evaporate:(Ljava/lang/String;)V
+     374: aload         9
+     376: areturn
+     377: new           #158                // class java/lang/IllegalStateException
+     380: dup
+     381: ldc           #160                // String Harness failed to distribute threads among groups properly
+     383: invokespecial #162                // Method java/lang/IllegalStateException."<init>":(Ljava/lang/String;)V
+     386: athrow
+    Exception table:
+       from    to  target type
+         206   235   238   Class java/lang/Throwable
+
+  public static void lambdaMetaFactoryLookUp_sample_jmhStub(org.openjdk.jmh.runner.InfraControl, org.openjdk.jmh.results.RawResults, org.openjdk.jmh.infra.BenchmarkParams, org.openjdk.jmh.infra.IterationParams, org.openjdk.jmh.infra.ThreadParams, org.openjdk.jmh.infra.Blackhole, org.openjdk.jmh.infra.Control, int, org.openjdk.jmh.util.SampleBuffer, int, long, int, com.tuya.jmh_generated.InvokeReflectCostTest_jmhType) throws java.lang.Throwable;
+    Code:
+       0: lconst_0
+       1: lstore        14
+       3: lconst_0
+       4: lstore        16
+       6: invokestatic  #163                // Method java/lang/System.nanoTime:()J
+       9: l2i
+      10: istore        18
+      12: iload         7
+      14: istore        19
+      16: lconst_0
+      17: lstore        20
+      19: iconst_0
+      20: istore        22
+      22: iload         18
+      24: ldc           #211                // int 1664525
+      26: imul
+      27: ldc           #212                // int 1013904223
+      29: iadd
+      30: istore        18
+      32: iload         18
+      34: iload         19
+      36: iand
+      37: ifne          44
+      40: iconst_1
+      41: goto          45
+      44: iconst_0
+      45: istore        23
+      47: iload         23
+      49: ifeq          57
+      52: invokestatic  #163                // Method java/lang/System.nanoTime:()J
+      55: lstore        20
+      57: iconst_0
+      58: istore        24
+      60: iload         24
+      62: iload         12
+      64: if_icmpge     88
+      67: aload_0
+      68: getfield      #213                // Field org/openjdk/jmh/runner/InfraControl.volatileSpoiler:Z
+      71: ifeq          75
+      74: return
+      75: aload         13
+      77: aload         5
+      79: invokevirtual #64                 // Method com/tuya/jmh_generated/InvokeReflectCostTest_jmhType.lambdaMetaFactoryLookUp:(Lorg/openjdk/jmh/infra/Blackhole;)V
+      82: iinc          24, 1
+      85: goto          60
+      88: iload         23
+      90: ifeq          133
+      93: aload         8
+      95: invokestatic  #163                // Method java/lang/System.nanoTime:()J
+      98: lload         20
+     100: lsub
+     101: lload         10
+     103: ldiv
+     104: invokevirtual #216                // Method org/openjdk/jmh/util/SampleBuffer.add:(J)V
+     107: iload         22
+     109: iinc          22, 1
+     112: iload         9
+     114: if_icmple     133
+     117: aload         8
+     119: invokevirtual #219                // Method org/openjdk/jmh/util/SampleBuffer.half:()V
+     122: iconst_0
+     123: istore        22
+     125: iload         19
+     127: iconst_1
+     128: ishl
+     129: iconst_1
+     130: iadd
+     131: istore        19
+     133: lload         16
+     135: lconst_1
+     136: ladd
+     137: lstore        16
+     139: aload_0
+     140: getfield      #172                // Field org/openjdk/jmh/runner/InfraControl.isDone:Z
+     143: ifeq          22
+     146: iload         7
+     148: iload         19
+     150: invokestatic  #222                // Method java/lang/Math.max:(II)I
+     153: istore        7
+     155: aload_1
+     156: lload         14
+     158: putfield      #178                // Field org/openjdk/jmh/results/RawResults.realTime:J
+     161: aload_1
+     162: lload         16
+     164: l2d
+     165: putfield      #111                // Field org/openjdk/jmh/results/RawResults.measuredOps:D
+     168: return
+
+  public org.openjdk.jmh.results.BenchmarkTaskResult lambdaMetaFactoryLookUp_SingleShotTime(org.openjdk.jmh.runner.InfraControl, org.openjdk.jmh.infra.ThreadParams) throws java.lang.Throwable;
+    Code:
+       0: aload_0
+       1: aload_1
+       2: getfield      #7                  // Field org/openjdk/jmh/runner/InfraControl.benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+       5: putfield      #13                 // Field benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+       8: aload_0
+       9: aload_1
+      10: getfield      #16                 // Field org/openjdk/jmh/runner/InfraControl.iterationParams:Lorg/openjdk/jmh/infra/IterationParams;
+      13: putfield      #20                 // Field iterationParams:Lorg/openjdk/jmh/infra/IterationParams;
+      16: aload_0
+      17: aload_2
+      18: putfield      #21                 // Field threadParams:Lorg/openjdk/jmh/infra/ThreadParams;
+      21: aload_0
+      22: aload_1
+      23: getfield      #25                 // Field org/openjdk/jmh/runner/InfraControl.notifyControl:Lorg/openjdk/jmh/infra/Control;
+      26: putfield      #29                 // Field notifyControl:Lorg/openjdk/jmh/infra/Control;
+      29: aload_0
+      30: getfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+      33: ifnonnull     49
+      36: aload_0
+      37: new           #34                 // class org/openjdk/jmh/infra/Blackhole
+      40: dup
+      41: ldc           #36                 // String Today\'s password is swordfish. I understand instantiating Blackholes directly is dangerous.
+      43: invokespecial #38                 // Method org/openjdk/jmh/infra/Blackhole."<init>":(Ljava/lang/String;)V
+      46: putfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+      49: aload_2
+      50: invokevirtual #41                 // Method org/openjdk/jmh/infra/ThreadParams.getSubgroupIndex:()I
+      53: ifne          208
+      56: aload_0
+      57: aload_1
+      58: invokevirtual #50                 // Method _jmh_tryInit_f_invokereflectcosttest0_0:(Lorg/openjdk/jmh/runner/InfraControl;)Lcom/tuya/jmh_generated/InvokeReflectCostTest_jmhType;
+      61: astore_3
+      62: aload_1
+      63: invokevirtual #54                 // Method org/openjdk/jmh/runner/InfraControl.preSetup:()V
+      66: aload_0
+      67: getfield      #29                 // Field notifyControl:Lorg/openjdk/jmh/infra/Control;
+      70: iconst_1
+      71: putfield      #74                 // Field org/openjdk/jmh/infra/Control.startMeasurement:Z
+      74: new           #47                 // class org/openjdk/jmh/results/RawResults
+      77: dup
+      78: invokespecial #49                 // Method org/openjdk/jmh/results/RawResults."<init>":()V
+      81: astore        4
+      83: aload_0
+      84: getfield      #20                 // Field iterationParams:Lorg/openjdk/jmh/infra/IterationParams;
+      87: invokevirtual #114                // Method org/openjdk/jmh/infra/IterationParams.getBatchSize:()I
+      90: istore        5
+      92: aload_1
+      93: aload         4
+      95: aload_0
+      96: getfield      #13                 // Field benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+      99: aload_0
+     100: getfield      #20                 // Field iterationParams:Lorg/openjdk/jmh/infra/IterationParams;
+     103: aload_2
+     104: aload_0
+     105: getfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+     108: aload_0
+     109: getfield      #29                 // Field notifyControl:Lorg/openjdk/jmh/infra/Control;
+     112: aload_0
+     113: getfield      #79                 // Field startRndMask:I
+     116: iload         5
+     118: aload_3
+     119: invokestatic  #228                // Method lambdaMetaFactoryLookUp_ss_jmhStub:(Lorg/openjdk/jmh/runner/InfraControl;Lorg/openjdk/jmh/results/RawResults;Lorg/openjdk/jmh/infra/BenchmarkParams;Lorg/openjdk/jmh/infra/IterationParams;Lorg/openjdk/jmh/infra/ThreadParams;Lorg/openjdk/jmh/infra/Blackhole;Lorg/openjdk/jmh/infra/Control;IILcom/tuya/jmh_generated/InvokeReflectCostTest_jmhType;)V
+     122: aload_1
+     123: invokevirtual #100                // Method org/openjdk/jmh/runner/InfraControl.preTearDown:()V
+     126: aload_1
+     127: invokevirtual #103                // Method org/openjdk/jmh/runner/InfraControl.isLastIteration:()Z
+     130: ifeq          138
+     133: aload_0
+     134: aconst_null
+     135: putfield      #107                // Field f_invokereflectcosttest0_0:Lcom/tuya/jmh_generated/InvokeReflectCostTest_jmhType;
+     138: aload_1
+     139: getfield      #7                  // Field org/openjdk/jmh/runner/InfraControl.benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+     142: invokevirtual #119                // Method org/openjdk/jmh/infra/BenchmarkParams.getOpsPerInvocation:()I
+     145: istore        6
+     147: iload         6
+     149: i2l
+     150: lstore        7
+     152: new           #124                // class org/openjdk/jmh/results/BenchmarkTaskResult
+     155: dup
+     156: lload         7
+     158: lload         7
+     160: invokespecial #126                // Method org/openjdk/jmh/results/BenchmarkTaskResult."<init>":(JJ)V
+     163: astore        9
+     165: aload         9
+     167: new           #232                // class org/openjdk/jmh/results/SingleShotResult
+     170: dup
+     171: getstatic     #131                // Field org/openjdk/jmh/results/ResultRole.PRIMARY:Lorg/openjdk/jmh/results/ResultRole;
+     174: ldc           #137                // String lambdaMetaFactoryLookUp
+     176: aload         4
+     178: invokevirtual #138                // Method org/openjdk/jmh/results/RawResults.getTime:()J
+     181: lload         7
+     183: aload_0
+     184: getfield      #13                 // Field benchmarkParams:Lorg/openjdk/jmh/infra/BenchmarkParams;
+     187: invokevirtual #142                // Method org/openjdk/jmh/infra/BenchmarkParams.getTimeUnit:()Ljava/util/concurrent/TimeUnit;
+     190: invokespecial #234                // Method org/openjdk/jmh/results/SingleShotResult."<init>":(Lorg/openjdk/jmh/results/ResultRole;Ljava/lang/String;JJLjava/util/concurrent/TimeUnit;)V
+     193: invokevirtual #149                // Method org/openjdk/jmh/results/BenchmarkTaskResult.add:(Lorg/openjdk/jmh/results/Result;)V
+     196: aload_0
+     197: getfield      #30                 // Field blackhole:Lorg/openjdk/jmh/infra/Blackhole;
+     200: ldc           #153                // String Yes, I am Stephen Hawking, and know a thing or two about black holes.
+     202: invokevirtual #155                // Method org/openjdk/jmh/infra/Blackhole.evaporate:(Ljava/lang/String;)V
+     205: aload         9
+     207: areturn
+     208: new           #158                // class java/lang/IllegalStateException
+     211: dup
+     212: ldc           #160                // String Harness failed to distribute threads among groups properly
+     214: invokespecial #162                // Method java/lang/IllegalStateException."<init>":(Ljava/lang/String;)V
+     217: athrow
+
+  public static void lambdaMetaFactoryLookUp_ss_jmhStub(org.openjdk.jmh.runner.InfraControl, org.openjdk.jmh.results.RawResults, org.openjdk.jmh.infra.BenchmarkParams, org.openjdk.jmh.infra.IterationParams, org.openjdk.jmh.infra.ThreadParams, org.openjdk.jmh.infra.Blackhole, org.openjdk.jmh.infra.Control, int, int, com.tuya.jmh_generated.InvokeReflectCostTest_jmhType) throws java.lang.Throwable;
+    Code:
+       0: lconst_0
+       1: lstore        10
+       3: aload_1
+       4: invokestatic  #163                // Method java/lang/System.nanoTime:()J
+       7: putfield      #168                // Field org/openjdk/jmh/results/RawResults.startTime:J
+      10: iconst_0
+      11: istore        12
+      13: iload         12
+      15: iload         8
+      17: if_icmpge     41
+      20: aload_0
+      21: getfield      #213                // Field org/openjdk/jmh/runner/InfraControl.volatileSpoiler:Z
+      24: ifeq          28
+      27: return
+      28: aload         9
+      30: aload         5
+      32: invokevirtual #64                 // Method com/tuya/jmh_generated/InvokeReflectCostTest_jmhType.lambdaMetaFactoryLookUp:(Lorg/openjdk/jmh/infra/Blackhole;)V
+      35: iinc          12, 1
+      38: goto          13
+      41: aload_1
+      42: invokestatic  #163                // Method java/lang/System.nanoTime:()J
+      45: putfield      #175                // Field org/openjdk/jmh/results/RawResults.stopTime:J
+      48: aload_1
+      49: lload         10
+      51: putfield      #178                // Field org/openjdk/jmh/results/RawResults.realTime:J
+      54: return
+
+  com.tuya.jmh_generated.InvokeReflectCostTest_jmhType _jmh_tryInit_f_invokereflectcosttest0_0(org.openjdk.jmh.runner.InfraControl) throws java.lang.Throwable;
+    Code:
+       0: aload_1
+       1: getfield      #237                // Field org/openjdk/jmh/runner/InfraControl.isFailing:Z
+       4: ifeq          15
+       7: new           #240                // class org/openjdk/jmh/runner/FailureAssistException
+      10: dup
+      11: invokespecial #242                // Method org/openjdk/jmh/runner/FailureAssistException."<init>":()V
+      14: athrow
+      15: aload_0
+      16: getfield      #107                // Field f_invokereflectcosttest0_0:Lcom/tuya/jmh_generated/InvokeReflectCostTest_jmhType;
+      19: astore_2
+      20: aload_2
+      21: ifnonnull     37
+      24: new           #65                 // class com/tuya/jmh_generated/InvokeReflectCostTest_jmhType
+      27: dup
+      28: invokespecial #243                // Method com/tuya/jmh_generated/InvokeReflectCostTest_jmhType."<init>":()V
+      31: astore_2
+      32: aload_0
+      33: aload_2
+      34: putfield      #107                // Field f_invokereflectcosttest0_0:Lcom/tuya/jmh_generated/InvokeReflectCostTest_jmhType;
+      37: aload_2
+      38: areturn
+}
