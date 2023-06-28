@@ -1,4 +1,6 @@
 public class com.walklown.learn.jarkata.base.NestClass$InnerClass {
+
+  // 内部包含一个 final 的父对象引用
   final com.walklown.learn.jarkata.base.NestClass this$0;
 
   public com.walklown.learn.jarkata.base.NestClass$InnerClass(com.walklown.learn.jarkata.base.NestClass, java.lang.String);
