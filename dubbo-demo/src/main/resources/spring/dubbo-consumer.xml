@@ -33,6 +33,6 @@
 
     <dubbo:reference id="demoService" interface="com.walklown.attempt.dubbo.provider.DemoService" protocol="dubbo"/>
 
-    <bean id="consumerService" class="com.walklown.attempt.dubbo.consumer.ConsumerService1"/>
+    <bean id="consumerService" class="com.walklown.attempt.dubbo.consumer.impl.ConsumerService1"/>
 
 </beans>

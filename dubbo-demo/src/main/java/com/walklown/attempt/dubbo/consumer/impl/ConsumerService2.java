@@ -17,14 +17,14 @@
  *
  */
 
-package com.walklown.attempt.dubbo.consumer;
+package com.walklown.attempt.dubbo.consumer.impl;
 
 import com.walklown.attempt.dubbo.provider.DemoService;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.springframework.stereotype.Service;
 
 @Service
-public class ConsumerService3 {
+public class ConsumerService2 {
 
     @DubboReference(check = false, timeout = 1000)
     private DemoService demoService;

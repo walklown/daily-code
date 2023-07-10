@@ -17,7 +17,7 @@
  *
  */
 
-package com.walklown.attempt.dubbo.consumer;
+package com.walklown.attempt.dubbo.consumer.impl;
 
 import com.walklown.attempt.dubbo.provider.DemoService;
 import org.apache.dubbo.config.annotation.DubboReference;

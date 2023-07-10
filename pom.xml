@@ -41,8 +41,12 @@
         <resilience4jVersion>2.0.2</resilience4jVersion>
         <jackson.version>2.15.1</jackson.version>
         <lombok.version>1.18.28</lombok.version>
-        <dubbo.version>3.2.1</dubbo.version>
+        <dubbo.version>3.2.3</dubbo.version>
         <jmh.version>1.36</jmh.version>
+        <zookeeper.version>3.6.2</zookeeper.version>
+        <curator.version>4.3.0</curator.version>
+        <snappy.version>1.1.7</snappy.version>
+        <dropwizard.version>3.2.5</dropwizard.version>
     </properties>
 
     <dependencies>
@@ -137,14 +141,40 @@
             <dependency>
                 <groupId>org.apache.zookeeper</groupId>
                 <artifactId>zookeeper</artifactId>
-                <version>3.8.1</version>
+                <version>${zookeeper.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>log4j</groupId>
+                        <artifactId>log4j</artifactId>
+                    </exclusion>
+                    <exclusion>
+                        <groupId>io.netty</groupId>
+                        <artifactId>netty</artifactId>
+                    </exclusion>
+                </exclusions>
+            </dependency>
+            <dependency>
+                <groupId>org.xerial.snappy</groupId>
+                <artifactId>snappy-java</artifactId>
+                <version>${snappy.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>io.dropwizard.metrics</groupId>
+                <artifactId>metrics-core</artifactId>
+                <version>${dropwizard.version}</version>
+                <exclusions>
+                    <exclusion>
+                        <groupId>org.slf4j</groupId>
+                        <artifactId>slf4j-api</artifactId>
+                    </exclusion>
+                </exclusions>
             </dependency>
             <!-- https://mvnrepository.com/artifact/org.apache.curator/curator-framework -->
-            <dependency>
-                <groupId>org.apache.curator</groupId>
-                <artifactId>curator-framework</artifactId>
-                <version>5.5.0</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>org.apache.curator</groupId>-->
+<!--                <artifactId>curator-framework</artifactId>-->
+<!--                <version>${curator.version}</version>-->
+<!--            </dependency>-->
 
             <!--            <dependency>-->
 <!--                <groupId>org.eclipse.jetty.aggregate</groupId>-->

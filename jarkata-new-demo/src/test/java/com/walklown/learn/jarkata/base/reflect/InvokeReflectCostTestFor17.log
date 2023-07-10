@@ -1,3 +1,4 @@
+JDK Version Corretto 17.0.6
 Compiled from "InvokeReflectCostTest.java"
 public class com.walklown.learn.jarkata.base.reflect.InvokeReflectCostTest {
   public com.walklown.learn.jarkata.base.reflect.InvokeReflectCostTest();

@@ -19,11 +19,11 @@
 
 package com.walklown.attempt.dubbo.consumer;
 
+import com.walklown.attempt.dubbo.consumer.impl.ConsumerService1;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.concurrent.CountDownLatch;
 
