@@ -21,14 +21,20 @@ package com.walklown.attempt.dubbo.consumer.impl;
 
 import com.walklown.attempt.dubbo.provider.DemoService;
 import org.apache.dubbo.config.annotation.DubboReference;
+import org.apache.dubbo.config.spring.ReferenceBean;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 public class ConsumerService1 {
 
     @DubboReference(check = false, timeout = 2000)
     private DemoService demoService;
+
+    @Autowired
+    private List<ReferenceBean<?>> referenceBeanList;
 
     public String sayHello(String name) {
         return demoService.sayHello(name);
