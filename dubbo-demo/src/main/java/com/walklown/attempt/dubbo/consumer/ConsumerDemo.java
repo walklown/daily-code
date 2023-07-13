@@ -38,6 +38,11 @@ public class ConsumerDemo {
         ConsumerService1 demoService = context.getBean("consumerService1", ConsumerService1.class);
         String hello = demoService.sayHello("world");
         System.out.println(hello);
+        try {
+            demoService.sayHelloEx("world");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
         new CountDownLatch(1).await();
     }
 }

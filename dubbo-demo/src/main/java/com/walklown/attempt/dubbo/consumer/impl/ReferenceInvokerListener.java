@@ -6,6 +6,7 @@ import org.apache.dubbo.rpc.Invoker;
 import org.apache.dubbo.rpc.InvokerListener;
 import org.apache.dubbo.rpc.RpcException;
 
+import java.lang.reflect.Method;
 import java.util.HashSet;
 import java.util.Set;
 
@@ -21,13 +22,24 @@ public class ReferenceInvokerListener implements InvokerListener {
             return;
         }
         if (invoker.getInterface().getPackageName().startsWith("com.walklown.attempt")) {
-            ReferenceHandlerCache.INVOKER_RUNNABLE_MAP.put(invoker.getInterface(), invocation -> {
-                for (int i = 0; i < invocation.getArguments().length; i++) {
-                    if (invocation.getArguments()[i] instanceof String) {
-                        invocation.getArguments()[i] = "adapt";
-                    }
+            initCache(invoker, String.class);
+        }
+    }
+
+    private void initCache(Invoker<?> invoker, Class<?> requestClass) {
+        for (Method declaredMethod : invoker.getInterface().getDeclaredMethods()) {
+            for (int i = 0; i < declaredMethod.getParameterTypes().length; i++) {
+                Class<?> currentClass = declaredMethod.getParameterTypes()[i];
+                if (requestClass.equals(currentClass)) {
+                    ReferenceHandlerCache.INVOKER_RUNNABLE_MAP.put(declaredMethod, System.out::println);
+                    // 当前method已处理
+                    break;
                 }
-            });
+                if (currentClass != null) {
+                    // 匹配到
+                    break;
+                }
+            }
         }
     }
 

@@ -25,4 +25,6 @@ public interface DemoService {
 
     String sayHelloAsync(String name);
 
+    String sayHelloThrEx(String name);
+
 }

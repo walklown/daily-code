@@ -48,4 +48,9 @@ public class DemoServiceImpl implements DemoService {
         }).start();
         return null;
     }
+
+    @Override
+    public String sayHelloThrEx(String name) {
+        throw new RuntimeException("aa");
+    }
 }

@@ -10,4 +10,9 @@ public class DemoServiceImplMock implements DemoService {
     public String sayHelloAsync(String name) {
         return "mock";
     }
+
+    @Override
+    public String sayHelloThrEx(String name) {
+        return "mock";
+    }
 }

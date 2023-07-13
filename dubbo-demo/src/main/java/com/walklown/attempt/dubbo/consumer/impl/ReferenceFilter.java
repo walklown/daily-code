@@ -11,6 +11,7 @@ import org.apache.dubbo.rpc.RpcException;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.lang.reflect.Method;
 import java.util.function.Consumer;
 
 @Activate(group = CommonConstants.CONSUMER, order = 450)
@@ -20,18 +21,27 @@ public class ReferenceFilter implements Filter, Filter.Listener {
 
     @Override
     public Result invoke(Invoker<?> invoker, Invocation invocation) throws RpcException {
-        Consumer<Invocation> consumer = ReferenceHandlerCache.INVOKER_RUNNABLE_MAP.get(invoker.getInterface());
-        if (consumer != null) {
-            consumer.accept(invocation);
+        try {
+            Method method = invoker.getInterface().getMethod(invocation.getMethodName(), invocation.getParameterTypes());
+            Consumer<Invocation> consumer = ReferenceHandlerCache.INVOKER_RUNNABLE_MAP.get(method);
+            if (consumer != null) {
+                consumer.accept(invocation);
+            }
+        } catch (NoSuchMethodException e) {
+            LOGGER.error("", e);
         }
-        return invoker.invoke(invocation);
+        Result result = invoker.invoke(invocation);
+        LOGGER.info("result:{}", result);
+        return result;
     }
 
     @Override
     public void onResponse(Result appResponse, Invoker<?> invoker, Invocation invocation) {
+        LOGGER.info("onResponse");
     }
 
     @Override
     public void onError(Throwable t, Invoker<?> invoker, Invocation invocation) {
+        LOGGER.info("onError");
     }
 }

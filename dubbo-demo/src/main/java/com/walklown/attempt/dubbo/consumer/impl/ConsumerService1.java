@@ -20,6 +20,8 @@
 package com.walklown.attempt.dubbo.consumer.impl;
 
 import com.walklown.attempt.dubbo.provider.DemoService;
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.Resource;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.dubbo.config.spring.ReferenceBean;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,7 +38,16 @@ public class ConsumerService1 {
     @Autowired
     private List<ReferenceBean<?>> referenceBeanList;
 
+    @PostConstruct
+    public void initMethod() {
+        System.out.println(referenceBeanList);
+    }
+
     public String sayHello(String name) {
         return demoService.sayHello(name);
+    }
+
+    public String sayHelloEx(String name) {
+        return demoService.sayHelloThrEx(name);
     }
 }
