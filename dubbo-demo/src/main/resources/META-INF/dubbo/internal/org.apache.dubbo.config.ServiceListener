@@ -1,0 +1,1 @@
+myServiceListener=com.walklown.attempt.dubbo.provider.impl.MyServiceListener

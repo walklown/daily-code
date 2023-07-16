@@ -19,9 +19,6 @@
 
 package com.walklown.attempt.dubbo.zk;
 
-import com.walklown.attempt.dubbo.provider.DemoService;
-import org.springframework.context.support.ClassPathXmlApplicationContext;
-
 import java.util.concurrent.CountDownLatch;
 
 public class ZkDemo {

@@ -1,2 +1,2 @@
-serviceResultFilter=com.walklown.attempt.dubbo.provider.ServiceResultFilter
+serviceResultFilter=com.walklown.attempt.dubbo.provider.impl.ServiceResultFilter
 referenceFilter=com.walklown.attempt.dubbo.consumer.impl.ReferenceFilter

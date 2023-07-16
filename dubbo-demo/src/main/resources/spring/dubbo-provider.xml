@@ -29,9 +29,9 @@
 
     <dubbo:protocol name="dubbo" host="127.0.0.1" port="20880"/>
 
-    <bean id="target" class="com.walklown.attempt.dubbo.provider.DemoServiceImpl"/>
+    <bean id="target" class="com.walklown.attempt.dubbo.provider.impl.DemoServiceImpl"/>
 
-    <dubbo:service interface="com.walklown.attempt.dubbo.provider.DemoService" ref="target" protocol="dubbo" mock=""/>
+    <dubbo:service interface="com.walklown.attempt.dubbo.provider.impl.DemoService" ref="target" protocol="dubbo" mock=""/>
 
 <!--    <dubbo:reference id="demoService" interface="org.apache.dubbo.samples.local.api.DemoService"/>-->
 

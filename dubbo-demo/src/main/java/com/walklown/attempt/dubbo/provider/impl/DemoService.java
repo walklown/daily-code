@@ -17,7 +17,7 @@
  *
  */
 
-package com.walklown.attempt.dubbo.provider;
+package com.walklown.attempt.dubbo.provider.impl;
 
 public interface DemoService {
 
