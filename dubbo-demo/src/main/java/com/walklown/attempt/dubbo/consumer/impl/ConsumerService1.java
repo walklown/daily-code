@@ -19,10 +19,13 @@
 
 package com.walklown.attempt.dubbo.consumer.impl;
 
+import com.walklown.attempt.dubbo.consumer.ConsumerDemo;
 import com.walklown.attempt.dubbo.provider.impl.DemoService;
 import jakarta.annotation.PostConstruct;
 import org.apache.dubbo.config.annotation.DubboReference;
 import org.apache.dubbo.config.spring.ReferenceBean;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -30,6 +33,8 @@ import java.util.List;
 
 @Service
 public class ConsumerService1 {
+
+    public static final Logger LOGGER = LoggerFactory.getLogger(ConsumerDemo.class);
 
     @DubboReference(check = false, timeout = 2000)
     private DemoService demoService;
