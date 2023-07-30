@@ -15,7 +15,7 @@ public class DemoServiceImplMock implements DemoService {
     }
 
     @Override
-    public Future<String> sayHelloAsync1(String name) {
+    public CompletableFuture<String> sayHelloAsync1(String name) {
         return CompletableFuture.completedFuture("mock");
     }
 

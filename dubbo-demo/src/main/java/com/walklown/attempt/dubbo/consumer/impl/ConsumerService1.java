@@ -30,6 +30,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
@@ -58,7 +59,7 @@ public class ConsumerService1 {
     }
 
     public String sayHelloAsync1(String name) throws ExecutionException, InterruptedException {
-        Future<String> future = demoService.sayHelloAsync1(name);
+        CompletableFuture<String> future = demoService.sayHelloAsync1(name);
         return future.get();
     }
 

@@ -19,6 +19,7 @@
 
 package com.walklown.attempt.dubbo.provider.impl;
 
+import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.Future;
 
 public interface DemoService {
@@ -27,7 +28,7 @@ public interface DemoService {
 
     String sayHelloAsync(String name);
 
-    Future<String> sayHelloAsync1(String name);
+    CompletableFuture<String> sayHelloAsync1(String name);
 
     String sayHelloThrEx(String name);
 

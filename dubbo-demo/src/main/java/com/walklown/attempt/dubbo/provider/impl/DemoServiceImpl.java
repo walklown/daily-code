@@ -51,7 +51,7 @@ public class DemoServiceImpl implements DemoService {
     }
 
     @Override
-    public Future<String> sayHelloAsync1(String name) {
+    public CompletableFuture<String> sayHelloAsync1(String name) {
         return CompletableFuture.supplyAsync(()->{
             try {
                 Thread.sleep(500);
