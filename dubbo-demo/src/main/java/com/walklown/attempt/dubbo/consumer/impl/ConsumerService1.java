@@ -38,7 +38,7 @@ public class ConsumerService1 {
 
     public static final Logger LOGGER = LoggerFactory.getLogger(ConsumerDemo.class);
 
-    @DubboReference(check = false, timeout = 2000, protocol = "injvm")
+    @DubboReference(check = false, timeout = 2000)
     private DemoService demoService;
 
     @Autowired

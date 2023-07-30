@@ -31,7 +31,7 @@
 
 <!--    <dubbo:service interface="org.apache.dubbo.samples.local.api.DemoService" ref="target"/>-->
 
-    <dubbo:reference id="demoService" interface="com.walklown.attempt.dubbo.provider.impl.DemoService" protocol="injvm"/>
+    <dubbo:reference id="demoService" interface="com.walklown.attempt.dubbo.provider.impl.DemoService" protocol="dubbo"/>
 
     <bean id="consumerService" class="com.walklown.attempt.dubbo.consumer.impl.ConsumerService1"/>
 

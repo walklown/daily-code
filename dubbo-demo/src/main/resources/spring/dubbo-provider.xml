@@ -27,11 +27,11 @@
 
     <dubbo:registry address="zookeeper://127.0.0.1:2181"/>
 
-    <dubbo:protocol name="injvm" host="127.0.0.1" port="20880"/>
+    <dubbo:protocol name="dubbo" host="127.0.0.1" port="20880"/>
 
     <bean id="target" class="com.walklown.attempt.dubbo.provider.impl.DemoServiceImpl"/>
 
-    <dubbo:service interface="com.walklown.attempt.dubbo.provider.impl.DemoService" ref="target" protocol="injvm" mock=""/>
+    <dubbo:service interface="com.walklown.attempt.dubbo.provider.impl.DemoService" ref="target" protocol="dubbo" mock=""/>
 
 <!--    <dubbo:reference id="demoService" interface="org.apache.dubbo.samples.local.api.DemoService"/>-->
 
