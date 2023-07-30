@@ -25,6 +25,8 @@ import org.apache.dubbo.rpc.RpcServiceContext;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import java.util.concurrent.CompletableFuture;
+import java.util.concurrent.Future;
 
 public class DemoServiceImpl implements DemoService {
 
@@ -42,11 +44,21 @@ public class DemoServiceImpl implements DemoService {
             try {
                 Thread.sleep(500);
             } catch (InterruptedException ignore) {
-
             }
             asyncContext.write(sayHello(name));
         }).start();
         return null;
+    }
+
+    @Override
+    public Future<String> sayHelloAsync1(String name) {
+        return CompletableFuture.supplyAsync(()->{
+            try {
+                Thread.sleep(500);
+            } catch (InterruptedException ignore) {
+            }
+            return sayHello(name);
+        });
     }
 
     @Override
