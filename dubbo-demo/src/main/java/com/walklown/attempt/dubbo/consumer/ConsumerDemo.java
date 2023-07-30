@@ -23,11 +23,12 @@ import com.walklown.attempt.dubbo.consumer.impl.ConsumerService1;
 import org.apache.dubbo.config.spring.context.annotation.EnableDubbo;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 
 import java.util.concurrent.CountDownLatch;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.walklown.attempt.dubbo.consumer.i"})
 @EnableDubbo
 public class ConsumerDemo {
 
@@ -43,6 +44,5 @@ public class ConsumerDemo {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        new CountDownLatch(1).await();
     }
 }

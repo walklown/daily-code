@@ -34,14 +34,6 @@ public class ConsumerService1 {
     @DubboReference(check = false, timeout = 2000)
     private DemoService demoService;
 
-    @Autowired
-    private List<ReferenceBean<?>> referenceBeanList;
-
-    @PostConstruct
-    public void initMethod() {
-        System.out.println(referenceBeanList);
-    }
-
     public String sayHello(String name) {
         return demoService.sayHello(name);
     }
