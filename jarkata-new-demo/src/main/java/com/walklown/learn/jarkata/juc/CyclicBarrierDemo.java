@@ -54,7 +54,7 @@ public class CyclicBarrierDemo {
                     .orTimeout(1, TimeUnit.SECONDS);
             tasks.add(task);
         }
-        CompletableFuture.allOf(tasks.toArray(new CompletableFuture[0])).join();
+//        CompletableFuture.allOf(tasks.toArray(new CompletableFuture[0])).join();
 
     }
 }

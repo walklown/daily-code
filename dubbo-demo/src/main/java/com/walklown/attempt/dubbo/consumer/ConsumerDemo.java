@@ -25,13 +25,14 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ImportResource;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.concurrent.CountDownLatch;
 
-@SpringBootApplication
+@SpringBootApplication(scanBasePackages = {"com.walklown.attempt.dubbo.consumer.i"})
 @EnableDubbo
 @ImportResource(locations = {"classpath:spring/dubbo-consumer.xml"})
 public class ConsumerDemo {
@@ -64,6 +65,5 @@ public class ConsumerDemo {
         } catch (Exception e) {
             e.printStackTrace();
         }
-        new CountDownLatch(1).await();
     }
 }
