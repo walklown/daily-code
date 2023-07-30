@@ -30,13 +30,15 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.Future;
 
 @Service
 public class ConsumerService1 {
 
     public static final Logger LOGGER = LoggerFactory.getLogger(ConsumerDemo.class);
 
-    @DubboReference(check = false, timeout = 2000)
+    @DubboReference(check = false, timeout = 2000, protocol = "injvm")
     private DemoService demoService;
 
     @Autowired
@@ -49,6 +51,15 @@ public class ConsumerService1 {
 
     public String sayHello(String name) {
         return demoService.sayHello(name);
+    }
+
+    public String sayHelloAsync(String name) {
+        return demoService.sayHelloAsync(name);
+    }
+
+    public String sayHelloAsync1(String name) throws ExecutionException, InterruptedException {
+        Future<String> future = demoService.sayHelloAsync1(name);
+        return future.get();
     }
 
     public String sayHelloEx(String name) {

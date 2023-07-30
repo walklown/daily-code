@@ -238,16 +238,16 @@
                 <artifactId>mysql-connector-j</artifactId>
                 <version>8.0.31</version>
             </dependency>
-            <!-- https://mvnrepository.com/artifact/com.mysql/mysql-connector-j -->
-            <!--            <dependency>-->
-            <!--                <groupId>com.mysql</groupId>-->
-            <!--                <artifactId>mysql-connector-j</artifactId>-->
-            <!--                <version>8.0.31</version>-->
-            <!--            </dependency>-->
             <dependency>
                 <groupId>org.mybatis</groupId>
                 <artifactId>mybatis</artifactId>
                 <version>3.5.11</version>
+            </dependency>
+            <!-- https://mvnrepository.com/artifact/org.mybatis.generator/mybatis-generator-core -->
+            <dependency>
+                <groupId>org.mybatis.generator</groupId>
+                <artifactId>mybatis-generator-core</artifactId>
+                <version>1.4.2</version>
             </dependency>
             <!-- https://mvnrepository.com/artifact/com.baomidou/mybatis-plus -->
             <dependency>

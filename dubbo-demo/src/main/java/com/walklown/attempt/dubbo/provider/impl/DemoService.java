@@ -19,11 +19,15 @@
 
 package com.walklown.attempt.dubbo.provider.impl;
 
+import java.util.concurrent.Future;
+
 public interface DemoService {
 
     String sayHello(String name);
 
     String sayHelloAsync(String name);
+
+    Future<String> sayHelloAsync1(String name);
 
     String sayHelloThrEx(String name);
 
