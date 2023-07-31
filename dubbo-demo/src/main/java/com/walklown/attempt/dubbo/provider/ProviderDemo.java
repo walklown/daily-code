@@ -55,12 +55,12 @@ public class ProviderDemo {
         service.setRef(new DemoServiceImpl());
 
         ApplicationConfig applicationConfig = new ApplicationConfig("demo-provider");
-        applicationConfig.setMetadataType("remote");
+        applicationConfig.setMetadataType("local");
         //这一个篇章主要说这里:
         DubboBootstrap bootstrap = DubboBootstrap.getInstance();
         bootstrap.application(applicationConfig)
                 .registry(new RegistryConfig("zookeeper://127.0.0.1:2181"))
-                .protocol(new ProtocolConfig("injvm", 20880))
+                .protocol(new ProtocolConfig("dubbo", 20880))
                 .service(service)
                 .start()
                 .await();

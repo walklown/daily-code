@@ -32,7 +32,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.concurrent.CountDownLatch;
 
-@SpringBootApplication(scanBasePackages = {"com.walklown.attempt.dubbo.consumer.i"})
+@SpringBootApplication(scanBasePackages = {"com.walklown.attempt.dubbo.consumer"})
 @EnableDubbo
 @ImportResource(locations = {"classpath:spring/dubbo-consumer.xml"})
 public class ConsumerDemo {
