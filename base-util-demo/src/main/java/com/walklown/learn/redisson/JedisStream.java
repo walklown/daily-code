@@ -2,6 +2,7 @@ package com.walklown.learn.redisson;
 
 import com.fasterxml.jackson.core.type.TypeReference;
 import redis.clients.jedis.*;
+import redis.clients.jedis.resps.StreamEntry;
 
 import java.time.LocalDateTime;
 import java.time.ZoneOffset;
@@ -45,10 +46,10 @@ public class JedisStream<T> {
 
         Map<String, StreamEntryID> map = new HashMap<>();
         map.put("testStream", null);
-        for (Map.Entry<String, StreamEntryID> entry : map.entrySet()) {
-            List<Map.Entry<String, List<StreamEntry>>> list = jedis.xread(1, 0, entry);
-            System.out.println(list);
-        }
+//        for (Map.Entry<String, StreamEntryID> entry : map.entrySet()) {
+//            List<Map.Entry<String, List<StreamEntry>>> list = jedis.xread(1, 0, entry);
+//            System.out.println(list);
+//        }
         jedis.xdel("testStream", streamEntryID);
     }
 }

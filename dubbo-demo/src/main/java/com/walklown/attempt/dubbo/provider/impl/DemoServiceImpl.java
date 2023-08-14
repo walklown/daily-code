@@ -31,9 +31,14 @@ import java.util.concurrent.Future;
 public class DemoServiceImpl implements DemoService {
 
     public String sayHello(String name) {
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            throw new RuntimeException(e);
+        }
         System.out.println("[" + new SimpleDateFormat("HH:mm:ss").format(new Date()) + "] Hello " + name +
-                ", request from consumer: " + RpcContext.getContext().getRemoteAddress());
-        return "Hello " + name + ", response from provider: " + RpcContext.getContext().getLocalAddress();
+                ", request from consumer: " + RpcContext.getServerContext().getRemoteAddress());
+        return "Hello " + name + ", response from provider: " + RpcContext.getServerContext().getLocalAddress();
     }
 
     @Override

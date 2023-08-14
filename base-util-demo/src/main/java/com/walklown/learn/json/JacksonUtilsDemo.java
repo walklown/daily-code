@@ -19,16 +19,13 @@ import java.util.Map;
  * @author 守愚（张智沛）
  * @date 2023-01-30
  */
-public class JacksonUtilsTest {
+public class JacksonUtilsDemo {
 
     public static void main(String[] args) throws NoSuchFieldException, NoSuchMethodException, JsonProcessingException {
-//        Object o = JacksonUtils.testDecode("{\"id\":\"123\", \"name\":\"a\"}", Node.class);
-//        System.out.println(o);
-//        Object o1 = JacksonUtils.testDecode("{\"id\":\"123\", \"name\":\"a\", \"child\":{\"id\":\"4\", \"name\":\"b\"}}", Node.class.getGenericSuperclass());
-//        System.out.println(o1);
+        System.out.println("System.getProperties():" + System.getProperties());
         // 注意 int.class 和 Integer.class 是不一样的(没有所谓的自动装箱、自动拆箱机制)，不能互用
         Class<?> clazz = List.class;
-        Method method = JacksonUtilsTest.class.getMethod("testType", clazz, clazz, clazz, clazz, clazz, Map.class);
+        Method method = JacksonUtilsDemo.class.getMethod("testType", clazz, clazz, clazz, clazz, clazz, Map.class);
         //按照方法参数声明顺序返回参数的 Type 数组
         Type[] genericParameterTypes = method.getGenericParameterTypes();
         List<String> aList = new ArrayList<>();

@@ -41,11 +41,13 @@ public class ProviderDemo {
     public static final Logger LOGGER = LoggerFactory.getLogger(ProviderDemo.class);
 
     public static void main(String[] args) throws Exception {
-        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/dubbo-provider.xml");
-        context.start();
-        System.out.println("dubbo service started");
-        new CountDownLatch(1).await();
-//        startWithBootstrap();
+        // for mac
+        System.setProperty("dubbo.network.interface.preferred", "en0");
+//        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/dubbo-provider.xml");
+//        context.start();
+//        System.out.println("dubbo service started");
+//        new CountDownLatch(1).await();
+        startWithBootstrap();
     }
     private static void startWithBootstrap() {
         //前面的文章都在说这个服务配置对象的创建,中间又说了分层域模型,扩展加载机制
@@ -53,6 +55,7 @@ public class ProviderDemo {
         //为服务配置下服务接口和服务实现,下面两行用来初始化对象就不详细说了
         service.setInterface(DemoService.class);
         service.setRef(new DemoServiceImpl());
+        service.setTimeout(2000);
 
         ApplicationConfig applicationConfig = new ApplicationConfig("demo-provider");
         applicationConfig.setMetadataType("local");

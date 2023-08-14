@@ -39,6 +39,8 @@ public class ConsumerDemo {
 
     public static final Logger LOGGER = LoggerFactory.getLogger(ConsumerDemo.class);
     public static void main(String[] args) throws InterruptedException {
+        // for mac
+        System.setProperty("dubbo.network.interface.preferred", "en0");
         ConfigurableApplicationContext context = SpringApplication.run(ConsumerDemo.class, args);
 //        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("spring/dubbo-consumer.xml");
 //        context.start();

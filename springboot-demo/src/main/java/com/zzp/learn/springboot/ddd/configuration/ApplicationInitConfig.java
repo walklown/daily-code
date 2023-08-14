@@ -18,8 +18,6 @@ public class ApplicationInitConfig implements ApplicationContextInitializer<Conf
 
     @Override
     public void initialize(ConfigurableApplicationContext applicationContext) {
-        //应付apollo初始化
-        System.setProperty("app.id", "tianlu");
     }
 
 }

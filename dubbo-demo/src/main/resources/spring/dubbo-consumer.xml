@@ -23,7 +23,7 @@
        http://dubbo.apache.org/schema/dubbo http://dubbo.apache.org/schema/dubbo/dubbo.xsd http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
     <context:property-placeholder/>
 
-    <dubbo:application name="demo-consumer" metadata-type="remote"/>
+    <dubbo:application name="demo-consumer" metadata-type="local"/>
 
     <dubbo:registry address="zookeeper://${zookeeper.address:127.0.0.1}:2181"/>
 
@@ -31,7 +31,7 @@
 
 <!--    <dubbo:service interface="org.apache.dubbo.samples.local.api.DemoService" ref="target"/>-->
 
-    <dubbo:reference id="demoService" interface="com.walklown.attempt.dubbo.provider.impl.DemoService" protocol="dubbo"/>
+    <dubbo:reference id="demoService" interface="com.walklown.attempt.dubbo.provider.impl.DemoService" protocol="dubbo" timeout="4000"/>
 
     <bean id="consumerService" class="com.walklown.attempt.dubbo.consumer.impl.ConsumerService1"/>
 
