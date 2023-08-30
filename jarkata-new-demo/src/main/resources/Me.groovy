@@ -1,10 +1,10 @@
-package com.zzp.learn.springboot.aop.impl;
+;
 
-import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonProperty
 import org.springframework.stereotype.Service;
 
 @Service
-public class Me implements Sleepable {
+public class Me {
 
     @JsonProperty(required = true)
     private String name;
@@ -17,8 +17,7 @@ public class Me implements Sleepable {
         this.name = name;
     }
 
-    @Override
     public void sleep() {
-        System.out.println("\n睡觉！不休息哪里有力气学习！\n");  
-    }  
-} 
+        System.out.println("\n睡觉！不休息哪里有力气学习！\n");
+    }
+}

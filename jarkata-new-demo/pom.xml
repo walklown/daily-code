@@ -73,5 +73,11 @@
             <version>4.11</version>
             <scope>test</scope>
         </dependency>
+
+        <!-- https://mvnrepository.com/artifact/org.apache.groovy/groovy-all -->
+        <dependency>
+            <groupId>org.apache.groovy</groupId>
+            <artifactId>groovy</artifactId>
+        </dependency>
     </dependencies>
 </project>

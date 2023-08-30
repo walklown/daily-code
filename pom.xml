@@ -128,6 +128,21 @@
                 <artifactId>druid</artifactId>
                 <version>1.2.15</version>
             </dependency>
+            <!-- https://mvnrepository.com/artifact/com.alibaba/transmittable-thread-local -->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>transmittable-thread-local</artifactId>
+                <version>2.14.3</version>
+            </dependency>
+
+            <!-- https://mvnrepository.com/artifact/org.apache.groovy/groovy-all -->
+            <dependency>
+                <groupId>org.apache.groovy</groupId>
+                <artifactId>groovy-all</artifactId>
+                <version>4.0.14</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
 
             <dependency>
                 <!-- Import dependency management from Spring Boot -->
@@ -1217,81 +1232,9 @@
             </dependency>
             <dependency>
                 <groupId>io.netty</groupId>
-                <artifactId>netty-transport-native-epoll</artifactId>
-                <version>${netty.version}</version>
-                <classifier>linux-aarch_64</classifier>
-                <scope>runtime</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>io.netty</groupId>
-                        <artifactId>netty-common</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>io.netty</groupId>
-                        <artifactId>netty-buffer</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>io.netty</groupId>
-                        <artifactId>netty-transport</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>io.netty</groupId>
-                        <artifactId>netty-transport-native-unix-common</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>io.netty</groupId>
-                        <artifactId>netty-transport-classes-epoll</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.bouncycastle</groupId>
-                        <artifactId>bcpkix-jdk15on</artifactId>
-                    </exclusion>
-                </exclusions>
-                <optional>false</optional>
-            </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
                 <artifactId>netty-transport-native-kqueue</artifactId>
                 <version>${netty.version}</version>
                 <classifier>osx-x86_64</classifier>
-                <scope>runtime</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>io.netty</groupId>
-                        <artifactId>netty-common</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>io.netty</groupId>
-                        <artifactId>netty-buffer</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>io.netty</groupId>
-                        <artifactId>netty-transport</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>io.netty</groupId>
-                        <artifactId>netty-transport-native-unix-common</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>io.netty</groupId>
-                        <artifactId>netty-transport-classes-kqueue</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>org.bouncycastle</groupId>
-                        <artifactId>bcpkix-jdk15on</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>io.netty</groupId>
-                        <artifactId>netty-transport-native-unix-common</artifactId>
-                    </exclusion>
-                </exclusions>
-                <optional>false</optional>
-            </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-transport-native-kqueue</artifactId>
-                <version>${netty.version}</version>
-                <classifier>osx-aarch_64</classifier>
                 <scope>runtime</scope>
                 <exclusions>
                     <exclusion>
@@ -1342,66 +1285,6 @@
                     </exclusion>
                 </exclusions>
                 <optional>false</optional>
-            </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-resolver-dns-native-macos</artifactId>
-                <version>${netty.version}</version>
-                <classifier>osx-aarch_64</classifier>
-                <scope>runtime</scope>
-                <exclusions>
-                    <exclusion>
-                        <groupId>io.netty</groupId>
-                        <artifactId>netty-resolver-dns-classes-macos</artifactId>
-                    </exclusion>
-                    <exclusion>
-                        <groupId>io.netty</groupId>
-                        <artifactId>netty-transport-native-unix-common</artifactId>
-                    </exclusion>
-                </exclusions>
-                <optional>false</optional>
-            </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-transport-native-epoll</artifactId>
-                <version>${netty.version}</version>
-                <classifier>linux-x86_64</classifier>
-                <scope>runtime</scope>
-            </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-transport-native-epoll</artifactId>
-                <version>${netty.version}</version>
-                <classifier>linux-aarch_64</classifier>
-                <scope>runtime</scope>
-            </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-transport-native-kqueue</artifactId>
-                <version>${netty.version}</version>
-                <classifier>osx-x86_64</classifier>
-                <scope>runtime</scope>
-            </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-transport-native-kqueue</artifactId>
-                <version>${netty.version}</version>
-                <classifier>osx-aarch_64</classifier>
-                <scope>runtime</scope>
-            </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-resolver-dns-native-macos</artifactId>
-                <version>${netty.version}</version>
-                <classifier>osx-x86_64</classifier>
-                <scope>runtime</scope>
-            </dependency>
-            <dependency>
-                <groupId>io.netty</groupId>
-                <artifactId>netty-resolver-dns-native-macos</artifactId>
-                <version>${netty.version}</version>
-                <classifier>osx-aarch_64</classifier>
-                <scope>runtime</scope>
             </dependency>
         </dependencies>
     </dependencyManagement>
