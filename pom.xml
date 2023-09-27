@@ -28,10 +28,10 @@
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.verison>17</java.verison>
-        <maven.compiler.source>17</maven.compiler.source>
-        <maven.compiler.target>17</maven.compiler.target>
-        <maven.compiler.compilerVersion>17</maven.compiler.compilerVersion>
+        <java.verison>21</java.verison>
+        <maven.compiler.source>21</maven.compiler.source>
+        <maven.compiler.target>21</maven.compiler.target>
+        <maven.compiler.compilerVersion>21</maven.compiler.compilerVersion>
 
         <netty.version>4.1.96.Final</netty.version>
         <springboot.version>3.1.0</springboot.version>
@@ -40,7 +40,7 @@
         <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
         <resilience4jVersion>2.0.2</resilience4jVersion>
         <jackson.version>2.15.1</jackson.version>
-        <lombok.version>1.18.28</lombok.version>
+        <lombok.version>1.18.30</lombok.version>
         <dubbo.version>3.2.3</dubbo.version>
         <jmh.version>1.36</jmh.version>
         <zookeeper.version>3.6.2</zookeeper.version>
