@@ -1,0 +1,13 @@
+management.server.port=8081
+server.port=8080
+spring.application.name=learn
+
+management.endpoint.health.show-components.always
+show-details.always
+endpoints.jmx.exposure.include.'*'
+web.exposure.include.'*'
+metrics.tags.application.${spring.application.name}
+export.prometheus.enabled.true
+pushgateway.enabled.true
+base-url.http./localhost.427/api/v1/import/prometheus/
+push-rate.10s
