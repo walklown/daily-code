@@ -1,13 +1,31 @@
-management.server.port=8081
-server.port=8080
-spring.application.name=learn
+server:
+  port: 8080
+spring:
+  application:
+    name: learn
 
-management.endpoint.health.show-components.always
-show-details.always
-endpoints.jmx.exposure.include.'*'
-web.exposure.include.'*'
-metrics.tags.application.${spring.application.name}
-export.prometheus.enabled.true
-pushgateway.enabled.true
-base-url.http./localhost.427/api/v1/import/prometheus/
-push-rate.10s
+management:
+  server:
+    port: 8081
+  endpoint:
+    health:
+      show-components: always
+      show-details: always
+  endpoints:
+    jmx:
+      exposure:
+        include: '*'
+    web:
+      exposure:
+        include: '*'
+  prometheus:
+    metrics:
+      export:
+        enabled: true
+        pushgateway:
+          enabled: true
+          base-url: http://localhost:8429/api/v1/import/prometheus/
+          push-rate: 10s
+          job: ${spring.application.name}
+          grouping-key:
+            instance: localhost:8080

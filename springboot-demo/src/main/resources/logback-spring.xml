@@ -3,7 +3,7 @@
         <!-- configuration to be enabled when the "staging" profile is active -->
         <springProperty scope="context" name="module" source="spring.application.name" />
 
-        <springProperty scope="context" name="bootstrapServers" source="spring.kafka.bootstrap-servers"
+        <springProperty scope="context" name="bootstrapServers" source="spring.kafka.bootstrçap-servers"
                         defaultValue="127.0.0.1:9092" />
 
         <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
@@ -25,9 +25,9 @@
         </appender>
 
         <!-- 指定项目中的logger -->
-        <logger name="com.salesmanager" level="INFO" >
-            <appender-ref ref="kafka-appender" />
-        </logger>
+<!--        <logger name="com.zzp" level="INFO" >-->
+<!--            <appender-ref ref="kafka-appender" />-->
+<!--        </logger>-->
 
         <root level="INFO">
             <appender-ref ref="STDOUT" />
