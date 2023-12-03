@@ -33,7 +33,7 @@ package com.walklown.learn.algorithm.archive220204;
  * 1 <= a.length, b.length <= 100
  * a 和 b 由小写英文字母组成
  *
- * @author 守愚（张智沛）
+ * @author Walklown
  * @date 2022-02-17
  */
 class Solution220303 {

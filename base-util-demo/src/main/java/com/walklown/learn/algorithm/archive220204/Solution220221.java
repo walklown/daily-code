@@ -17,7 +17,7 @@ package com.walklown.learn.algorithm.archive220204;
  * dominoes[i] = '.'，表示没有推动第 i 张多米诺骨牌。
  * 返回表示最终状态的字符串。
  *
- * @author 守愚（张智沛）
+ * @author Walklown
  * @date 2022-02-17
  */
 class Solution220221 {

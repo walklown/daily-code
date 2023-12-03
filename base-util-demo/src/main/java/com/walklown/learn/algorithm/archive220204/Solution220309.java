@@ -35,7 +35,7 @@
 // * 1 <= nums.length <= 105
 // * 0 <= nums[i] < nums.length
 // *
-// * @author 守愚（张智沛）
+// * @author Walklown
 // * @date 2022-02-17
 // */
 //class Solution220309 {

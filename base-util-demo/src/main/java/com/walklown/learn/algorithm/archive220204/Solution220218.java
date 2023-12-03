@@ -10,7 +10,7 @@ package com.walklown.learn.algorithm.archive220204;
  输出：2
  解释：如上图所示，节点 2 与其他每个节点都相连，所以节点 2 是中心节点。
  *
- * @author 守愚（张智沛）
+ * @author Walklown
  * @date 2022-02-17
  */
 class Solution220218 {

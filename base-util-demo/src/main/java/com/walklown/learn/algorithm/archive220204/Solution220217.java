@@ -16,7 +16,7 @@ package com.walklown.learn.algorithm.archive220204;
  * 链接：https://leetcode-cn.com/problems/knight-probability-in-chessboard
  * 著作权归领扣网络所有。商业转载请联系官方授权，非商业转载请注明出处。
  *
- * @author 守愚（张智沛）
+ * @author Walklown
  * @date 2022-02-17
  */
 class Solution220217 {

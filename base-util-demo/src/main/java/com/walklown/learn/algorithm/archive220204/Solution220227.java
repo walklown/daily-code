@@ -26,7 +26,7 @@ package com.walklown.learn.algorithm.archive220204;
  * 数组中每个元素的大小都在 [2, 1000] 之间。
  * 每个测试用例只有一个最优除法解。
  *
- * @author 守愚（张智沛）
+ * @author Walklown
  * @date 2022-02-17
  */
 class Solution220227 {

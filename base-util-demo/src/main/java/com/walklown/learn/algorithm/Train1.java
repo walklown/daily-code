@@ -3,7 +3,7 @@ package com.walklown.learn.algorithm;
 /**
  * 三个线程轮流输出ABC
  *
- * @author 守愚（张智沛）
+ * @author Walklown
  */
 public class Train1 {
 

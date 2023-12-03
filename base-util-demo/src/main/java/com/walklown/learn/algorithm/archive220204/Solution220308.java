@@ -39,7 +39,7 @@ package com.walklown.learn.algorithm.archive220204;
  * queries[i].length == 2
  * 0 <= lefti <= righti < s.length
  *
- * @author 守愚（张智沛）
+ * @author Walklown
  * @date 2022-02-17
  */
 class Solution220308 {

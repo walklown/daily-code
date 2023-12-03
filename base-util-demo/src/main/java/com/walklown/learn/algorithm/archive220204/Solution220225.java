@@ -27,7 +27,7 @@ package com.walklown.learn.algorithm.archive220204;
  *
  * num1 和 num2 都是有效的复数表示。
  *
- * @author 守愚（张智沛）
+ * @author Walklown
  * @date 2022-02-17
  */
 class Solution220225 {

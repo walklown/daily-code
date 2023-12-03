@@ -10,7 +10,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * 与CountDownLatch的主要区别，是可以reset
  *
- * @author 守愚（张智沛）
+ * @author Walklown
  * @date 2023-02-10
  */
 public class CyclicBarrierDemo {

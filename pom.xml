@@ -19,23 +19,24 @@
         <!--        <module>eureka</module>-->
         <module>jarkata-new-demo</module>
         <module>netty-demo</module>
-        <module>springboot-demo</module>
         <module>dubbo-demo</module>
         <module>mybatis-demo</module>
+        <module>springboot-demo/springboot-demo-cloud-zookeeper</module>
+        <module>springboot-demo/springboot-demo-metrics</module>
         <!--        <module>java-processor</module>-->
     </modules>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-        <java.verison>21</java.verison>
-        <maven.compiler.source>21</maven.compiler.source>
-        <maven.compiler.target>21</maven.compiler.target>
+        <java.verison>17</java.verison>
+        <maven.compiler.source>${java.verison}</maven.compiler.source>
+        <maven.compiler.target>${java.verison}</maven.compiler.target>
         <maven.compiler.compilerVersion>21</maven.compiler.compilerVersion>
 
         <netty.version>4.1.96.Final</netty.version>
         <springboot.version>3.1.5</springboot.version>
-        <!--        <springcloud.version>2020.0.4</springcloud.version>-->
+        <springcloud.version>2022.0.4</springcloud.version>
         <springframework.version>6.0.9</springframework.version>
         <org.mapstruct.version>1.5.5.Final</org.mapstruct.version>
         <resilience4jVersion>2.0.2</resilience4jVersion>
@@ -144,23 +145,32 @@
                 <scope>import</scope>
             </dependency>
 
+
+            <!-- Import dependency management from Spring Cloud -->
             <dependency>
-                <!-- Import dependency management from Spring Boot -->
+                <groupId>org.springframework.cloud</groupId>
+                <artifactId>spring-cloud-dependencies</artifactId>
+                <version>${springcloud.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+            <!-- Import dependency management from Spring Boot -->
+            <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-dependencies</artifactId>
                 <version>${springboot.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-
+            <!-- Import dependency management from Spring -->
             <dependency>
-                <!-- Import dependency management from Spring -->
                 <groupId>org.springframework</groupId>
                 <artifactId>spring-framework-bom</artifactId>
                 <version>${springframework.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
+            <!-- Import dependency management from Dubbo -->
             <dependency>
                 <groupId>org.apache.dubbo</groupId>
                 <artifactId>dubbo-bom</artifactId>

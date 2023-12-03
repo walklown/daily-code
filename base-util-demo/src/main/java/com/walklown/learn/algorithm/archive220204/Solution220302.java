@@ -28,7 +28,7 @@ package com.walklown.learn.algorithm.archive220204;
  *
  * TODO 抽象，冗余存储
  *
- * @author 守愚（张智沛）
+ * @author Walklown
  * @date 2022-02-17
  */
 class Solution220302 {

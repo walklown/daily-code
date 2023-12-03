@@ -21,7 +21,7 @@ import com.walklown.learn.json.JacksonUtils;
  * 1 <= m, n <= 100
  * grid[i][j] 为 1 或 -1
  *
- * @author 守愚（张智沛）
+ * @author Walklown
  * @date 2022-02-17
  */
 class Solution220224 {

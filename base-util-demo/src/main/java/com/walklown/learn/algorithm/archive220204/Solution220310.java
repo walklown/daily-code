@@ -32,7 +32,7 @@ import java.util.List;
  *
  * 所谓迭代法就是用堆栈实现
  *
- * @author 守愚（张智沛）
+ * @author Walklown
  * @date 2022-02-17
  */
 class Solution220310 {

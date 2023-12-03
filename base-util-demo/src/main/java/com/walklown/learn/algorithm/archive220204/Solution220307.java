@@ -20,7 +20,7 @@ package com.walklown.learn.algorithm.archive220204;
  * <p>
  * -107 <= num <= 107
  *
- * @author 守愚（张智沛）
+ * @author Walklown
  * @date 2022-02-17
  */
 class Solution220307 {

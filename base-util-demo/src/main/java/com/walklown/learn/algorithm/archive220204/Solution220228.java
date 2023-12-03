@@ -51,7 +51,7 @@ package com.walklown.learn.algorithm.archive220204;
  * requests[i].length == 2
  * 0 <= fromi, toi < n
  *
- * @author 守愚（张智沛）
+ * @author Walklown
  * @date 2022-02-17
  */
 class Solution220228 {

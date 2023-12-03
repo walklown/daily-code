@@ -40,7 +40,7 @@ package com.walklown.learn.algorithm.archive220204;
  * s 由英文字母（小写和大写）、',' 和 '.' 组成
  * 1 <= numRows <= 1000
  *
- * @author 守愚（张智沛）
+ * @author Walklown
  * @date 2022-02-17
  */
 class Solution220301 {

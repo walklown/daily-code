@@ -32,7 +32,7 @@ import java.util.List;
  *
  * 标签：贪心算法
  *
- * @author 守愚（张智沛）
+ * @author Walklown
  * @date 2022-02-17
  */
 class Solution220303plus {

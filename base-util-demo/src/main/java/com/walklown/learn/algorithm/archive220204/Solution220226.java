@@ -32,7 +32,7 @@ package com.walklown.learn.algorithm.archive220204;
  * 2 <= n <= 1000
  * 1 <= nums[i] <= 10^9
  *
- * @author 守愚（张智沛）
+ * @author Walklown
  * @date 2022-02-17
  */
 class Solution220226 {
