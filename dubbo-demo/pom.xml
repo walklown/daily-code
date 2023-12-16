@@ -59,14 +59,14 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-server</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-servlet</artifactId>
-        </dependency>
+<!--        <dependency>-->
+<!--            <groupId>org.eclipse.jetty</groupId>-->
+<!--            <artifactId>jetty-server</artifactId>-->
+<!--        </dependency>-->
+<!--        <dependency>-->
+<!--            <groupId>org.eclipse.jetty</groupId>-->
+<!--            <artifactId>jetty-servlet</artifactId>-->
+<!--        </dependency>-->
 
         <dependency>
             <groupId>io.github.resilience4j</groupId>
