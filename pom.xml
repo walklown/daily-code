@@ -21,6 +21,7 @@
         <module>netty-demo</module>
         <module>dubbo-demo</module>
         <module>mybatis-demo</module>
+        <module>springboot-demo/springboot</module>
         <module>springboot-demo/springboot-demo-cloud-eureka</module>
         <module>springboot-demo/springboot-demo-cloud-client</module>
         <module>springboot-demo/springboot-demo-metrics</module>

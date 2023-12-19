@@ -3,7 +3,6 @@ package com.walklown.attempt.learn;
 import org.springframework.stereotype.Component;
 
 @Component
-@A2
 public class Child1 extends Parent {
 
     @Override

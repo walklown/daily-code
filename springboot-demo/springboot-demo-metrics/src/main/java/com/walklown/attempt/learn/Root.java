@@ -3,7 +3,6 @@ package com.walklown.attempt.learn;
 import org.springframework.stereotype.Component;
 
 @Component
-@A1
 public class Root {
 
     public void sayHello() {
