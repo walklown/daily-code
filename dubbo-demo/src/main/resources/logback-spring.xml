@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <configuration>
-    <conversionRule conversionWord="p" converterClass="com.walklown.attempt.dubbo.provider.LogFilterMessageConverter"/>
+    <conversionRule conversionWord="p" converterClass="com.walklown.attempt.server.dubbo.provider.LogFilterMessageConverter"/>
 
     <property name="BASE_PATH" value="${user.home}/logs"/>
 

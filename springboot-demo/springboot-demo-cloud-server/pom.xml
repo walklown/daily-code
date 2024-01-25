@@ -10,14 +10,9 @@
         <relativePath>../../pom.xml</relativePath>
     </parent>
 
-    <artifactId>springboot-demo-cloud-client</artifactId>
+    <artifactId>springboot-demo-cloud-server</artifactId>
 
     <dependencies>
-        <dependency>
-            <groupId>com.walklown.attempt.learn</groupId>
-            <artifactId>springboot-demo-cloud-server</artifactId>
-            <version>1.0.0-SNAPSHOT</version>
-        </dependency>
         <dependency>
             <groupId>org.springframework.cloud</groupId>
             <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>

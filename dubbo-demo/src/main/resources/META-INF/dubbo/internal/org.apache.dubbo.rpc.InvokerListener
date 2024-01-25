@@ -1,1 +1,1 @@
-filterHandler=com.walklown.attempt.dubbo.consumer.impl.ReferenceInvokerListener
+filterHandler=impl.consumer.dubbo.com.walklown.attempt.server.ReferenceInvokerListener

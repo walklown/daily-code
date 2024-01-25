@@ -31,8 +31,8 @@
 
 <!--    <dubbo:service interface="org.apache.dubbo.samples.local.api.DemoService" ref="target"/>-->
 
-    <dubbo:reference id="demoService" interface="com.walklown.attempt.dubbo.provider.impl.DemoService" protocol="dubbo" timeout="4000"/>
+    <dubbo:reference id="demoService" interface="com.walklown.attempt.server.dubbo.provider.impl.DemoService" protocol="dubbo" timeout="4000"/>
 
-    <bean id="consumerService" class="com.walklown.attempt.dubbo.consumer.impl.ConsumerService1"/>
+    <bean id="consumerService" class="com.walklown.attempt.server.dubbo.consumer.impl.ConsumerService1"/>
 
 </beans>

@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: my-server
+
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+microsphere:
+  availability:
+    zone: cn

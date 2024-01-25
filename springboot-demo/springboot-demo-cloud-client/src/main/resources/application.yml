@@ -1,3 +1,16 @@
 spring:
   application:
-    name:my1
+    name: my-client
+  cloud:
+    loadbalancer:
+      retry:
+        enabled: true
+      configurations: my-zone
+
+server:
+  port: 8082
+
+microsphere:
+  availability:
+    zone: cn
+
