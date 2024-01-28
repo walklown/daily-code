@@ -5,7 +5,7 @@ spring:
     loadbalancer:
       retry:
         enabled: true
-      configurations: my-zone
+      configurations: optimized-zone-preference
 
 server:
   port: 8082
@@ -13,4 +13,5 @@ server:
 microsphere:
   availability:
     zone: cn
-
+  customized-loadbalancer:
+    enabled: true
