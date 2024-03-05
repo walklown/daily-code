@@ -14,6 +14,7 @@ import com.fasterxml.jackson.datatype.jsonorg.JsonOrgModule;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collection;
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -117,5 +118,11 @@ public class JacksonUtils {
         OBJ_MAPPER.disable(DeserializationFeature.FAIL_ON_NULL_FOR_PRIMITIVES);
         OBJ_MAPPER.disable(SerializationFeature.FAIL_ON_EMPTY_BEANS);
         OBJ_MAPPER.enable(com.fasterxml.jackson.core.JsonGenerator.Feature.IGNORE_UNKNOWN);
+    }
+
+    public static void main(String[] args) {
+        Map<Integer, String> map = new HashMap<>();
+        map.put(1, "sfds");
+        System.out.println(JacksonUtils.toJSONString(map));
     }
 }
