@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: my-mysql
+  datasource:
+    name: mysql1
+    driverClassName: com.mysql.cj.jdbc.Driver
+# _user_:_password_@address=(key1=value1)(key2=value2)
+    url: jdbc:mysql:replication://root:root123456@(host=localhost,port=3309,type=SOURCE),root:root123456@(host=localhost,port=3310,type=SOURCE),root:root123456@(host=localhost,port=3311,type=REPLICA),root:root123456@(host=localhost,port=3312,type=REPLICA)/my_schema?ha.loadBalanceStrategy=random
+    username: root
+    password: root123456
+
+server:
+  port: 8081
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+microsphere:
+  availability:
+    zone: zone1
+  multiple-active:
+    jdbc:
+      urls: zone2://localhost:3310,zone2://localhost:3311,zone3://localhost:3310
+
+

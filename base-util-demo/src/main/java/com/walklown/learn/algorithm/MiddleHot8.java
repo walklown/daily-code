@@ -3,7 +3,7 @@ package com.walklown.learn.algorithm;
 /**
  * 8. 字符串转换整数 (atoi)
  *
- * @author 守愚（张智沛）
+ * @author @author <a href="mailto:warlklown@gmail.com">Walklown<a/>
  */
 public class MiddleHot8 {
 

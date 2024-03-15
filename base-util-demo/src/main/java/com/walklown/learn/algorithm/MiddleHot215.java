@@ -6,7 +6,7 @@ import java.util.Map;
 /**
  * 215. 数组中的第K个最大元素
  *
- * @author 守愚（张智沛）
+ * @author @author <a href="mailto:warlklown@gmail.com">Walklown<a/>
  */
 public class MiddleHot215 {
 

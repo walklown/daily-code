@@ -13,7 +13,7 @@ import java.util.Set;
 /**
  * 15. 三数之和
  *
- * @author 守愚（张智沛）
+ * @author @author <a href="mailto:warlklown@gmail.com">Walklown<a/>
  */
 public class MiddleHot15 {
 

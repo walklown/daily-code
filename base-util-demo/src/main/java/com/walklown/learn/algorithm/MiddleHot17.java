@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 17. 电话号码的字母组合
  *
- * @author 守愚（张智沛）
+ * @author @author <a href="mailto:warlklown@gmail.com">Walklown<a/>
  */
 public class MiddleHot17 {
 

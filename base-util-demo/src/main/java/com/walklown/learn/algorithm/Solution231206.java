@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * 2646. 最小化旅行的价格总和
  *
- * @author 守愚（张智沛）
+ * @author @author <a href="mailto:warlklown@gmail.com">Walklown<a/>
  */
 public class Solution231206 {
 

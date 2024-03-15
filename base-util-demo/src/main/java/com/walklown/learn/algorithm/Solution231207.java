@@ -9,7 +9,7 @@ import java.util.Map;
 /**
  * 1466. 重新规划路线
  *
- * @author 守愚（张智沛）
+ * @author @author <a href="mailto:warlklown@gmail.com">Walklown<a/>
  */
 public class Solution231207 {
 

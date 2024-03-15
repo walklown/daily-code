@@ -3,7 +3,7 @@ package com.walklown.learn.algorithm;
 /**
  * 2. 两数相加
  *
- * @author 守愚（张智沛）
+ * @author @author <a href="mailto:warlklown@gmail.com">Walklown<a/>
  */
 public class MiddleHot2 {
 

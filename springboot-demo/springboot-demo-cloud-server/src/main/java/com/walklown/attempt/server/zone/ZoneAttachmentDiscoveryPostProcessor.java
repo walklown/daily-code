@@ -3,7 +3,7 @@ package com.walklown.attempt.server.zone;
 import com.netflix.appinfo.ApplicationInfoManager;
 import io.microsphere.multiple.active.zone.ZoneAttachmentHandler;
 import io.microsphere.multiple.active.zone.ZoneContext;
-import io.microsphere.multiple.active.zone.eureka.ZoneAttachmentPreRegistrationHandler;
+import io.microsphere.multiple.active.zone.netflix.eureka.ZoneAttachmentPreRegistrationHandler;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.config.BeanPostProcessor;
@@ -36,6 +36,7 @@ public class ZoneAttachmentDiscoveryPostProcessor implements BeanPostProcessor {
         RestTemplateDiscoveryClientOptionalArgs args = ((RestTemplateDiscoveryClientOptionalArgs) bean);
         args.setPreRegistrationHandler(new ZoneAttachmentPreRegistrationHandler(applicationInfoManager,
                 new ZoneAttachmentHandler(zoneContext)));
+
         return bean;
     }
 }

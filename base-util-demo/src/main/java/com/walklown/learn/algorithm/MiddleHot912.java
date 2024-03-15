@@ -5,7 +5,7 @@ import com.walklown.learn.json.JacksonUtils;
 /**
  * 912. 排序数组
  *
- * @author 守愚（张智沛）
+ * @author @author <a href="mailto:warlklown@gmail.com">Walklown<a/>
  */
 public class MiddleHot912 {
 

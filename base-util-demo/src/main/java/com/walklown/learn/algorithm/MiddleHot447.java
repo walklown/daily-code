@@ -9,7 +9,7 @@ import java.util.List;
 /**
  * 447. 回旋镖的数量
  *
- * @author 守愚（张智沛）
+ * @author @author <a href="mailto:warlklown@gmail.com">Walklown<a/>
  */
 public class MiddleHot447 {
 

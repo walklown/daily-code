@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * 18. 四数之和
  *
- * @author 守愚（张智沛）
+ * @author @author <a href="mailto:warlklown@gmail.com">Walklown<a/>
  */
 public class MiddleHot18 {
 

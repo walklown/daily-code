@@ -5,7 +5,7 @@ import com.walklown.learn.json.JacksonUtils;
 /**
  * 31. 下一个排列
  *
- * @author 守愚（张智沛）
+ * @author @author <a href="mailto:warlklown@gmail.com">Walklown<a/>
  */
 public class MiddleHot31 {
 

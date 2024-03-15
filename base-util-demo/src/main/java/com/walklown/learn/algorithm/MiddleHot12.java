@@ -3,7 +3,7 @@ package com.walklown.learn.algorithm;
 /**
  * 12. 整数转罗马数字
  *
- * @author 守愚（张智沛）
+ * @author @author <a href="mailto:warlklown@gmail.com">Walklown<a/>
  */
 public class MiddleHot12 {
 

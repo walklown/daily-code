@@ -9,7 +9,7 @@ import java.util.TreeSet;
 /**
  * 146. LRU 缓存
  *
- * @author 守愚（张智沛）
+ * @author @author <a href="mailto:warlklown@gmail.com">Walklown<a/>
  */
 public class MiddleHot146 {
 
