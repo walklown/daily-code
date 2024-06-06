@@ -75,6 +75,5 @@
             <groupId>io.prometheus</groupId>
             <artifactId>simpleclient_pushgateway</artifactId>
         </dependency>
-
     </dependencies>
 </project>
